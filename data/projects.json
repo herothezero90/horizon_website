@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Text to speech conversion web application",
+    "link": "https://cumulustalk.com/welcome.html",
+    "description": "Web application that implements Google API to convert written text to downloadable mp3 audio. Users can select language, voice, pitch, speed, and use SSML for advanced control. Includes subscription-based feature limits and statistics panel.",
+    "tech": "HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Dating Site Store Integration",
+    "link": null,
+    "description": "Web app to sell products on an existing dating site. Includes QR code generation and redemption, merchant upload panel, and admin tools. Built with full stack PHP/Yii.",
+    "tech": "HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "3D Model Rendering Platform",
+    "link": null,
+    "description": "Web app for 3D rendering of AutoCAD models using Autodesk SDK. Features include logo overlays, subscription plans, user/admin panels, and share functionality.",
+    "tech": "HTML, CSS, JavaScript, PHP, MySQL, Autodesk PHP SDK, PayPal",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Stripe Integration (Connected Accounts)",
+    "link": "https://cumulusgate.com/welcome.php",
+    "description": "Connected Stripe accounts for vendors to sell products on a central platform. Admin can collect a platform fee. Uses Stripe PHP SDK.",
+    "tech": "Stripe PHP SDK",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Zammad Ticket Automation",
+    "link": null,
+    "description": "Workflow automation using Zammad API and PHP scripts with web scraping. System processes and updates Zammad tickets with scraped and processed data.",
+    "tech": "Zammad API Client PHP",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Flight Data Visualization",
+    "link": null,
+    "description": "Interactive 3D globe visualizing flight data using React, ThreeJS, and Flightlab API. Includes WebSocket chat and Google Places integration.",
+    "tech": "React, ThreeJS, Node.js, Express, WebSockets, Google Places, Flightlab API",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Interactive Multimedia Show Editor",
+    "link": null,
+    "description": "Multimedia editor to control displays, live streams, games and audio via smartphones. Built using Node.js, Socket.io, and OSC messages. Similar to a live Photoshop-like layer editor.",
+    "tech": "Node.js, Express, Socket.io, OSC, HTML, CSS, JS",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Advent Calendar Game",
+    "link": "https://formation.stepforward-education.fr/",
+    "description": "Interactive game platform for kids learning English. Includes audio, drag and drop, crosswords, and progress tracking.",
+    "tech": "HTML, CSS, Bootstrap, JavaScript, PHP, MySQL",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  },
+  {
+    "title": "Alphabet Game for Kids",
+    "link": "https://formation.stepforward-education.fr/amazing-english/",
+    "description": "Educational game sold via Shopify, connected via API. Features include HTML emails, login/register system, and interactive games for children.",
+    "tech": "HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API",
+    "images": [
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png",
+      "../images/autodesk_2.png"
+    ],
+    "video": "../images/visualization_1.mp4"
+  }
+]
