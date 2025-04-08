@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Horizon</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- navbar -->
+  <div class="navbar bg-base-200">
+    <div class="navbar-start">
+      <div class="dropdown bg-base-200">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               class="h-5 w-5" fill="none" 
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" 
+            class="menu menu-sm dropdown-content 
+                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
+          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
+          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
+          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
+          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
+        <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <!-- dark/light theme -->
+      <label class="toggle text-base-content">
+        <input type="checkbox" value="black" class="theme-controller" />
+        <!-- sun icon -->
+        <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </g>
+        </svg>
+        <!-- moon icon -->
+        <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </g>
+        </svg>
+      </label>
+    </div>
+  </div>
+
+  <!-- Projects (2 columns on desktop) -->
+  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- PROJECT 1: Text to Speech -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Text to speech conversion web application
+          <a href="https://cumulustalk.com/welcome.html" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Implements Google API to convert text into MP3 audio</li>
+          <li>Supports language, voice, pitch, speed, SSML for advanced control</li>
+          <li>Includes subscription-based feature limits and a statistics panel</li>
+        </ul>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 2: Dating Site Store Integration -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Dating Site Store Integration
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Web app to sell products on an existing dating site</li>
+          <li>Includes QR code generation and redemption</li>
+          <li>Merchant upload panel and admin tools (PHP/Yii)</li>
+        </ul>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 3: 3D Model Rendering Platform -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          3D Model Rendering Platform
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Web app for rendering AutoCAD models with Autodesk SDK</li>
+          <li>Supports logo overlays, subscription plans, and share functionality</li>
+          <li>Includes user/admin panels</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL, Autodesk PHP SDK, PayPal
+        </p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 4: Stripe Integration -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Stripe Integration (Connected Accounts)
+          <a href="https://cumulusgate.com/welcome.php" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Connected Stripe accounts for vendors on a central platform</li>
+          <li>Admin can collect a platform fee</li>
+          <li>Uses Stripe PHP SDK</li>
+        </ul>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> Stripe PHP SDK</p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 5: Zammad Ticket Automation -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Zammad Ticket Automation
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Workflow automation using Zammad API and PHP scripts</li>
+          <li>Processes and updates tickets with scraped data</li>
+        </ul>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> Zammad API Client PHP</p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 6: Flight Data Visualization -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Flight Data Visualization
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Interactive 3D globe visualizing flight data via Flightlab API</li>
+          <li>Includes WebSocket chat and Google Places integration</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> React, ThreeJS, Node.js, Express, WebSockets, Google Places, Flightlab API
+        </p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 7: Interactive Multimedia Show Editor -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Interactive Multimedia Show Editor
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Controls displays, live streams, games, audio via smartphones</li>
+          <li>Layer-based editor, similar to a live Photoshop environment</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> Node.js, Express, Socket.io, OSC, HTML, CSS, JS
+        </p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 8: Advent Calendar Game -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Advent Calendar Game
+          <a href="https://formation.stepforward-education.fr/" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Interactive game platform for kids learning English</li>
+          <li>Includes audio, drag-and-drop, crosswords, progress tracking</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
+        </p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+    <!-- PROJECT 9: Alphabet Game for Kids -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Alphabet Game for Kids
+          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-inside mt-2">
+          <li>Educational game sold via Shopify, connected via API</li>
+          <li>Includes HTML emails, login/register system, interactive games</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
+        </p>
+      </div>
+      <figure>
+        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
+      </figure>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-base-200 py-4 text-center">
+    <p class="text-sm">&copy; 2025 Horizon. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Horizon</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <div class="navbar bg-base-200">
+    <div class="navbar-start">
+      <div class="dropdown bg-base-200">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               class="h-5 w-5" fill="none" 
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" 
+            class="menu menu-sm dropdown-content 
+                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
+          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
+          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
+          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
+          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
+        <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <!-- dark/light theme -->
+      <label class="toggle text-base-content">
+        <input type="checkbox" value="black" class="theme-controller" />
+        <!-- sun icon -->
+        <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </g>
+        </svg>
+        <!-- moon icon -->
+        <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </g>
+        </svg>
+      </label>
+    </div>
+  </div>
+
+  <!-- main -->
+  <main class="min-h-screen flex">
+    <div class="items-center text-center flex flex-col justify-center h-full">
+
+      <!-- lofi -->
+      <div class="overflow-hidden h-84 w-50 mb-3 pb-10 block" data-theme-visible="lofi">
+        <img
+          src="./images/hero.png"
+          alt="Hero image for light theme"
+          class="w-full h-full object-cover object-[center_20%]"
+        />
+      </div>
+    
+      <!-- black -->
+      <div class="overflow-hidden h-84 w-50 mb-3 pb-10 hidden" data-theme-visible="black">
+        <img
+          src="./images/hero_dark.png"
+          alt="Hero image for dark theme"
+          class="w-full h-full object-cover object-[center_20%]"
+        />
+      </div>
+    
+      <section class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-20 theme-color">GET IN TOUCH</h1>
+        <h2 class="text-2xl mb-2 mt-10 text-center">
+          horizon.dev.info@gmail.com
+        </h2>
+      </section>
+    </div>
+  </main>
+
+  <!-- footer  -->
+  <footer class="bg-base-200 py-4 text-center">
+    <p class="text-sm">&copy; 2025 Horizon. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Dubravka Spoljaric",
+    "position": "Full Stack Developer",
+    "about": "Handles backend logic and API integrations. Loves building scalable systems.",
+    "image": "./images/dubravka.jpeg",
+    "links": {
+      "github": "https://github.com/somehorizonplaceholder",
+      "linkedin": "https://www.linkedin.com/in/dubravka-example"
+    }
+  },
+  {
+    "name": "Karla Lenard",
+    "position": "Frontend Developer",
+    "about": "Focused on clean UI and seamless UX. Passionate about CSS art and web animation.",
+    "image": "./images/karla.jpg",
+    "links": {
+      "github": "https://github.com/karla-lenard",
+      "linkedin": "https://www.linkedin.com/in/karla-example"
+    }
+  },
+  {
+    "name": "Ivona Lenard",
+    "position": "Social Media Manager",
+    "about": "Google Ads, Facebook, Instagram, TikTok",
+    "image": "./images/ivona.jpg",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/ivona-example"
+    }
+  },
+  {
+    "name": "Mia Majstor",
+    "position": "UI/UX Designer (Clever Fox Design)",
+    "about": "Crafts intuitive interfaces and pixel-perfect designs.",
+    "image": "./images/mia.jpeg",
+    "links": {
+      "linkedin": "https://cleverfoxdesign.hr/en"
+    }
+  }
+]

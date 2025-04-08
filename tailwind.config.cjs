@@ -10,24 +10,24 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        outfit: ['Outfit', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+        phudu: ['Phudu', 'sans-serif'],
+        onest: ['Onest', 'sans-serif'],
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             h1: {
-              fontFamily: theme('fontFamily.outfit'),
+              fontFamily: theme('fontFamily.phudu'),
               fontWeight: '700',
               fontSize: theme('fontSize.5xl'),
             },
             h2: {
-              fontFamily: theme('fontFamily.outfit'),
+              fontFamily: theme('fontFamily.phudu'),
               fontWeight: '400',
               fontSize: theme('fontSize.3xl'),
             },
             p: {
-              fontFamily: theme('fontFamily.roboto'),
+              fontFamily: theme('fontFamily.onest'),
               fontWeight: '400',
               fontSize: theme('fontSize.base'),
             },

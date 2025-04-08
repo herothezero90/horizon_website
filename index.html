@@ -1,92 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="lofi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizon – Home</title>
   <link href="./dist/output.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
+    href="https://fonts.googleapis.com/css2?family=Onest&family=Phudu:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
-<body class="min-h-screen font-sans">
-  <!-- loader --> 
-  <div id="loader" class="absolute inset-0 flex items-center justify-center bg-base-200 bg-opacity-50 hidden">
-    <div class="loading loading-spinner loading-lg"></div>
-  </div>
-  <!-- desktop sidebar -->
-  <div class="hidden lg:flex w-[10%] bg-base-200 p-4 flex-col gap-4 fixed left-0 top-0 bottom-0">
-    <label class="flex cursor-pointer gap-2 mb-4">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5" />
-        <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-      </svg>
-      <input type="checkbox" value="black" class="toggle theme-controller" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </label>
-    <button class="btn btn-ghost justify-start gap-2" data-page="home">
-      <i class="fas fa-home"></i> <span class="hidden lg:inline">Home</span>
-    </button>
-    <button class="btn btn-ghost justify-start gap-2" data-page="projects">
-      <i class="fas fa-info-circle"></i> <span class="hidden lg:inline">Projects</span>
-    </button>
-    <button class="btn btn-ghost justify-start gap-2" data-page="about">
-      <i class="fas fa-cogs"></i> <span class="hidden lg:inline">About</span>
-    </button>
-  </div>
-  
-  <!-- mobile navbar -->
-  <div class="navbar bg-base-100 shadow-sm flex lg:hidden">
+<body class="min-h-screen flex flex-col">
+  <!-- navbar -->
+  <div class="navbar bg-base-200">
     <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+      <div class="dropdown bg-base-200">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               class="h-5 w-5" fill="none" 
                viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M4 6h16M4 12h16M4 18h7" />
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
-          <li><a data-page="home">Home</a></li>
-          <li><a data-page="projects">Projects</a></li>
-          <li><a data-page="about">About</a></li>
+        <ul tabindex="0" 
+            class="menu menu-sm dropdown-content 
+                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
+          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
+          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
+          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
+          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
         </ul>
       </div>
+      <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
     </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost text-xl">Horizon</a>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
+        <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
+      </ul>
     </div>
     <div class="navbar-end">
+      <!-- dark/light theme -->
       <label class="toggle text-base-content">
         <input type="checkbox" value="black" class="theme-controller" />
+        <!-- sun icon -->
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2"></path>
             <path d="M12 20v2"></path>
@@ -98,406 +65,27 @@
             <path d="m19.07 4.93-1.41 1.41"></path>
           </g>
         </svg>
+        <!-- moon icon -->
         <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+             fill="none" stroke="currentColor">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </g>
         </svg>
       </label>
     </div>
   </div>
-  
-  <!-- main content -->
-  <div class="lg:ml-[10%] w-full lg:w-[90%]">
-    <div id="loader" class="absolute inset-0 flex items-center justify-center bg-base-200 bg-opacity-50 hidden">
-      <div class="loading loading-spinner loading-lg"></div>
-    </div>
-    <!-- content container -->
-    <div id="page-content" class="w-full max-w-4xl mx-auto px-4 pt-8 text-center prose">
-     <!-- js injected -->
-  </div>
 
-  <!-- homepage content -->
-  <div id="homepage-content" class="hidden w-full px-4 py-10 text-center flex flex-col items-center">
+  <!--  homepage -->
+  <main id="homepage-content" class="flex-grow p-5 md:p-10"></main>
 
-    <!-- Banner + Intro Container -->
-    <div class="max-w-2xl mx-auto">
-      <img 
-        src="./images/HORIZONbanner.png" 
-        alt="Horizon Banner" 
-        class="mb-6 mx-auto"
-      />
-      <h2 class="card p-2 bg-white mb-8">
-        We specialize in building innovative web solutions, from subscription-based 
-        text-to-speech apps to advanced 3D rendering platforms. Whether you need a 
-        restaurant menu management system, REST API integrations, or data 
-        visualization tools, our team is here to help.
-      </h2>
-      
-<!-- SERVICES SECTION -->
-<div class="w-full max-w-5xl mt-12 flex flex-col items-center mx-auto">
-  <h2 class="text-3xl font-bold mb-8">Services We Offer</h2>
-  
-  <!-- 4 columns on lg screens; items-stretch ensures same height -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full items-stretch">
+  <!-- footer -->
+  <footer class=" py-4 text-center">
+    <p class="text-sm">© 2025 Horizon. All rights reserved.</p>
+  </footer>
 
-    <!-- Card 1: Web Application + SEO -->
-    <div class="card bg-base-100 shadow-sm h-full flex flex-col">
-      <div class="card-body items-center text-center flex flex-col justify-center h-full">
-        <i class="fas fa-search text-4xl mb-3"></i>
-        <h3 class="card-title">Web App + SEO</h3>
-        <p class="text-sm mt-2">
-          Need a robust website or application with SEO optimization?
-          We’ll help you rank higher and reach your audience.
-        </p>
-      </div>
-    </div>
-
-    <!-- Card 2: Figma Design + Website -->
-    <div class="card bg-base-100 shadow-sm h-full flex flex-col">
-      <div class="card-body items-center text-center flex flex-col justify-center h-full">
-        <i class="fab fa-figma text-4xl mb-3"></i>
-        <h3 class="card-title">Figma + Website</h3>
-        <p class="text-sm mt-2">
-          From design mockups in Figma to a fully responsive site,
-          we turn ideas into visually striking, user-friendly sites.
-        </p>
-      </div>
-    </div>
-
-    <!-- Card 3: Restaurant Menu System -->
-    <div class="card bg-base-100 shadow-sm h-full flex flex-col">
-      <div class="card-body items-center text-center flex flex-col justify-center h-full">
-        <i class="fas fa-utensils text-4xl mb-3"></i>
-        <h3 class="card-title">Restaurant Menu System</h3>
-        <p class="text-sm mt-2">
-          Easily update menus and manage special offers, 
-          all in one mobile-friendly, streamlined web app for restaurants.
-        </p>
-      </div>
-    </div>
-
-    <!-- Card 4: Full Package -->
-    <div class="card bg-base-100 shadow-sm h-full flex flex-col">
-      <div class="card-body items-center text-center flex flex-col justify-center h-full">
-        <i class="fas fa-briefcase text-4xl mb-3"></i>
-        <h3 class="card-title">Complete Package</h3>
-        <p class="text-sm mt-2">
-          Frontend, backend, design, and social media management.
-          We cover every aspect so you can focus on your business.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    </div>
-
-  <!-- Technologies -->
-  <div class="w-full max-w-5xl mt-12 flex flex-col items-center">
-    <h2 class="text-3xl font-bold mb-8">Technologies We Use</h2>
-    <div class="grid 
-                grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 
-                gap-6 
-                place-items-center"
-    >
-    <!-- 1) HTML5 -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-html5 text-3xl mb-2"></i>
-      <span class="font-medium">HTML5</span>
-    </div>
-
-    <!-- 2) CSS3 -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-css3-alt text-3xl mb-2"></i>
-      <span class="font-medium">CSS3</span>
-    </div>
-
-    <!-- 3) JavaScript -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-js text-3xl mb-2"></i>
-      <span class="font-medium">JavaScript</span>
-    </div>
-
-    <!-- 4) Bootstrap -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-bootstrap text-3xl mb-2"></i>
-      <span class="font-medium">Bootstrap</span>
-    </div>
-
-    <!-- 5) Material UI -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-paint-brush text-3xl mb-2"></i>
-      <span class="font-medium">MaterialUI</span>
-    </div>
-
-    <!-- 6) ReactJS -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-react text-3xl mb-2"></i>
-      <span class="font-medium">ReactJS</span>
-    </div>
-
-    <!-- 7) Next.js -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-code text-3xl mb-2"></i>
-      <span class="font-medium">Next.js</span>
-    </div>
-
-    <!-- 8) AngularJS -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-angular text-3xl mb-2"></i>
-      <span class="font-medium">AngularJS</span>
-    </div>
-
-    <!-- 9) jQuery -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-code text-3xl mb-2"></i>
-      <span class="font-medium">jQuery</span>
-    </div>
-
-    <!-- 10) NodeJS -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-node text-3xl mb-2"></i>
-      <span class="font-medium">Node.js</span>
-    </div>
-
-    <!-- 11) ExpressJS -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-server text-3xl mb-2"></i>
-      <span class="font-medium">ExpressJS</span>
-    </div>
-
-    <!-- 12) JSON -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-file-code text-3xl mb-2"></i>
-      <span class="font-medium">JSON</span>
-    </div>
-
-    <!-- 13) npm -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-npm text-3xl mb-2"></i>
-      <span class="font-medium">npm</span>
-    </div>
-
-    <!-- 14) PHP -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fab fa-php text-3xl mb-2"></i>
-      <span class="font-medium">PHP</span>
-    </div>
-
-    <!-- 15) MySQL -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-database text-3xl mb-2"></i>
-      <span class="font-medium">MySQL</span>
-    </div>
-
-    <!-- 16) DigitalOcean -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-cloud text-3xl mb-2"></i>
-      <span class="font-medium">DigitalOcean</span>
-    </div>
-
-    <!-- 17) Chakra UI -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-bolt text-3xl mb-2"></i>
-      <span class="font-medium">Chakra UI</span>
-    </div>
-
-    <!-- 18) React Router -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-route text-3xl mb-2"></i>
-      <span class="font-medium">React Router</span>
-    </div>
-
-    <!-- 19) Tailwind CSS -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-wind text-3xl mb-2"></i>
-      <span class="font-medium">Tailwind</span>
-    </div>
-
-    <!-- 20) DaisyUI -->
-    <div class="card w-36 bg-base-100 border border-base-200 shadow-sm flex flex-col items-center p-4">
-      <i class="fas fa-star text-3xl mb-2"></i>
-      <span class="font-medium">DaisyUI</span>
-    </div>
-    </div>
-  </div>
-</div>
-
- <!-- project card -->
- <template id="card-template">
-  <div class="card-wrapper mb-6">
-    <div class="card lg:card-side bg-base-100 shadow w-full max-w-5xl mx-auto">
-      <div class="card-body text-left">
-        <h2 class="card-title mb-2"></h2>
-        <p class="whitespace-pre-line description"></p>
-        <p class="text-sm mt-2 opacity-70 tech"></p>
-        <!-- Swiper Slider -->
-        <div class="swiper swiper-in-card mt-4">
-          <div class="swiper-wrapper"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-</template>
-  
-<!-- project list -->
-<template id="web-solutions-template">
-  <ul class="list bg-base-100 rounded-box shadow-md text-left mb-10">
-    <h2 class="p-4 pb-2 opacity-60 tracking-wide">Web Application Solutions</h2>
-    <li class="list-row">
-      <div><i class="fas fa-notes-medical text-2xl"></i></div>
-      <div>Patient data management for a small clinic</div>
-      <div class="text-xs uppercase font-semibold opacity-60">
-        <a href="#dating-site-store-integration" class="text-primary">See more</a>
-      </div>
-    </li> 
-    <li class="list-row">
-      <div><i class="fas fa-headphones text-2xl"></i></div>
-      <div>Text to Speech App</div>
-      <div class="text-xs uppercase font-semibold opacity-60">
-        <a href="#zammad-ticket-automation" class="text-primary">See more</a>
-      </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-cube text-2xl"></i></div>
-      <div>3D rendering and sharing of autoCAD models</div>
-      <div class="text-xs uppercase font-semibold opacity-60">
-        <a href="#3d-model-rendering-platform" class="text-primary">See more</a>
-      </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-calendar-alt text-2xl"></i></div>
-        <div>Advent Calendar Game</div>
-        <div class="text-xs uppercase font-semibold opacity-60">
-          <a href="#advent-calendar-game" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-child text-2xl"></i></div>
-        <div>Alphabet Game</div>
-        <div class="text-xs uppercase font-semibold opacity-60">
-          <a href="#alphabet-game-for-kids" class="text-primary">See more</a>
-      </div>
-    </li>
-    </ul>
-    </template>
-
-    <template id="payment-integrations-template">
-      <ul class="list bg-base-100 rounded-box shadow-md text-left mb-10">
-    <h2 class="p-4 pb-2 opacity-60 tracking-wide">Payment Integrations</h2>
-
-    <li class="list-row">
-      <div><i class="fab fa-paypal text-2xl"></i></div>
-        <div>PayPal Integration</div>
-        <div class="text-xs uppercase font-semibold opacity-60">
-          <a href="#3d-model-rendering-platform" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fab fa-stripe-s text-2xl"></i></div>
-        <div>Stripe Integration</div>
-        <div class="text-xs uppercase font-semibold opacity-60">
-          <a href="#stripe-integration-connected-accounts" class="text-primary">See more</a>
-        </div>
-    </li>
-  </ul>
-</template>
-
-<template id="rest-api-template">
-  <ul class="list bg-base-100 rounded-box shadow-md text-left mb-10">
-    <h2 class="p-4 pb-2 opacity-60 tracking-wide">REST API and SDK Implementation</h2>
-    <li class="list-row">
-      <div><i class="fas fa-robot text-2xl text-primary"></i></div>
-        <div>Google text to speech</div>
-        <div class="text-xs opacity-60">Used in various TTS apps</div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-cubes text-2xl text-primary"></i></div>
-        <div>Autodesk 3D viewer</div>
-        <div class="text-xs opacity-60">
-          <a href="#3d-model-rendering-platform" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-ticket-alt text-2xl text-primary"></i></div>
-        <div>Zammad ticketing system</div>
-        <div class="text-xs opacity-60">
-          <a href="#zammad-ticket-automation" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-plane text-2xl text-primary"></i></div>
-        <div>Flightlab</div>
-        <div class="text-xs opacity-60">
-          <a href="#flight-data-visualization" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-map-marker-alt text-2xl text-primary"></i></div>
-        <div>Google places</div>
-        <div class="text-xs opacity-60">
-          <a href="#flight-data-visualization" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fab fa-shopify text-2xl text-primary"></i></div>
-        <div>Shopify Admin</div>
-        <div class="text-xs opacity-60">
-          <a href="#alphabet-game-for-kids" class="text-primary">See more</a>
-        </div>
-    </li>
-  </ul>
-</template>
-
-<template id="api-data-visualization-template">
-  <ul class="list bg-base-100 rounded-box shadow-md text-left mb-10">
-    <h2 class="p-4 pb-2 opacity-60 tracking-wide">API Data Visualization</h2>
-    <li class="list-row">
-      <div><i class="fas fa-globe text-2xl text-primary"></i></div>
-        <div>React + ThreeJS globe</div>
-        <div class="text-xs opacity-60">
-          <a href="#flight-data-visualization" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-qrcode text-2xl text-primary"></i></div>
-        <div>QR codes</div>
-        <div class="text-xs opacity-60">
-          <a href="#dating-site-store-integration" class="text-primary">See more</a>
-        </div>
-    </li>
-    <h2 class="p-4 pb-2 text-xs opacity-60 tracking-wide">Programming in Art</h2>
-    <li class="list-row">
-      <div><i class="fas fa-pencil-alt text-2xl text-primary"></i></div>
-      <div>
-        <div>Dynamic HTML editor</div>
-        <div class="text-xs opacity-60">
-          <a href="#interactive-multimedia-show-editor" class="text-primary">See more</a>
-        </div>
-      </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-wave-square text-2xl text-primary"></i></div>
-        <div>OSC messages</div>
-        <div class="text-xs opacity-60">
-          <a href="#interactive-multimedia-show-editor" class="text-primary">See more</a>
-        </div>
-    </li>
-    <li class="list-row">
-      <div><i class="fas fa-broadcast-tower text-2xl text-primary"></i></div>
-        <div>Live streams</div>
-        <div class="text-xs opacity-60">
-          <a href="#interactive-multimedia-show-editor" class="text-primary">See more</a>
-        </div>
-    </li>
-  </ul>
-</template>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/home.js"></script>
 </body>
 </html>
