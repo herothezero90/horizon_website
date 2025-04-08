@@ -42,34 +42,29 @@
         <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
       </ul>
     </div>
+
     <div class="navbar-end">
-      <!-- dark/light theme -->
-      <label class="toggle text-base-content">
-        <input type="checkbox" value="black" class="theme-controller" />
-        <!-- sun icon -->
-        <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2"></path>
-            <path d="M12 20v2"></path>
-            <path d="m4.93 4.93 1.41 1.41"></path>
-            <path d="m17.66 17.66 1.41 1.41"></path>
-            <path d="M2 12h2"></path>
-            <path d="M20 12h2"></path>
-            <path d="m6.34 17.66-1.41 1.41"></path>
-            <path d="m19.07 4.93-1.41 1.41"></path>
-          </g>
+      <!-- Theme toggle switch -->
+      <label class="swap swap-rotate">
+        <!-- hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" value="black" />
+
+        <!-- Sun icon (light mode) -->
+        <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
         </svg>
-        <!-- moon icon -->
-        <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-          </g>
+
+        <!-- Moon icon (dark mode) -->
+        <svg class="swap-off w-8 h-8 sm:w-10 sm:h-10 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
         </svg>
       </label>
     </div>
-  </div>
 
+  </div>
   <!-- main -->
   <main
     class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 animate-fade-right animate-duration-[1000ms] animate-ease-in">
@@ -85,17 +80,113 @@
         Some of the projects we have been working on:
       </h2>
     </div>
+
     <!-- PROJECT 1 -->
+
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          Restaurant management web app
+          <a href="https://horizondev.netlify.app/restaurant" target="_blank"
+            class="text-blue-500 text-sm ml-2">[SHOWCASE]</a>
+        </h2>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Responsive web application for managing menu items, adding new items, translation to 5 languages</li>
+          <li>Customizing live online menu from dashboard, online menu</li>
+          <li>Dashboard for customizable menu PDF export</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> NEXT JS, PHP, MySQL, Chakra UI, Digital Ocean
+        </p>
+      </div>
+
+      <div class="carousel w-full rounded-md">
+        <div id="restaurant-slide1" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant1.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide10" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide2" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant2.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide1" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide3" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide2" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide4" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide3" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide5" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide5" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant5.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide4" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide6" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide6" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant6.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide5" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide7" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide7" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant7.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide6" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide8" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide8" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant8.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide7" class="btn btn-circle">❮</a>
+            <a href="#restaurant-slide9" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="restaurant-slide9" class="carousel-item relative w-full">
+          <img src="./images/restaurant/restaurant9.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#restaurant-slide8" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROJECT 2 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
           Text to speech conversion web application
           <a href="https://cumulustalk.com/welcome.html" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>Implements Google API to convert text into MP3 audio</li>
-          <li>Supports language, voice, pitch, speed, SSML for advanced control</li>
-          <li>Includes subscription-based feature limits and a statistics panel</li>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Implements Google API to convert text into downloadable mp3</li>
+          <li>User can select language, male/female voice, voice type, voice pitch and voice speed to gain audio that
+            suits their needs</li>
+          <li>Users can also add SSML markups to written text to achieve better quality of audio in advance settings
+            panel</li>
+          <!-- <li>Includes subscription-based feature limits and a statistics panel</li> -->
+          <li>User can select language, male/female voice, voice type, voice pitch and voice speed to gain audio that
+            suits their needs</li>
+          <li>Statisctics panel displays history of users selections</li>
+          <!-- <li>Lenght of text, option to store text and audio data, count of conversions and usage of advanaced settings
+            panel are limited and depending on subscription type</li> -->
         </ul>
         <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
       </div>
@@ -107,60 +198,63 @@
     </div>
 
 
-    <!-- PROJECT 2-->
+    <!-- PROJECT 3-->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
           Dating Site Store Integration
         </h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>Web app to sell products on an existing dating site</li>
-          <li>Includes QR code generation and redemption</li>
-          <li>Merchant upload panel and admin tools (PHP/Yii)</li>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>QR code generator</li>
+          <li>QR code reader and redeem system</li>
+          <li>Yii (PHP framework) template adjustments for admin</li>
+          <li>Web app for merchants to upload products to existing dating site</li>
+          <li>Sell of products on dating site with QR code generated for each purchase</li>
+          <li>Physical products are sell in stores by redeem of QR code</li>
         </ul>
         <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
       </div>
 
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
+      <div class="carousel w-full rounded-md">
+        <div id="dating-slide1" class="carousel-item relative w-full">
           <img src="./images/dating site/datingsite_1.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
+            <a href="#dating-slide4" class="btn btn-circle">❮</a>
+            <a href="#dating-slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
+        <div id="dating-slide2" class="carousel-item relative w-full">
           <img src="./images/dating site/datingsite_2.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
+            <a href="#dating-slide1" class="btn btn-circle">❮</a>
+            <a href="#dating-slide3" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide3" class="carousel-item relative w-full">
+        <div id="dating-slide3" class="carousel-item relative w-full">
           <img src="./images/dating site/datingsite_3.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide2" class="btn btn-circle">❮</a>
-            <a href="#slide4" class="btn btn-circle">❯</a>
+            <a href="#dating-slide2" class="btn btn-circle">❮</a>
+            <a href="#dating-slide4" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide4" class="carousel-item relative w-full">
+        <div id="dating-slide4" class="carousel-item relative w-full">
           <img src="./images/dating site/datingsite_4.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide3" class="btn btn-circle">❮</a>
-            <a href="#slide1" class="btn btn-circle">❯</a>
+            <a href="#dating-slide3" class="btn btn-circle">❮</a>
+            <a href="#dating-slide1" class="btn btn-circle">❯</a>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- PROJECT 3 -->
+    <!-- PROJECT 4 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
           3D Model Rendering Platform
         </h2>
-        <ul class="list-disc list-inside mt-2">
+        <ul class="list-disc list-outside pl-5 mt-2">
           <li>Web app for rendering AutoCAD models with Autodesk SDK</li>
           <li>Supports logo overlays, subscription plans, and share functionality</li>
           <li>Includes user/admin panels</li>
@@ -170,68 +264,19 @@
         </p>
       </div>
 
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
+      <div class="carousel w-full rounded-md">
+        <div id="modeling-slide1" class="carousel-item relative w-full">
           <img src="./images/autodesk/autodesk_1.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
+            <a href="#modeling-slide2" class="btn btn-circle">❮</a>
+            <a href="#modeling-slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
+        <div id="modeling-slide2" class="carousel-item relative w-full">
           <img src="./images/autodesk/autodesk_2.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Stripe Integration (Connected Accounts)
-          <a href="https://cumulusgate.com/welcome.php" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>Connected Stripe accounts for vendors on a central platform</li>
-          <li>Admin can collect a platform fee</li>
-          <li>Uses Stripe PHP SDK</li>
-        </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> Stripe PHP SDK</p>
-      </div>
-
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="slide2" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="slide3" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="slide4" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
+            <a href="#modeling-slide1" class="btn btn-circle">❮</a>
+            <a href="#modeling-slide1" class="btn btn-circle">❯</a>
           </div>
         </div>
       </div>
@@ -243,68 +288,77 @@
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
-          Zammad Ticket Automation
+          Stripe Integration (Connected Accounts)
+          <a href="https://cumulusgate.com/welcome.php" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>Workflow automation using Zammad API and PHP scripts</li>
-          <li>Processes and updates tickets with scraped data</li>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Connected Stripe accounts for vendors on a central platform</li>
+          <li>Admin can collect a platform fee</li>
+          <li>Uses Stripe PHP SDK</li>
         </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> Zammad API Client PHP</p>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> Stripe PHP SDK</p>
       </div>
 
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
-          <img src="./images/ticketing/zammad_1.png" class="w-full" />
+      <div class="carousel w-full rounded-md">
+        <div id="stripe-slide1" class="carousel-item relative w-full">
+          <img src="./images/stripe/stripe_1.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
+            <a href="#stripe-slide4" class="btn btn-circle">❮</a>
+            <a href="#stripe-slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
-          <img src="./images/ticketing/zammad_2.png" class="w-full" />
+        <div id="stripe-slide2" class="carousel-item relative w-full">
+          <img src="./images/stripe/stripe_2.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
+            <a href="#stripe-slide1" class="btn btn-circle">❮</a>
+            <a href="#stripe-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="stripe-slide3" class="carousel-item relative w-full">
+          <img src="./images/stripe/stripe_3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#stripe-slide2" class="btn btn-circle">❮</a>
+            <a href="#stripe-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="stripe-slide4" class="carousel-item relative w-full">
+          <img src="./images/stripe/stripe_4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#stripe-slide3" class="btn btn-circle">❮</a>
+            <a href="#stripe-slide1" class="btn btn-circle">❯</a>
           </div>
         </div>
       </div>
 
+    </div>
     </div>
 
     <!-- PROJECT 6 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
-          Flight Data Visualization
+          Zammad Ticket Automation
         </h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>Interactive 3D globe visualizing flight data via Flightlab API</li>
-          <li>Includes WebSocket chat and Google Places integration</li>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Workflow automation using Zammad API and PHP scripts</li>
+          <li>Processes and updates tickets with scraped data</li>
         </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> React, ThreeJS, Node.js, Express, WebSockets, Google Places, Flightlab API
-        </p>
+        <p class="mt-2 text-sm"><strong>Technologies:</strong> Zammad API Client PHP</p>
       </div>
 
-      <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
-          <video class="w-full" controls>
-            <source src="./images/multimedia show/artproject_1.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      <div class="carousel w-full rounded-md">
+        <div id="zammad-slide1" class="carousel-item relative w-full">
+          <img src="./images/ticketing/zammad_1.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" class="btn btn-circle">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
+            <a href="#zammad-slide2" class="btn btn-circle">❮</a>
+            <a href="#zammad-slide2" class="btn btn-circle">❯</a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
-          <video class="w-full" controls>
-            <source src="./images/multimedia show/artproject_2.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div id="zammad-slide2" class="carousel-item relative w-full">
+          <img src="./images/ticketing/zammad_2.png" class="w-full" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
+            <a href="zammad-slide1" class="btn btn-circle">❮</a>
+            <a href="zammad-slide1" class="btn btn-circle">❯</a>
           </div>
         </div>
       </div>
@@ -315,9 +369,34 @@
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
+          Flight Data Visualization
+        </h2>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Interactive 3D globe visualizing flight data via Flightlab API</li>
+          <li>Includes WebSocket chat and Google Places integration</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> React, ThreeJS, Node.js, Express, WebSockets, Google Places, Flightlab API
+        </p>
+      </div>
+      <div class="carousel w-full rounded-md">
+        <div id="slide1" class="carousel-item relative w-full">
+          <video class="w-full" controls>
+            <source src="./images/visualization_1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROJECT 8 -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
           Interactive Multimedia Show Editor
         </h2>
-        <ul class="list-disc list-inside mt-2">
+        <ul class="list-disc list-outside pl-5 mt-2">
           <li>Controls displays, live streams, games, audio via smartphones</li>
           <li>Layer-based editor, similar to a live Photoshop environment</li>
         </ul>
@@ -325,12 +404,33 @@
           <strong>Technologies:</strong> Node.js, Express, Socket.io, OSC, HTML, CSS, JS
         </p>
       </div>
-      <figure>
-        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
-      </figure>
+
+      <div class="carousel w-full rounded-md">
+        <div id="multimedia-slide1" class="carousel-item relative w-full">
+          <video class="w-full" controls>
+            <source src="./images/multimedia show/artproject_1.mov" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#multimedia-slide2" class="btn btn-circle">❮</a>
+            <a href="#multimedia-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="multimedia-slide2" class="carousel-item relative w-full">
+          <video class="w-full" controls>
+            <source src="./images/multimedia show/artproject_2.mov" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#multimedia-slide1" class="btn btn-circle">❮</a>
+            <a href="#multimedia-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- PROJECT 8 -->
+    <!-- PROJECT 9 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -338,7 +438,7 @@
           <a href="https://formation.stepforward-education.fr/" target="_blank"
             class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
-        <ul class="list-disc list-inside mt-2">
+        <ul class="list-disc list-outside pl-5 mt-2">
           <li>Interactive game platform for kids learning English</li>
           <li>Includes audio, drag-and-drop, crosswords, progress tracking</li>
         </ul>
@@ -346,12 +446,62 @@
           <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
         </p>
       </div>
-      <figure>
-        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
-      </figure>
+
+      <div class="carousel w-full rounded-md">
+        <div id="advent-slide1" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_1.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide4" class="btn btn-circle">❮</a>
+            <a href="#advent-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide2" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_2.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide1" class="btn btn-circle">❮</a>
+            <a href="#advent-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide3" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide2" class="btn btn-circle">❮</a>
+            <a href="#advent-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide4" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide3" class="btn btn-circle">❮</a>
+            <a href="#advent-slide5" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide5" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_5.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide4" class="btn btn-circle">❮</a>
+            <a href="#advent-slide6" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide6" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_6.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide5" class="btn btn-circle">❮</a>
+            <a href="#advent-slide7" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="advent-slide7" class="carousel-item relative w-full">
+          <img src="./images/advent calendar/advent_7.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#advent-slide6" class="btn btn-circle">❮</a>
+            <a href="#advent-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- PROJECT 9 -->
+    <!-- PROJECT 10 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -359,7 +509,7 @@
           <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
             class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
-        <ul class="list-disc list-inside mt-2">
+        <ul class="list-disc list-outside pl-5 mt-2">
           <li>Educational game sold via Shopify, connected via API</li>
           <li>Includes HTML emails, login/register system, interactive games</li>
         </ul>
@@ -367,9 +517,183 @@
           <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
         </p>
       </div>
-      <figure>
-        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
-      </figure>
+
+      <div class="carousel w-full rounded-md">
+        <div id="alphabet-slide1" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_1.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide2" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_2.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide1" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide3" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide2" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide4" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide3" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide5" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide5" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_5.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide6" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_6.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide5" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROJECT 11 -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          The Subject Pronouns Game for Kids
+          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
+            class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Educational game sold via Shopify, connected via API</li>
+          <li>Made after Figma design, responsive</li>
+          <li>Includes HTML emails, login/register system, interactive games</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
+        </p>
+      </div>
+
+      <div class="carousel w-full rounded-md">
+        <div id="alphabet-slide1" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_1.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide2" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_2.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide1" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide3" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide2" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide4" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide3" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide5" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide5" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_5.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide6" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_6.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide5" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 12 -->
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-xl font-bold">
+          The Animals Game for Kids
+          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
+            class="text-blue-500 text-sm ml-2">[View]</a>
+        </h2>
+        <ul class="list-disc list-outside pl-5 mt-2">
+          <li>Educational game sold via Shopify, connected via API</li>
+          <li>Made after Figma design, responsive</li>
+          <li>Includes HTML emails, login/register system, interactive games</li>
+        </ul>
+        <p class="mt-2 text-sm">
+          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
+        </p>
+      </div>
+
+      <div class="carousel w-full rounded-md">
+        <div id="alphabet-slide1" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_1.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide2" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_2.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide1" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide3" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_3.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide2" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide4" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_4.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide3" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide5" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide5" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_5.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="alphabet-slide6" class="carousel-item relative w-full">
+          <img src="./images/alphabet game/alphabet_6.png" class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#alphabet-slide5" class="btn btn-circle">❮</a>
+            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </main>
@@ -378,9 +702,9 @@
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
 
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
+  <script src="./js/projects.js"></script>
 </body>
 
 </html>

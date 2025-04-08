@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizon – Home</title>
+  <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <!-- navbar -->
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown bg-base-200">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+          <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
+          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
+          <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+          <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
+        <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <div class="navbar-end">
+      <!-- Theme toggle switch -->
+      <label class="swap swap-rotate">
+        <!-- hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" value="black" />
+
+        <!-- Sun icon (light mode) -->
+        <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+
+        <!-- Moon icon (dark mode) -->
+        <svg class="swap-off w-8 h-8 sm:w-10 sm:h-10 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+      </label>
+    </div>
+
+  </div>
+
+  <!--  homepage -->
+  <main id="restaurant-content" class="flex-grow p-5 md:p-10">
+
+    <!-- hero -->
+    <div class="hero h-[60vh] rounded-[30px]" style="background-image: url(./images/restaurant.png); opacity: 0.7;">
+      <div class="hero-overlay rounded-[30px]"></div>
+      <div class="hero-content text-neutral-content text-left">
+        <div class="max-w-xl">
+          <h1
+            class="text-5xl md:text-5xl theme-color font-bold mb-5 text-left animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms] ">
+            RESTAURANT MENU WEB APP
+          </h1>
+          <h2
+            class="text-xl md:text-3xl mb-2 font-heading text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms] ">
+            Responsive web app for restaurants
+          </h2>
+          <h2
+            class="text-xl md:text-3xl mb-2 font-heading text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms] ">
+            to keep track of items on the menu
+          </h2>
+          <h2
+            class="text-xl md:text-3xl font-heading text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms] ">
+            customize digital menu
+          </h2>
+          <h2
+            class="text-xl md:text-3xl font-heading text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms] ">
+            or export menu as PDF
+          </h2>
+          <p class="mt-5 animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms] ">
+            NEXT JS, PHP, MySQL, Chakra UI, Digital Ocean
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <section>
+        <div class="flex flex-col lg:flex-row items-center max-w-7xl mx-auto gap-10 py-10">
+          <!-- text -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left relative inline-block">
+            <h2 class="text-2xl md:text-4xl main-heading font-bold mb-2 font-heading text-center">
+              MOBILE
+            </h2>
+            <!-- SVG  -->
+            <img src="./images/mobile.svg" alt="Decorative SVG"
+              class="absolute bottom-2 left-5 translate-x-2 translate-y-4 w-12 h-12 md:w-32 md:h-32 pointer-events-none select-none" />
+          </div>
+          <!-- video -->
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <video class="w-auto max-h-[500px] rounded-lg shadow-lg" controls>
+              <source src="./images/Screen Recording 2025-04-08 at 20.12.17.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col lg:flex-row items-center max-w-7xl mx-auto gap-10 py-10">
+          <!-- text -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left relative inline-block order-1 lg:order-2">
+            <h2 class="text-2xl md:text-4xl main-heading font-bold mb-2 font-heading text-center">
+              DESKTOP
+            </h2>
+            <!-- SVG -->
+            <img src="./images/responsive.svg" alt="Decorative SVG"
+              class="absolute bottom-10 right-5 translate-x-2 translate-y-4 w-12 h-12 md:w-48 md:h-48 pointer-events-none select-none" />
+          </div>
+          <!-- video -->
+          <div class="w-full lg:w-1/2 flex justify-center order-2 lg:order-1">
+            <video class="w-auto max-h-[500px] rounded-lg shadow-lg" controls>
+              <source src="./images/Screen Recording 2025-04-08 at 20.24.30.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- cards -->
+    <div class="grid grid-flow-row grid-rows-2 gap-4">
+      <div class="w-full max-w-6xl mx-auto px-4 pt-10 grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 ">
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Card Title</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            </div>
+            <figure>
+              <img src="./images/restaurant/rest1.png" alt="Shoes" />
+            </figure>
+          </div>
+        </section>
+
+      </div>
+
+
+    </div>
+
+    <!-- footer -->
+    <footer class="py-4 text-center">
+      <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
