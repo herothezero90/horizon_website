@@ -36,7 +36,11 @@ module.exports = {
       }),
     },
   },
-  plugins: [daisyui, require('@tailwindcss/typography')],
+  plugins: [
+    daisyui,
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animated')
+  ],
   daisyui: {
     themes: ['lofi', 'black'],
   },

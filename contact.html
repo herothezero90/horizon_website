@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Horizon</title>
+  <title>Contact | Horizon</title>
   <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col justify-between">
 
   <div class="navbar bg-base-200">
     <div class="navbar-start">
@@ -24,13 +28,12 @@
                   d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0" 
-            class="menu menu-sm dropdown-content 
-                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
-          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
-          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
-          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
-          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <li><a class="text-3xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
       <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
@@ -73,34 +76,40 @@
     </div>
   </div>
 
-  <!-- main -->
-  <main class="min-h-screen flex">
-    <div class="items-center text-center flex flex-col justify-center h-full">
-
-      <!-- lofi -->
-      <div class="overflow-hidden h-84 w-50 mb-3 pb-10 block" data-theme-visible="lofi">
-        <img
-          src="./images/hero.png"
-          alt="Hero image for light theme"
-          class="w-full h-full object-cover object-[center_20%]"
-        />
-      </div>
-    
-      <!-- black -->
-      <div class="overflow-hidden h-84 w-50 mb-3 pb-10 hidden" data-theme-visible="black">
-        <img
-          src="./images/hero_dark.png"
-          alt="Hero image for dark theme"
-          class="w-full h-full object-cover object-[center_20%]"
-        />
-      </div>
-    
-      <section class="max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-20 theme-color">GET IN TOUCH</h1>
-        <h2 class="text-2xl mb-2 mt-10 text-center">
-          horizon.dev.info@gmail.com
+  <main class="w-full flex-grow">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-center max-w-6xl w-full px-4 py-12 mx-auto gap-10">
+      
+      <!-- Contact Info -->
+      <section class="w-full lg:w-1/2 mt-0 lg:-mt-24 animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms]">
+        <h1 class="text-5xl font-bold mb-6 theme-color text-center">GET IN TOUCH</h1>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl mb-2 text-center">
+          <a href="mailto:horizon.dev.info@gmail.com" class="hover:underline text-black-600">
+            horizon.dev.info@gmail.com
+          </a>
         </h2>
       </section>
+  
+      <!-- Image Block -->
+      <div class="w-full lg:w-1/2 animate-fade-down animate-once animate-ease-linear animate-duration-[1000ms]">
+       <!-- Light Theme Image -->
+        <div class="block mt-0 lg:mt-24" data-theme-visible="lofi">
+          <img
+            src="./images/pair-programming-light.png"
+            alt="Hero light"
+            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto"
+          />
+        </div>
+
+        <!-- Dark Theme Image -->
+        <div class="hidden mt-0 lg:mt-24" data-theme-visible="black">
+          <img
+            src="./images/pair-programming-dark.png"
+            alt="Hero dark"
+            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto"
+          />
+        </div>
+      </div>
+  
     </div>
   </main>
 

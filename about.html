@@ -9,8 +9,10 @@
   <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
-  
-  <!-- Font Awesome for icons -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -27,13 +29,12 @@
                   d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0" 
-            class="menu menu-sm dropdown-content 
-                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
-          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
-          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
-          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
-          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <li><a class="text-3xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
       <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
@@ -78,103 +79,91 @@
 
   
   <!-- Main content container -->
-  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow">
-    <h1 class="text-4xl font-bold text-center mb-10">Our Team</h1>
+  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow mb-10">
+    <h1 class="text-4xl font-bold text-center sm:mb-2 lg:mb-10">Our Team:</h1>
     <!-- 2 columns on md and up, 1 column on mobile -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
-      <!-- CARD 1: Dubravka -->
-      <div class="bg-base-100 shadow-sm flex flex-row w-96 h-52 overflow-hidden">
-        <figure class="w-1/2 h-full">
-          <img
-            src="./images/dubravka.jpeg"
-            alt="Dubravka Spoljaric"
-            class="object-cover w-full h-full"
-          />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
+      <!-- Dubravka -->
+      <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[400px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+        <figure class="w-full md:w-1/2 h-full">
+          <img src="./images/dubravka.jpeg" alt="Dubravka Spoljaric" class="object-cover w-full h-full rounded-md" />
         </figure>
-        <div class="flex flex-col w-1/2 h-full p-4 justify-between">
+        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
           <div>
-            <h2 class="text-lg font-bold">Dubravka Spoljaric</h2>
-            <p class="text-sm font-semibold">Full Stack Developer</p>
+            <h2 class="text-xl font-bold">Dubravka Spoljaric</h2>
+            <p class="text-base font-semibold">Full Stack Developer</p>
           </div>
-          <p class="text-sm flex-grow">
+          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
             Handles backend logic and API integrations. Loves building scalable systems.
           </p>
-          <div class="text-xl space-x-3">
+          <div class="text-2xl space-x-3">
             <a href="https://github.com/somehorizonplaceholder" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/dubravka-example" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2: Karla -->
-      <div class="bg-base-100 shadow-sm flex flex-row w-96 h-52 overflow-hidden">
-        <figure class="w-1/2 h-full">
-          <img
-            src="./images/karla.jpg"
-            alt="Karla Lenard"
-            class="object-cover w-full h-full"
-          />
-        </figure>
-        <div class="flex flex-col w-1/2 h-full p-4 justify-between">
-          <div>
-            <h2 class="text-lg font-bold">Karla Lenard</h2>
-            <p class="text-sm font-semibold">Frontend Developer</p>
-          </div>
-          <p class="text-sm flex-grow">
-            Focused on clean UI and seamless UX. Passionate about CSS art and web animation.
-          </p>
-          <div class="text-xl space-x-3">
-            <a href="https://github.com/karla-lenard" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/karla-example" target="_blank"><i class="fab fa-linkedin"></i></a>
+     <!-- Karla -->
+        <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[400px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+          <figure class="w-full md:w-1/2 h-full">
+            <img src="./images/karla.jpg" alt="Karla Lenard" class="object-cover w-full h-full rounded-md" />
+          </figure>
+          <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
+            <div>
+              <h2 class="text-xl font-bold">Karla Lenard</h2>
+              <p class="text-base font-semibold">Frontend Developer</p>
+            </div>
+            <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
+              Focused on clean UI and seamless UX. Passionate about CSS art and web animation.
+            </p>
+            <div class="text-2xl space-x-3">
+              <a href="https://github.com/karla-lenard" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/karla-example" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- CARD 3: Ivona -->
-      <div class="bg-base-100 shadow-sm flex flex-row w-96 h-52 overflow-hidden">
-        <figure class="w-1/2 h-full">
-          <img
-            src="./images/ivona.jpg"
-            alt="Ivona Lenard"
-            class="object-cover w-full h-full"
-          />
-        </figure>
-        <div class="flex flex-col w-1/2 h-full p-4 justify-between">
-          <div>
-            <h2 class="text-lg font-bold">Ivona Lenard</h2>
-            <p class="text-sm font-semibold">Social Media Manager</p>
+      <h1 class="text-4xl font-bold text-center mb-10 mt-10">Extended team:</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+      <!-- Ivona -->
+          <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[400px] lg:h-60 overflow-hidden p-4 animate-fade-right animate-once animate-duration-1000">
+            <figure class="w-full md:w-1/2 h-full">
+              <img src="./images/ivona.jpg" alt="Ivona Lenard" class="object-cover w-full h-full rounded-md" />
+            </figure>
+            <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
+              <div>
+                <h2 class="text-xl font-bold">Ivona Lenard</h2>
+                <p class="text-base font-semibold">Social Media Manager</p>
+              </div>
+              <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
+                Google Ads, Facebook, Instagram, TikTok
+              </p>
+              <div class="text-2xl space-x-3">
+                <a href="https://www.linkedin.com/in/ivona-example" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
           </div>
-          <p class="text-sm flex-grow">
-            Google Ads, Facebook, Instagram, TikTok
-          </p>
-          <div class="text-xl space-x-3">
-            <a href="https://www.linkedin.com/in/ivona-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
 
-      <!-- CARD 4: Mia -->
-      <div class="bg-base-100 shadow-sm flex flex-row w-96 h-52 overflow-hidden">
-        <figure class="w-1/2 h-full">
-          <img
-            src="./images/mia.jpeg"
-            alt="Mia Majstor"
-            class="object-cover w-full h-full"
-          />
+        <!-- Mia -->
+      <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[400px] lg:h-60 overflow-hidden p-4 animate-fade-right animate-once animate-duration-1000">
+        <figure class="w-full md:w-1/2 h-full">
+          <img src="./images/mia.jpeg" alt="Mia Majstor" class="object-cover w-full h-full rounded-md" />
         </figure>
-        <div class="flex flex-col w-1/2 h-full p-4 justify-between">
+        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
           <div>
-            <h2 class="text-lg font-bold">Mia Majstor</h2>
-            <p class="text-sm font-semibold">UI/UX Designer (Clever Fox Design)</p>
+            <h2 class="text-xl font-bold">Mia Majstor</h2>
+            <p class="text-base font-semibold">UI/UX Designer (Clever Fox Design)</p>
           </div>
-          <p class="text-sm flex-grow">
+          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
             Crafts intuitive interfaces and pixel-perfect designs.
           </p>
-          <div class="text-xl space-x-3">
+          <div class="text-2xl space-x-3">
             <a href="https://cleverfoxdesign.hr/en" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
+
     </div>
   </main>
 
