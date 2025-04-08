@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="lofi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,28 +10,22 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
   <link
-  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet"
-/>
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="min-h-screen flex flex-col">
-<!-- navbar -->
+  <!-- navbar -->
   <div class="navbar bg-base-100">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" 
-               class="h-5 w-5" fill="none" 
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M4 6h16M4 12h8m-8 6h16" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0"
-          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
           <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
@@ -53,8 +48,7 @@
         <input type="checkbox" value="black" class="theme-controller" />
         <!-- sun icon -->
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2"></path>
             <path d="M12 20v2"></path>
@@ -68,8 +62,7 @@
         </svg>
         <!-- moon icon -->
         <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </g>
         </svg>
@@ -77,20 +70,21 @@
     </div>
   </div>
 
-  <!-- Projects (2 columns on desktop) -->
-  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 animate-fade-right animate-duration-[1000ms] animate-ease-in">
+  <!-- main -->
+  <main
+    class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 animate-fade-right animate-duration-[1000ms] animate-ease-in">
     <div class="flex flex-col items-center gap-6 md:gap-20 mt-0 lg:mt-20">
-  <!-- Image -->
-  <figure class="w-full md:w-auto flex justify-center">
-    <img src="./images/design.svg" alt="projects" class="w-64 h-64 object-cover rounded-md" />
-  </figure>
-
-  <!-- Text -->
-  <h2 class="text-5xl text-center md:text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
-    Some of the projects we have been working on so far:
-  </h2>
-</div>
-    <!-- PROJECT 1: Text to Speech -->
+      <!-- image -->
+      <figure class="w-full md:w-auto flex justify-center">
+        <img src="./images/design.svg" alt="projects" class="w-64 h-64 object-cover rounded-md" />
+      </figure>
+      <!-- text -->
+      <h2
+        class="text-5xl text-center md:text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+        Some of the projects we have been working on so far:
+      </h2>
+    </div>
+    <!-- PROJECT 1 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -109,7 +103,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 2: Dating Site Store Integration -->
+    <!-- PROJECT 2-->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -127,7 +121,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 3: 3D Model Rendering Platform -->
+    <!-- PROJECT 3 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -147,7 +141,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 4: Stripe Integration -->
+    <!-- PROJECT 4 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -166,7 +160,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 5: Zammad Ticket Automation -->
+    <!-- PROJECT 5 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -183,7 +177,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 6: Flight Data Visualization -->
+    <!-- PROJECT 6 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -202,7 +196,7 @@
       </figure>
     </div>
 
-    <!-- PROJECT 7: Interactive Multimedia Show Editor -->
+    <!-- PROJECT 7 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
@@ -221,12 +215,13 @@
       </figure>
     </div>
 
-    <!-- PROJECT 8: Advent Calendar Game -->
+    <!-- PROJECT 8 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
           Advent Calendar Game
-          <a href="https://formation.stepforward-education.fr/" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+          <a href="https://formation.stepforward-education.fr/" target="_blank"
+            class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
         <ul class="list-disc list-inside mt-2">
           <li>Interactive game platform for kids learning English</li>
@@ -241,12 +236,13 @@
       </figure>
     </div>
 
-    <!-- PROJECT 9: Alphabet Game for Kids -->
+    <!-- PROJECT 9 -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
         <h2 class="card-title text-xl font-bold">
           Alphabet Game for Kids
-          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
+          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
+            class="text-blue-500 text-sm ml-2">[View]</a>
         </h2>
         <ul class="list-disc list-inside mt-2">
           <li>Educational game sold via Shopify, connected via API</li>
@@ -263,7 +259,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="py-4 text-center">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
@@ -272,4 +267,5 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
 </body>
+
 </html>

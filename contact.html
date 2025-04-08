@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="lofi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,28 +10,22 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
   <link
-  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet"
-/>
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
 
+<body class="min-h-screen flex flex-col justify-between">
+  <!-- navbar -->
   <div class="navbar bg-base-100">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" 
-               class="h-5 w-5" fill="none" 
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M4 6h16M4 12h8m-8 6h16" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0"
-          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
           <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
@@ -53,8 +48,7 @@
         <input type="checkbox" value="black" class="theme-controller" />
         <!-- sun icon -->
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2"></path>
             <path d="M12 20v2"></path>
@@ -68,8 +62,7 @@
         </svg>
         <!-- moon icon -->
         <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </g>
         </svg>
@@ -78,10 +71,12 @@
   </div>
 
   <main class="w-full flex-grow">
-    <div class="flex flex-col-reverse lg:flex-row items-center justify-center max-w-6xl w-full px-4 py-12 mx-auto gap-10">
-      
+    <div
+      class="flex flex-col-reverse lg:flex-row items-center justify-center max-w-6xl w-full px-4 py-12 mx-auto gap-10">
+
       <!-- Contact Info -->
-      <section class="w-full lg:w-1/2 mt-0 lg:-mt-24 animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms]">
+      <section
+        class="w-full lg:w-1/2 mt-0 lg:-mt-24 animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms]">
         <h1 class="text-5xl font-bold mb-6 theme-color text-center">GET IN TOUCH</h1>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl mb-2 text-center">
           <a href="mailto:horizon.dev.info@gmail.com" class="hover:underline text-black-600">
@@ -89,28 +84,22 @@
           </a>
         </h2>
       </section>
-  
+
       <!-- Image Block -->
       <div class="w-full lg:w-1/2 animate-fade-down animate-once animate-ease-linear animate-duration-[1000ms]">
-       <!-- Light Theme Image -->
+        <!-- Light Theme Image -->
         <div class="block mt-0 lg:mt-24" data-theme-visible="lofi">
-          <img
-            src="./images/pair-programming-light.png"
-            alt="Hero light"
-            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto"
-          />
+          <img src="./images/pair-programming-light.png" alt="Hero light"
+            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto" />
         </div>
 
         <!-- Dark Theme Image -->
         <div class="hidden mt-0 lg:mt-24" data-theme-visible="black">
-          <img
-            src="./images/pair-programming-dark.png"
-            alt="Hero dark"
-            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto"
-          />
+          <img src="./images/pair-programming-dark.png" alt="Hero dark"
+            class="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto" />
         </div>
       </div>
-  
+
     </div>
   </main>
 
@@ -122,4 +111,5 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
 </body>
+
 </html>

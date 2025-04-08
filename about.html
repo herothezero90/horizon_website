@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="lofi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Horizon</title>
-
-  <!-- Tailwind + DaisyUI -->
   <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
   <link
-  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-  rel="stylesheet"
-/>
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="min-h-screen flex flex-col">
+  <!-- navbar -->
   <div class="navbar bg-base-100">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" 
-               class="h-5 w-5" fill="none" 
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M4 6h16M4 12h8m-8 6h16" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0"
-          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
           <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
@@ -53,8 +47,7 @@
         <input type="checkbox" value="black" class="theme-controller" />
         <!-- sun icon -->
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2"></path>
             <path d="M12 20v2"></path>
@@ -68,8 +61,7 @@
         </svg>
         <!-- moon icon -->
         <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-             fill="none" stroke="currentColor">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </g>
         </svg>
@@ -77,14 +69,15 @@
     </div>
   </div>
 
-  
-  <!-- Main content container -->
+
+  <!-- main -->
   <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow mb-10">
     <h1 class="text-4xl font-bold text-center sm:mb-2 lg:mb-10">Our Team:</h1>
-    <!-- 2 columns on md and up, 1 column on mobile -->
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
       <!-- Dubravka -->
-      <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+      <div
+        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
         <figure class="w-full md:w-1/2 h-full">
           <img src="./images/dubravka.jpeg" alt="Dubravka Spoljaric" class="object-cover w-full h-full rounded-md" />
         </figure>
@@ -103,51 +96,55 @@
         </div>
       </div>
 
-     <!-- Karla -->
-     <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
-      <figure class="w-full md:w-1/2 h-full">
-            <img src="./images/karla.jpg" alt="Karla Lenard" class="object-cover w-full h-full rounded-md" />
-          </figure>
-          <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-            <div>
-              <h2 class="text-xl font-bold">Karla Lenard</h2>
-              <p class="text-base font-semibold">Frontend Developer</p>
-            </div>
-            <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-              Focused on clean UI and seamless UX. Passionate about CSS art and web animation.
-            </p>
-            <div class="text-2xl space-x-3">
-              <a href="https://github.com/karla-lenard" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/karla-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
+      <!-- Karla -->
+      <div
+        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+        <figure class="w-full md:w-1/2 h-full">
+          <img src="./images/karla.jpg" alt="Karla Lenard" class="object-cover w-full h-full rounded-md" />
+        </figure>
+        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
+          <div>
+            <h2 class="text-xl font-bold">Karla Lenard</h2>
+            <p class="text-base font-semibold">Frontend Developer</p>
+          </div>
+          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
+            Focused on clean UI and seamless UX. Passionate about CSS art and web animation.
+          </p>
+          <div class="text-2xl space-x-3">
+            <a href="https://github.com/karla-lenard" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/karla-example" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-4xl font-bold text-center mb-10 mt-10">Extended team:</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
+
+      <!-- Ivona -->
+      <div
+        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+        <figure class="w-full md:w-1/2 h-full">
+          <img src="./images/ivona.jpg" alt="Ivona Lenard" class="object-cover w-full h-full rounded-md" />
+        </figure>
+        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
+          <div>
+            <h2 class="text-xl font-bold">Ivona Lenard</h2>
+            <p class="text-base font-semibold">Social Media Manager</p>
+          </div>
+          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
+            Google Ads, Facebook, Instagram, TikTok
+          </p>
+          <div class="text-2xl space-x-3">
+            <a href="https://www.linkedin.com/in/ivona-example" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
 
-      <h1 class="text-4xl font-bold text-center mb-10 mt-10">Extended team:</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
-      <!-- Ivona -->
-      <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
+      <!-- Mia -->
+      <div
+        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
         <figure class="w-full md:w-1/2 h-full">
-        <img src="./images/ivona.jpg" alt="Ivona Lenard" class="object-cover w-full h-full rounded-md" />
-            </figure>
-            <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-              <div>
-                <h2 class="text-xl font-bold">Ivona Lenard</h2>
-                <p class="text-base font-semibold">Social Media Manager</p>
-              </div>
-              <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-                Google Ads, Facebook, Instagram, TikTok
-              </p>
-              <div class="text-2xl space-x-3">
-                <a href="https://www.linkedin.com/in/ivona-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        <!-- Mia -->
-        <div class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-1000">
-          <figure class="w-full md:w-1/2 h-full">
           <img src="./images/mia.jpeg" alt="Mia Majstor" class="object-cover w-full h-full rounded-md" />
         </figure>
         <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
@@ -167,15 +164,13 @@
     </div>
   </main>
 
-  <!-- Footer  -->
   <footer class="py-4 text-center">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
 
-
-  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
   <script src="./js/about.js"></script>
 </body>
+
 </html>
