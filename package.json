@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "tailwindcss-animated": "^2.0.0"
   }
 }

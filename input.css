@@ -23,7 +23,7 @@
   }
 
   .main-heading {
-    font-size: 10em !important;
+    font-size: 8em !important;
     color: #F5CF0A;
   }
 
@@ -141,6 +141,11 @@
   }
 
   @layer base {
+
+    html {
+      font-family: 'Phudu', sans-serif;
+    }
+
 
     h1,
     h2,

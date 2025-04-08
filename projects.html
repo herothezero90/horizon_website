@@ -7,6 +7,10 @@
   <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -24,13 +28,12 @@
                   d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </div>
-        <ul tabindex="0" 
-            class="menu menu-sm dropdown-content 
-                   rounded-box z-10 mt-3 w-52 p-2 shadow bg-base-200">
-          <li class="text-5xl font-bold"><a href="index.html">HOME</a></li>
-          <li class="text-5xl font-bold"><a href="about.html">ABOUT</a></li>
-          <li class="text-5xl font-bold"><a href="projects.html">PROJECTS</a></li>
-          <li class="text-5xl font-bold"><a href="contact.html">CONTACT</a></li>
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+        <li><a class="text-3xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+        <li><a class="text-3xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
       <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
@@ -74,8 +77,18 @@
   </div>
 
   <!-- Projects (2 columns on desktop) -->
-  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6">
+  <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 animate-fade-right animate-duration-[1000ms] animate-ease-in">
+    <div class="flex flex-col items-center gap-6 md:gap-20 mt-0 lg:mt-20">
+  <!-- Image -->
+  <figure class="w-full md:w-auto flex justify-center">
+    <img src="./images/design.svg" alt="projects" class="w-64 h-64 object-cover rounded-md" />
+  </figure>
 
+  <!-- Text -->
+  <h2 class="text-5xl text-center md:text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+    Some of the projects we have been working on so far:
+  </h2>
+</div>
     <!-- PROJECT 1: Text to Speech -->
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
