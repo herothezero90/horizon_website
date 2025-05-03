@@ -78,7 +78,7 @@
   [data-theme="lofi"] .card {
     border-radius: 0.5rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: white;
+    /* background-color: white; */
     /* padding-top: 0; */
   }
 
@@ -86,7 +86,7 @@
   [data-theme="black"] .card {
     border-radius: 0.5rem;
     border: none;
-    background-color: black;
+    /* background-color: black; */
     /* padding-top: 0; */
   }
 
@@ -107,44 +107,54 @@
     overflow-y: auto;
   }
 
-  @layer base {
+  .tech-card {
+    position: relative;
+    overflow: hidden;
+    /* your new yellow base: */
+    background-color: #F5CF0A !important;
+    opacity: 1;
+    background-color: #F5CF0A;
+    background-image: linear-gradient(30deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(150deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(30deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(150deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(60deg, #ebc40077 25%, transparent 25.5%, transparent 75%, #ebc40077 75%, #ebc40077), linear-gradient(60deg, #ebc40077 25%, transparent 25.5%, transparent 75%, #ebc40077 75%, #ebc40077);
+    background-size: 34px 60px;
+    background-position: 0 0, 0 0, 17px 30px, 17px 30px, 0 0, 17px 30px;
 
-    html {
-      font-family: 'Phudu', sans-serif;
+    [data-theme="lofi"] [data-theme-visible="lofi"] {
+      display: block;
     }
 
-
-    h1,
-    h2,
-    h3 {
-      font-family: 'Phudu', sans-serif;
-      font-weight: bold;
+    [data-theme="lofi"] [data-theme-visible="black"] {
+      display: none;
     }
 
-    p {
-      font-family: 'Onest', sans-serif;
+    [data-theme="black"] [data-theme-visible="lofi"] {
+      display: none;
     }
 
-    li {
-      font-family: 'Onest', sans-serif;
+    [data-theme="black"] [data-theme-visible="black"] {
+      display: block;
     }
   }
 }
 
-@layer components {
-  [data-theme="lofi"] [data-theme-visible="lofi"] {
-    display: block;
+@layer base {
+
+  html {
+    font-family: 'Phudu', sans-serif;
   }
 
-  [data-theme="lofi"] [data-theme-visible="black"] {
-    display: none;
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Phudu', sans-serif;
+    font-weight: bold;
   }
 
-  [data-theme="black"] [data-theme-visible="lofi"] {
-    display: none;
+  p {
+    font-family: 'Onest', sans-serif;
   }
 
-  [data-theme="black"] [data-theme-visible="black"] {
-    display: block;
+  li {
+    font-family: 'Onest', sans-serif;
   }
 }
