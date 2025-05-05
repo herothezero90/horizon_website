@@ -12,6 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,8 +29,8 @@
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
           <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
@@ -37,8 +39,8 @@
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
-        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
         <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
         <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
       </ul>
     </div>
@@ -66,649 +68,244 @@
 
   </div>
   <!-- main -->
-  <main
-    class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 animate-fade-right animate-duration-[1000ms] animate-ease-in">
-    <div class="flex flex-col items-center gap-6 md:gap-20 mt-0  md:mt-10 lg:mt-20">
-      <!-- image -->
-      <figure
-        class="w-full md:w-auto flex justify-center animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms]">
-        <img src="./images/design.svg" alt="projects" class="w-64 h-64 object-cover rounded-md" />
-      </figure>
-      <!-- text -->
-      <h2
-        class="text-5xl text-center md:text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
-        Some of the projects we have been working on:
-      </h2>
-    </div>
 
-    <!-- PROJECT 1 -->
-
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Restaurant management web app
-          <!-- <a href="https://horizondev.netlify.app/restaurant" target="_blank"
-            class="text-blue-500 text-sm ml-2">[SHOWCASE]</a> -->
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Responsive web application for managing menu items, adding new items, translation to 5 languages</li>
-          <li>Customizing live online menu from dashboard, online menu</li>
-          <li>Dashboard for customizable menu PDF export</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> NEXT JS, PHP, MySQL, Chakra UI, Digital Ocean
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="restaurant-slide1" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide10" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide2" class="btn btn-circle">❯</a>
+  <!-- mvp approact -->
+  <div class="overflow-hidden py-1 sm:py-[30px] bg-base-100">
+    <div class="mx-auto max-w-7xl px-1 lg:px-2">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-2 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:pt-4 lg:pr-8">
+          <div class="lg:max-w-lg">
+            <p class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+              MVP-FIRST approach
+            </p>
+            <p class="mt-6 text-xl/8 font-bold">
+              We help startups and businesses bring new ideas to market faster with MVP (Minimum Viable Product)
+              development. Our team focuses on what matters most — delivering a functional, testable version of your
+              product that meets user needs while staying lean and cost-efficient.
+            </p>
+            <dl class="mt-10 max-w-xl space-y-8 text-base/7 lg:max-w-none">
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-xl">
+                  <svg class="absolute top-1 left-1 size-5 text-[#F5CF0A]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Core feature development.
+                </dt>
+                <dd class="inline text-xl">
+                  We identify and build only the essential features needed to validate your product idea and satisfy
+                  early users.
+                </dd>
+              </div>
+              <div class=" relative pl-9">
+                <dt class="inline font-semibold text-xl">
+                  <svg class=" absolute top-1 left-1 size-5 text-[#F5CF0A]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Rapid prototyping & validation.
+                </dt>
+                <dd class="inline text-xl">
+                  We design interactive prototypes and MVPs for real-user feedback, helping you validate your concept
+                  before full-scale investment.
+                </dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-xl">
+                  <svg class="absolute top-1 left-1 size-5 text-[#F5CF0A]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
+                    <path fill-rule="evenodd"
+                      d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Scalable architecture.
+                </dt>
+                <dd class="inline text-xl">
+                  Our MVPs are built with scalability in mind, so when you're ready to grow, your product can scale with
+                  you seamlessly.
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
-        <div id="restaurant-slide2" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide1" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide3" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide2" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide4" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide3" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide5" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide5" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant5.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide4" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide6" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide6" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant6.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide5" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide7" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide7" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant7.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide6" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide8" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide8" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant8.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide7" class="btn btn-circle">❮</a>
-            <a href="#restaurant-slide9" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="restaurant-slide9" class="carousel-item relative w-full">
-          <img src="./images/restaurant/restaurant9.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#restaurant-slide8" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Text to speech conversion web application
-          <a href="https://cumulustalk.com/welcome.html" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Implements Google API to convert text into downloadable mp3</li>
-          <li>User can select language, male/female voice, voice type, voice pitch and voice speed to gain audio that
-            suits their needs</li>
-          <li>Users can also add SSML markups to written text to achieve better quality of audio in advance settings
-            panel</li>
-          <!-- <li>Includes subscription-based feature limits and a statistics panel</li> -->
-          <li>User can select language, male/female voice, voice type, voice pitch and voice speed to gain audio that
-            suits their needs</li>
-          <li>Statisctics panel displays history of users selections</li>
-          <!-- <li>Lenght of text, option to store text and audio data, count of conversions and usage of advanaced settings
-            panel are limited and depending on subscription type</li> -->
-        </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
-      </div>
-      <!-- gallery -->
-      <figure>
-        <video src="../images/visualization_1.mp4" controls class="w-full"></video>
-      </figure>
-
-    </div>
-
-
-    <!-- PROJECT 3-->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Dating Site Store Integration
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>QR code generator</li>
-          <li>QR code reader and redeem system</li>
-          <li>Yii (PHP framework) template adjustments for admin</li>
-          <li>Web app for merchants to upload products to existing dating site</li>
-          <li>Sell of products on dating site with QR code generated for each purchase</li>
-          <li>Physical products are sell in stores by redeem of QR code</li>
-        </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="dating-slide1" class="carousel-item relative w-full">
-          <img src="./images/dating site/datingsite_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#dating-slide4" class="btn btn-circle">❮</a>
-            <a href="#dating-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="dating-slide2" class="carousel-item relative w-full">
-          <img src="./images/dating site/datingsite_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#dating-slide1" class="btn btn-circle">❮</a>
-            <a href="#dating-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="dating-slide3" class="carousel-item relative w-full">
-          <img src="./images/dating site/datingsite_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#dating-slide2" class="btn btn-circle">❮</a>
-            <a href="#dating-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="dating-slide4" class="carousel-item relative w-full">
-          <img src="./images/dating site/datingsite_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#dating-slide3" class="btn btn-circle">❮</a>
-            <a href="#dating-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          3D Model Rendering Platform
-          <a href=" https://aps.autodesk.com/developer/idea/viewer-app" target="_blank"
-            class="text-blue-500 text-sm ml-2">[VIEW]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Web app for rendering AutoCAD models with Autodesk SDK</li>
-          <li>Supports logo overlays, subscription plans, and share functionality</li>
-          <li>Includes user/admin panels</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL, Autodesk PHP SDK, PayPal
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="modeling-slide1" class="carousel-item relative w-full">
-          <img src="./images/autodesk/autodesk_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#modeling-slide2" class="btn btn-circle">❮</a>
-            <a href="#modeling-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="modeling-slide2" class="carousel-item relative w-full">
-          <img src="./images/autodesk/autodesk_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#modeling-slide1" class="btn btn-circle">❮</a>
-            <a href="#modeling-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
+        <!-- image -->
+        <!-- <div class="relative lg:block hidden py-10 animate-fade-right animate-duration-[1000ms] animate-ease-in"> -->
+        <img src="./images/design.svg" alt="Product screenshot"
+          class="w-[48rem] max-w-none sm:w-[57rem] md:-ml-2 lg:-ml-0" width="2432" height="1442">
+        <!-- </div> -->
       </div>
     </div>
+  </div>
 
+  <h2 class="text-5xl font-bold text-center py-10 animate-fade-left animate-once animate-duration-2000">
+    some of our previous projects:
+  </h2>
+
+  <!-- database management -->
+  <section
+    class="bg-base-100/80 mt-10 mx-3 mx-auto rounded-md py-2 px-1 sm:px-6 md:px-10 max-w-full sm:max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
+    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">Database management</h2>
+      <p class="text-lg mb-8">
+        Projects focused on food service, menu customization, and multilingual management:
+        * Restaurant management web app(NEXT.js, PHP, MySQL, Chakra UI, Digital Ocean)
+        * Menu item management, live updates, multilingual support, and PDF export.
+        * HTML, CSS, Bootstrap, JavaScript, React, PHP, MySQL
+      </p>
+
+      <p class="text-lg mb-8"> Admin data management panel
+        Internal web application for Lifeline Clinic in Namibia for purposes of running patients database, ailment and
+        attendance history, feeding program and outreach program database.
+        Option to export various data from database and data management panel to add new database parameters specific
+        for health clinic work.
+        Access allowed only for clinic stuff.
+        Design in simple and clean with data entry enabled by using keyboard to simulate desktop software (enter, tab,
+        ...)</p>
+
+      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/restaurant_mockup.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/clinic_mockup.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
+          </div>
+        </div>
+
+        <div class="swiper-button-prev text-gray-700"></div>
+        <div class="swiper-button-next text-gray-700"></div>
+      </div>
     </div>
+  </section>
 
-    <!-- PROJECT 5 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Stripe Integration (Connected Accounts)
-          <a href="https://cumulusgate.com/welcome.php" target="_blank" class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Connected Stripe accounts for vendors on a central platform</li>
-          <li>Admin can collect a platform fee</li>
-          <li>Uses Stripe PHP SDK</li>
-        </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> Stripe PHP SDK</p>
+  <!-- games -->
+  <section class="bg-base-100/80 mt-10 mx-3 mx-auto rounded-md py-2 px-1 sm:px-6 md:px-10 max-w-full sm:max-w-5xl"
+    data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
+      <p class="text-lg mb-8">
+        HTML, CSS, Boostrap, JavaScript, PHP, MySQL
+        Game platform for multiuser accounts
+        Avatars, custom animation
+        HTML emails
+        Shopify API
+      </p>
+      <p>includes wordsearch, drag and drop, animations</p>
+      <p class="text-lg mb-8">
+        <li>Educational game sold via Shopify, connected via API</li>
+        <li>Made after Figma design, responsive</li>
+        <li>Includes HTML emails, login/register system, interactive games</li>
+      </p>
+      <p class="mt-2 text-sm">
+        <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
+      </p>
+
+      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
+          </div>
+        </div>
+
+        <div class="swiper-button-prev text-gray-700"></div>
+        <div class="swiper-button-next text-gray-700"></div>
       </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="stripe-slide1" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#stripe-slide4" class="btn btn-circle">❮</a>
-            <a href="#stripe-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="stripe-slide2" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#stripe-slide1" class="btn btn-circle">❮</a>
-            <a href="#stripe-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="stripe-slide3" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#stripe-slide2" class="btn btn-circle">❮</a>
-            <a href="#stripe-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="stripe-slide4" class="carousel-item relative w-full">
-          <img src="./images/stripe/stripe_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#stripe-slide3" class="btn btn-circle">❮</a>
-            <a href="#stripe-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </section>
+
+  <!-- games -->
+  <section class="bg-base-100 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-full sm:max-w-5xl"
+    data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4">GAMES</h2>
+      <p class="text-lg mb-8">
+        HTML, CSS, Boostrap, JavaScript, PHP, MySQL
+        Game platform for multiuser accounts
+        Avatars, custom animation
+        HTML emails
+        Shopify API
+      </p>
+      <p>includes wordsearch, drag and drop, animations</p>
+      <p class="text-lg mb-8">
+        <li>Educational game sold via Shopify, connected via API</li>
+        <li>Made after Figma design, responsive</li>
+        <li>Includes HTML emails, login/register system, interactive games</li>
+      </p>
+      <p class="mt-2 text-sm">
+        <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
+      </p>
+
+      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
+          </div>
+        </div>
+
+        <div class="swiper-button-prev text-gray-700"></div>
+        <div class="swiper-button-next text-gray-700"></div>
+      </div>
     </div>
+  </section>
 
-    <!-- PROJECT 6 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Zammad Ticket Automation
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Workflow automation using Zammad API and PHP scripts</li>
-          <li>Processes and updates tickets with scraped data</li>
-        </ul>
-        <p class="mt-2 text-sm"><strong>Technologies:</strong> Zammad API Client PHP</p>
-      </div>
+  <div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+        <h2 class="text-2xl font-bold text-gray-900">Website design</h2>
 
-      <div class="carousel w-full rounded-md">
-        <div id="zammad-slide1" class="carousel-item relative w-full">
-          <img src="./images/ticketing/zammad_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#zammad-slide2" class="btn btn-circle">❮</a>
-            <a href="#zammad-slide2" class="btn btn-circle">❯</a>
+        <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+          <div class="group relative">
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg"
+              alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Desk and Office
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+          </div>
+          <div class="group relative">
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg"
+              alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Self-Improvement
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+          </div>
+          <div class="group relative">
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg"
+              alt="Collection of four insulated travel bottles on wooden shelf."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Travel
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
           </div>
         </div>
-        <div id="zammad-slide2" class="carousel-item relative w-full">
-          <img src="./images/ticketing/zammad_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="zammad-slide1" class="btn btn-circle">❮</a>
-            <a href="zammad-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
       </div>
-
     </div>
-
-    <!-- PROJECT 7 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Flight Data Visualization
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Interactive 3D globe visualizing flight data via Flightlab API</li>
-          <li>Chat, flight search, data visualization, google places API to autocomplete users entries</li>
-          <li>Due to NDA details are not presented</li>
-          <li>Web socket based chat</li>
-          <li>Google places</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> React + ThreeJS, Node.js, JavaScript, Bootstrap, Express
-        </p>
-      </div>
-      <div class="carousel w-full rounded-md">
-        <div id="slide1" class="carousel-item relative w-full">
-          <video class="w-full" controls>
-            <source src="./images/visualization_1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 8 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Interactive Multimedia Show Editor
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Controls displays, live streams, games, audio via smartphones</li>
-          <li>Layer-based editor, similar to a live Photoshop environment</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> Node.js, Express, Socket.io, OSC, HTML, CSS, JS
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="multimedia-slide1" class="carousel-item relative w-full">
-          <video class="w-full" controls>
-            <source src="./images/multimedia show/artproject_1.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#multimedia-slide2" class="btn btn-circle">❮</a>
-            <a href="#multimedia-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="multimedia-slide2" class="carousel-item relative w-full">
-          <video class="w-full" controls>
-            <source src="./images/multimedia show/artproject_2.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#multimedia-slide1" class="btn btn-circle">❮</a>
-            <a href="#multimedia-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 9 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Advent Calendar Game
-          <a href="https://formation.stepforward-education.fr/" target="_blank"
-            class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Interactive game platform for kids learning English</li>
-          <li>Includes audio, drag-and-drop, crosswords, progress tracking</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="advent-slide1" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide4" class="btn btn-circle">❮</a>
-            <a href="#advent-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide2" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide1" class="btn btn-circle">❮</a>
-            <a href="#advent-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide3" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide2" class="btn btn-circle">❮</a>
-            <a href="#advent-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide4" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide3" class="btn btn-circle">❮</a>
-            <a href="#advent-slide5" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide5" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_5.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide4" class="btn btn-circle">❮</a>
-            <a href="#advent-slide6" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide6" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_6.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide5" class="btn btn-circle">❮</a>
-            <a href="#advent-slide7" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="advent-slide7" class="carousel-item relative w-full">
-          <img src="./images/advent calendar/advent_7.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#advent-slide6" class="btn btn-circle">❮</a>
-            <a href="#advent-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 10 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          Alphabet Game for Kids
-          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
-            class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Educational game sold via Shopify, connected via API</li>
-          <li>Includes HTML emails, login/register system, interactive games</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="alphabet-slide1" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide2" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide1" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide3" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide2" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide4" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide3" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide5" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide5" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_5.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide6" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_6.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide5" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROJECT 11 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          The Subject Pronouns Game for Kids
-          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
-            class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Educational game sold via Shopify, connected via API</li>
-          <li>Made after Figma design, responsive</li>
-          <li>Includes HTML emails, login/register system, interactive games</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="alphabet-slide1" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide2" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide1" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide3" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide2" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide4" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide3" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide5" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide5" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_5.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide6" class="carousel-item relative w-full">
-          <img src="./images/alphabet game/alphabet_6.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide5" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- PROJECT 12 -->
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-xl font-bold">
-          The Animals Game for Kids
-          <a href="https://formation.stepforward-education.fr/amazing-english/" target="_blank"
-            class="text-blue-500 text-sm ml-2">[View]</a>
-        </h2>
-        <ul class="list-disc list-outside pl-5 mt-2">
-          <li>Educational game sold via Shopify, connected via API</li>
-          <li>Made after Figma design, responsive</li>
-          <li>Includes HTML emails, login/register system, interactive games</li>
-        </ul>
-        <p class="mt-2 text-sm">
-          <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
-        </p>
-      </div>
-
-      <div class="carousel w-full rounded-md">
-        <div id="animals-slide1" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_1.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide4" class="btn btn-circle">❮</a>
-            <a href="#animals-slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="animals-slide2" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_2.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide1" class="btn btn-circle">❮</a>
-            <a href="#animals-slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="animals-slide3" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_3.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide2" class="btn btn-circle">❮</a>
-            <a href="#animals-slide4" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="animals-slide4" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_4.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide3" class="btn btn-circle">❮</a>
-            <a href="#animals-slide5" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="alphabet-slide5" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_5.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#alphabet-slide4" class="btn btn-circle">❮</a>
-            <a href="#alphabet-slide6" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="animals-slide6" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_6.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide5" class="btn btn-circle">❮</a>
-            <a href="#animals-slide7" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-        <div id="animals-slide7" class="carousel-item relative w-full">
-          <img src="./images/animals game/animals_7.png" class="w-full" />
-          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#animals-slide6" class="btn btn-circle">❮</a>
-            <a href="#animals-slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
+  </div>
 
   <footer class="py-4 text-center">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
@@ -717,6 +314,23 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
   <script src="./js/projects.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init();
+    });
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 20,
+      slidesPerView: 1,
+      grabCursor: true,
+    });
+  </script>
 </body>
 
 </html>

@@ -27,8 +27,8 @@
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
           <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
+          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
           <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
@@ -37,14 +37,14 @@
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
-        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
         <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
+        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
         <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
       </ul>
     </div>
 
     <div class="navbar-end">
-      <!-- Theme toggle switch -->
+      <!-- theme toggle -->
       <label class="swap swap-rotate">
         <!-- hidden checkbox controls the state -->
         <input type="checkbox" class="theme-controller" value="black" />
@@ -69,99 +69,155 @@
 
   <!-- main -->
   <main class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow mb-10">
-    <h1 class="text-4xl font-bold text-center sm:mb-2 lg:mb-10 animate-fade-right animate-once animate-duration-2000">
-      Our Team:</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
+    <h1 class="text-5xl font-bold text-center mb-10 animate-fade-right animate-once animate-duration-2000">
+      Our Team:
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+
       <!-- Dubravka -->
       <div
-        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-2000">
-        <figure class="w-full md:w-1/2 h-full">
-          <img src="./images/dubravka.jpeg" alt="Dubravka Spoljaric" class="object-cover w-full h-full rounded-md" />
+        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
+        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
+
+          <div class="flex items-center">
+            <img class="rounded-full w-20 h-20" src="./images/dubravka.jpeg" alt="Dubravka Spoljaric">
+            <figcaption class="ms-4 text-left space-y-1">
+              <div class="text-2xl font-bold text-[#F5CF0A]">Dubravka Spoljaric</div>
+              <div class="text-lg text-gray-500 dark:text-gray-400">Full Stack Developer</div>
+            </figcaption>
+          </div>
+
+          <div class="flex ms-10 space-x-3">
+            <a href="https://github.com/duda1304" target="_blank"><i class="fab fa-github text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/dubravka-%C5%A1poljari%C4%87-906403a/" target="_blank"><i
+                class="fab fa-linkedin text-xl"></i></a>
+          </div>
         </figure>
-        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-          <div>
-            <h2 class="text-xl font-bold">Dubravka Spoljaric</h2>
-            <p class="text-base font-semibold">Full Stack Developer</p>
-          </div>
-          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-            Handles backend logic and API integrations. Loves building scalable systems.
-          </p>
-          <div class="text-2xl space-x-3">
-            <a href="https://github.com/somehorizonplaceholder" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dubravka-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
+
+        <ul class="list-disc text-md mt-4 ms-4">
+          <li>Develops responsive, accessible, and performant user interfaces using modern frameworks (e.g. React, Vue)
+          </li>
+          <li>Builds and maintains backend services with Node.js, Express, or other server-side technologies</li>
+          <li>Designs and manages relational and NoSQL databases such as PostgreSQL, MySQL, and MongoDB</li>
+          <li>Creates RESTful and/or GraphQL APIs to enable communication between frontend and backend systems</li>
+          <li>Implements user authentication, authorization, and session management securely</li>
+          <li>Deploys and monitors applications using services like Docker, Vercel, or DigitalOcean</li>
+          <li>Troubleshoots across the full stack—from browser UI bugs to server/database issues</li>
+        </ul>
       </div>
 
       <!-- Karla -->
       <div
-        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-2000">
-        <figure class="w-full md:w-1/2 h-full">
-          <img src="./images/karla.jpg" alt="Karla Lenard" class="object-cover w-full h-full rounded-md" />
+        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
+        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
+
+          <div class="flex items-center">
+            <img class="rounded-full w-20 h-20" src="./images/karla.jpg" alt="Karla Lenard">
+            <figcaption class="ms-4 text-left space-y-1">
+              <div class="text-2xl font-bold text-[#F5CF0A]">Karla Lenard</div>
+              <div class="text-lg text-gray-500 dark:text-gray-400">Frontend Developer</div>
+            </figcaption>
+          </div>
+
+          <div class="flex ms-10 space-x-3">
+            <a href="https://github.com/herothezero90" target="_blank">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/karla-lenard-b7590b26b/" target="_blank">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </div>
         </figure>
-        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-          <div>
-            <h2 class="text-xl font-bold">Karla Lenard</h2>
-            <p class="text-base font-semibold">Frontend Developer</p>
-          </div>
-          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-            Focused on clean UI and seamless UX. Passionate about CSS art and web animation.
-          </p>
-          <div class="text-2xl space-x-3">
-            <a href="https://github.com/karla-lenard" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/karla-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
+
+        <ul class="list-disc text-md mt-4 ms-4">
+          <li>Designs and implements user interfaces with HTML, CSS (Tailwind, SCSS), and JavaScript</li>
+          <li>Builds interactive, single-page or routed applications using frameworks like React</li>
+          <li>Focuses on responsive design to ensure smooth performance across devices and screen sizes</li>
+          <li>Uses UI libraries (like DaisyUI, Chakra UI, or Material UI, Bootstrap) to accelerate development</li>
+          <li>Optimizes websites for speed and performance, ensures cross-browser compatibility and accessibility</li>
+          <li>Collaborates with backend developers to integrate APIs and display dynamic content</li>
+          <li>Works closely with designers to translate mockups into functional web pages</li>
+        </ul>
       </div>
+
     </div>
 
-    <h1 class="text-4xl font-bold text-center mb-10 mt-10  animate-fade-right animate-once animate-duration-2000">
-      Extended team:</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center p-10">
+    <h1 class="text-4xl font-bold text-center mt-16 mb-10 animate-fade-right animate-once animate-duration-2000">
+      Extended Team:
+    </h1>
 
-      <!-- Ivona -->
-      <div
-        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-2000">
-        <figure class="w-full md:w-1/2 h-full">
-          <img src="./images/ivona.jpg" alt="Ivona Lenard" class="object-cover w-full h-full rounded-md" />
-        </figure>
-        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-          <div>
-            <h2 class="text-xl font-bold">Ivona Lenard</h2>
-            <p class="text-base font-semibold">Social Media Manager</p>
-          </div>
-          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-            Google Ads, Facebook, Instagram, TikTok
-          </p>
-          <div class="text-2xl space-x-3">
-            <a href="https://www.linkedin.com/in/ivona-example" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
 
       <!-- Mia -->
       <div
-        class="card bg-base-100 shadow-md flex flex-col md:flex-row w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[500px] h-[500px] lg:h-60 overflow-hidden p-4 animate-fade-left animate-once animate-duration-2000">
-        <figure class="w-full md:w-1/2 h-full">
-          <img src="./images/mia.jpeg" alt="Mia Majstor" class="object-cover w-full h-full rounded-md" />
+        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
+        <figure class="flex items-start bg-base-300 rounded-md p-4">
+
+          <div class="flex items-center">
+            <img class="rounded-full w-20 h-20" src="./images/mia.jpeg" alt="Mia Majstor">
+            <figcaption class="ms-4 text-left space-y-1">
+              <div class="text-2xl font-bold text-[#F5CF0A]">Mia Majstor</div>
+              <a href="https://cleverfoxdesign.hr/en" target="_blank"
+                class="text-lg text-gray-500 dark:text-gray-400 underline">Clever Fox
+                Design</a>
+              <div class="text-lg text-gray-500 dark:text-gray-400">Brand Identity & Web Designer</div>
+            </figcaption>
+          </div>
+
+          <div class="flex ms-10 space-x-3">
+            <a href="https://www.linkedin.com/in/mia-majstor-39a257246/" target="_blank">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </div>
         </figure>
-        <div class="flex flex-col w-full md:w-1/2 h-full px-4 justify-between text-center md:text-left">
-          <div>
-            <h2 class="text-xl font-bold">Mia Majstor</h2>
-            <p class="text-base font-semibold">UI/UX Designer (Clever Fox Design)</p>
+
+        <ul class="list-disc text-md mt-4 ms-4">
+          <li>Brand identity, crafting unique visual identities that resonate with client objectives and
+            target audiences</li>
+          <li>Experienced in UI/UX design, creating intuitive and user-centered interfaces that enhance usability and
+            engagement</li>
+          <li>Skilled in web design, developing visually appealing and functional websites </li>
+          <li>Proficient in visual design, utilizing creative tools and techniques to deliver compelling visuals and
+            graphics</li>
+        </ul>
+      </div>
+
+      <!-- Ivona -->
+      <div
+        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
+        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
+
+          <div class="flex items-center">
+            <img class="rounded-full w-20 h-20" src="./images/ivona.jpg" alt="Ivona Lenard">
+            <figcaption class="ms-4 text-left space-y-1">
+              <div class="text-2xl font-bold text-[#F5CF0A]">Ivona Lenard</div>
+              <div class="text-lg text-gray-500 dark:text-gray-400">Social Media Manager</div>
+            </figcaption>
           </div>
-          <p class="text-base flex-grow leading-snug mt-4 lg:mt-0">
-            Crafts intuitive interfaces and pixel-perfect designs.
-          </p>
-          <div class="text-2xl space-x-3">
-            <a href="https://cleverfoxdesign.hr/en" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+          <div class="flex ms-10 space-x-3">
+            <a href="https://www.linkedin.com/in/ivona-lenard-59892a118/" target="_blank"><i
+                class="fab fa-linkedin text-xl"></i></a>
           </div>
-        </div>
+        </figure>
+
+        <ul class="list-disc text-md mt-4 ms-4">
+          <li>Expertise in Google Ads & Meta marketing, focusing on strategic campaigns and targeted advertising.</li>
+          <li>Proficient in social media management, enhancing brand presence across various platforms.</li>
+          <li>Skilled in content writing, creating engaging and informative posts that resonate with the audience.</li>
+          <li>Experienced in digital marketing strategies, optimizing online channels for increased reach and
+            engagement.</li>
+          <li>Specializes in social media campaign management, developing and executing effective campaigns to achieve
+            marketing objectives.</li>
+        </ul>
       </div>
 
     </div>
   </main>
+
+
 
   <footer class="py-4 text-center">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>

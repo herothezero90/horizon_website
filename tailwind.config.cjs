@@ -4,7 +4,7 @@ const daisyui = require('daisyui');
 module.exports = {
   content: [
     './*.html',
-    './**/*.html',
+    './!(node_modules)/**/*.html',
     './*.js'
   ],
   theme: {

@@ -74,6 +74,8 @@
     background-size: 55px 55px;
   }
 
+
+
   /* light theme card */
   [data-theme="lofi"] .card {
     border-radius: 0.5rem;
@@ -107,33 +109,44 @@
     overflow-y: auto;
   }
 
-  .tech-card {
+
+
+  [data-theme="lofi"] [data-theme-visible="lofi"] {
+    display: block;
+  }
+
+  [data-theme="lofi"] [data-theme-visible="black"] {
+    display: none;
+  }
+
+  [data-theme="black"] [data-theme-visible="lofi"] {
+    display: none;
+  }
+
+  [data-theme="black"] [data-theme-visible="black"] {
+    display: block;
+  }
+
+  .service-card {
     position: relative;
     overflow: hidden;
-    /* your new yellow base: */
     background-color: #F5CF0A !important;
     opacity: 1;
     background-color: #F5CF0A;
     background-image: linear-gradient(30deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(150deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(30deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(150deg, #ebc400 12%, transparent 12.5%, transparent 87%, #ebc400 87.5%, #ebc400), linear-gradient(60deg, #ebc40077 25%, transparent 25.5%, transparent 75%, #ebc40077 75%, #ebc40077), linear-gradient(60deg, #ebc40077 25%, transparent 25.5%, transparent 75%, #ebc40077 75%, #ebc40077);
     background-size: 34px 60px;
     background-position: 0 0, 0 0, 17px 30px, 17px 30px, 0 0, 17px 30px;
-
-    [data-theme="lofi"] [data-theme-visible="lofi"] {
-      display: block;
-    }
-
-    [data-theme="lofi"] [data-theme-visible="black"] {
-      display: none;
-    }
-
-    [data-theme="black"] [data-theme-visible="lofi"] {
-      display: none;
-    }
-
-    [data-theme="black"] [data-theme-visible="black"] {
-      display: block;
-    }
   }
+
+  .tech-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 17px), repeating-linear-gradient(#f8f8f855, #f8f8f8);
+    background-position: 0 0, 0 0, 17px 30px, 17px 30px, 0 0, 17px 30px;
+  }
+
 }
 
 @layer base {
