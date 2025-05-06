@@ -3286,18 +3286,13 @@ img {
   gap: 2rem;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .gap-y-16 {
   row-gap: 4rem;
-}
-
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -3648,10 +3643,6 @@ img {
     width: 57rem;
   }
 
-  .sm\:w-\[100rem\] {
-    width: 100rem;
-  }
-
   .sm\:max-w-3xl {
     max-width: 48rem;
   }
@@ -3676,21 +3667,6 @@ img {
   .sm\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .sm\:py-\[70px\] {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .sm\:py-\[50px\] {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .sm\:py-\[10px\] {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .sm\:py-\[30px\] {
