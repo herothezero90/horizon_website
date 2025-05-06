@@ -109,8 +109,6 @@
     overflow-y: auto;
   }
 
-
-
   [data-theme="lofi"] [data-theme-visible="lofi"] {
     display: block;
   }
