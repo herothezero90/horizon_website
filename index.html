@@ -13,9 +13,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>Horizon – Home</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link href="./dist/output.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <link rel="preload" href="/dist/output.css" as="style">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -83,7 +87,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
-  <script src="./js/home.js"></script>
+  <script src="./js/home.js" defer></script>
 </body>
 
 </html>
