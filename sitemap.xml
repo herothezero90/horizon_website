@@ -1,0 +1,28 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://horizon-dev.hr/</loc>
+<lastmod>2025-05-30T19:15:38+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://horizon-dev.hr/projects</loc>
+<lastmod>2025-05-30T19:15:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://horizon-dev.hr/startup</loc>
+<lastmod>2025-05-30T19:15:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://horizon-dev.hr/about</loc>
+<lastmod>2025-05-30T19:15:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://horizon-dev.hr/contact</loc>
+<lastmod>2025-05-30T19:15:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+</urlset>
