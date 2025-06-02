@@ -25,8 +25,14 @@
     </div>
     <!-- right image -->
     <div class="w-full lg:w-1/2 flex justify-center">
-      <img rel="preload" src="./images/hero3.png" loading="eager" alt="Hero Illustration"
-        class="w-full max-w-[250px] sm:max-w-[300px] md:max-w-sm animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms]" />
+      <picture>
+        <!-- webp -->
+        <source type="image/webp" srcset="./images/hero3.webp" />
+        <!-- png -->
+        <img src="./images/hero3.png" width="300" height="300" style="aspect-ratio: 1/1;" loading="eager"
+          alt="Hero Illustration"
+          class="w-full max-w-[250px] sm:max-w-[300px] md:max-w-sm animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms]" />
+      </picture>
     </div>
   </section>
 
