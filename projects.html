@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col overflow-x-hidden">
   <!-- navbar -->
   <div class="navbar bg-base-100">
     <div class="navbar-start">
@@ -66,171 +66,266 @@
   </div>
   <!-- main -->
 
-  <h2 class="text-5xl font-bold text-center py-10 animate-fade-left animate-once animate-duration-2000">
-    some of our previous projects:
-  </h2>
+  <main class="px-2 overflow-x-hidden">
+    <div class="flex items-center justify-center gap-4 py-10 animate-fade-left animate-once animate-duration-2000">
+      <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
+      <h2 class="text-[#F5CF0A] text-2xl sm:text-4xl font-bold text-center">
+        some of our previous projects:
+      </h2>
+    </div>
 
-  <!-- database management -->
-  <section
-    class="bg-base-100/80 mt-10 mx-3 mx-auto rounded-md py-2 px-1 sm:px-6 md:px-10 max-w-full sm:max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">Database management</h2>
-      <p class="text-lg mb-8">
-        Projects focused on food service, menu customization, and multilingual management:
-        * Restaurant management web app(NEXT.js, PHP, MySQL, Chakra UI, Digital Ocean)
-        * Menu item management, live updates, multilingual support, and PDF export.
-        * HTML, CSS, Bootstrap, JavaScript, React, PHP, MySQL
-      </p>
+    <!-- restaurant -->
+    <section
+      class="bg-base-100/80 mt-0 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
+      <div class="text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Restaurant management web app</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          Next js + MySQL + react + chakra ui (deployed on digital ocean)
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu ideas
+          and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized interface on
+          desktop and mobile.<br> With
+          integrated instant live translations into all required languages,editing of the restaurant menu became simple.
+          <br>
+          Additional feature was a PDF menu prepared for print with one easy click.
+        </p>
+        <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
+          class="w-full h-auto mx-auto max-w-3xl" />
+      </div>
+    </section>
 
-      <p class="text-lg mb-8"> Admin data management panel
-        Internal web application for Lifeline Clinic in Namibia for purposes of running patients database, ailment and
-        attendance history, feeding program and outreach program database.
-        Option to export various data from database and data management panel to add new database parameters specific
-        for health clinic work.
-        Access allowed only for clinic stuff.
-        Design in simple and clean with data entry enabled by using keyboard to simulate desktop software (enter, tab,
-        ...)</p>
+    <!-- clinic -->
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class="text-left">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4">Database management</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          PHP + MySQL + jAVASCRIPT + BOOTSTRAP
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia for
+          purposes of running patients database, ailment and attendance history, feeding program and outreach program
+          database. Application is secured so access is allowed only for clinic staff. Option to export various data
+          from database and to add new database parameters specific for health clinic work. Design is simple and clean
+          with data entry enabled by using keyboard to simulate desktop software.
+        </p>
+
+        <img src="./images/clinic_mockup.png" alt="Clinic database system" class="w-full h-auto mx-auto max-w-3xl" />
+      </div>
+    </section>
+
+    <!-- screenagers -->
+    <section
+      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
+      <div class="text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">PROGRAMMING AND ART</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          node.js + JavaScript + WebSocket + HTML + CSS
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Platform for creation and control of multimedia shows. Videos, audio images, texts and live stream defined
+          trough editor interface with layers compatibility to achieve complex and multilayered time dependent display
+          of media. Audience is connected to server to interact with displays on stage supported by websockets.
+          Integrated two classic games that audience can control with their smartphone. Master interface for directors
+          to control live show.
+        </p>
+        <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+          <div class="swiper-wrapper mb-10">
+            <div class="swiper-slide">
+              <video src="./images/multimedia show/artproject_1.mov" controls autoplay muted loop playsinline
+                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video src="./images/multimedia show/artproject_2.mov" controls autoplay muted loop playsinline
+                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- flight data -->
+
+    <section
+      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
+      <div class="text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">FLIGHT DATA VISUALISATION</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + Web socket based chat +
+          Flightlab
+          API + Google places API
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Subscription based social network with integration of flight tracking data visualisation. 3D Globe with real
+          and detailed world map layer and interactive representation of flight data. Tracked flights from platform
+          users entered fight numbers with integration of Flightlab API. Integration of live one to one chat for
+          platform users.
+        </p>
+        <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
+          class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- qr code dating site -->
+
+    <section
+      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
+      <div class="text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">QR CODE SYSTEM</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          QR code generator, UI for QR code reader and redeem system developed and added to an existing dating web app.
+          Developed with purpose to enable dating app users sending gifts connected to real shops. Shops can read and
+          redeem QR code based gifts send among dating app platform users.
+        </p>
+        <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+          <div class="swiper-wrapper mb-10">
+            <div class="swiper-slide">
+              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+            </div>
+          </div>
+
+          <div class="pt-10 swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- games -->
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class="text-left">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4">GAMES</h2>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Game platform for subscription based multiuser accounts sold on Shopify. Interactive educational games for
+          language learning which includes word search games, level based games, hints, collecting points and custom
+          avatars.
+        </p>
+
+        <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+          <div class="swiper-wrapper mb-10">
+            <div class="swiper-slide">
+              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
+            </div>
+          </div>
+
+          <div class="pt-10 swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- websites new element -->
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class="text-left mb-6">
+        <h2 class="text-4xl sm:text-5xl font-bold">websites</h2>
+      </div>
 
       <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/restaurant_mockup.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/clinic_mockup.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
-          </div>
-        </div>
+        <div class="swiper-wrapper mb-10">
 
-        <div class="swiper-button-prev text-gray-700"></div>
-        <div class="swiper-button-next text-gray-700"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- games -->
-  <section class="bg-base-100/80 mt-10 mx-3 mx-auto rounded-md py-2 px-1 sm:px-6 md:px-10 max-w-full sm:max-w-5xl"
-    data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
-    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
-      <p class="text-lg mb-8">
-        HTML, CSS, Boostrap, JavaScript, PHP, MySQL
-        Game platform for multiuser accounts
-        Avatars, custom animation
-        HTML emails
-        Shopify API
-      </p>
-      <p>includes wordsearch, drag and drop, animations</p>
-      <p class="text-lg mb-8">
-        <li>Educational game sold via Shopify, connected via API</li>
-        <li>Made after Figma design, responsive</li>
-        <li>Includes HTML emails, login/register system, interactive games</li>
-      </p>
-      <p class="mt-2 text-sm">
-        <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
-      </p>
-
-      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
-          </div>
-        </div>
-
-        <div class="swiper-button-prev text-gray-700"></div>
-        <div class="swiper-button-next text-gray-700"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- games -->
-  <!-- <section class="bg-base-100 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-full sm:max-w-5xl"
-    data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
-    <div class="max-w-full sm:max-w-5xl mx-2 text-left">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-4">GAMES</h2>
-      <p class="text-lg mb-8">
-        HTML, CSS, Boostrap, JavaScript, PHP, MySQL
-        Game platform for multiuser accounts
-        Avatars, custom animation
-        HTML emails
-        Shopify API
-      </p>
-      <p>includes wordsearch, drag and drop, animations</p>
-      <p class="text-lg mb-8">
-        <li>Educational game sold via Shopify, connected via API</li>
-        <li>Made after Figma design, responsive</li>
-        <li>Includes HTML emails, login/register system, interactive games</li>
-      </p>
-      <p class="mt-2 text-sm">
-        <strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, Shopify API
-      </p>
-
-      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
-          </div>
-        </div>
-
-        <div class="swiper-button-prev text-gray-700"></div>
-        <div class="swiper-button-next text-gray-700"></div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- website design section -->
-  <section>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl py-16 sm:py-24 max-w-5xl">
-        <h2 class="text-5xl font-bold text-[#F5CF0A] pb-10">Websites</h2>
-        <div class="mt-10 space-y-20">
           <!-- 1 -->
-          <div class="group relative">
-            <h3 class="mt-10 text-gray-500 text-2xl">
-              <a href="https://shift-mate.netlify.app/" target="_blank" rel="noopener noreferrer">
-            </h3>
-            <p class="font-bold text-gray-200 text-4xl">STARTUP APP WEBSITE</p>
-            <img src="./images/website mockups/1.png"
-              alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-            </a>
-          </div>
-          <!-- 2 -->
-          <div class="group relative">
-            <h3 class="mt-6 text-gray-500 text-2xl">
-              <a href="https://modular-homes.netlify.app/" target=" _blank" rel="noopener noreferrer" class="block">
-                <span class="absolute inset-0"></span>
-                BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
+          <div class="swiper-slide">
+            <div class="group relative flex-1">
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
+                <a href="https://shift-mate.netlify.app/" target="_blank" rel="noopener noreferrer" class="block">
+                  <span class="absolute inset-0"></span>
+                  HTML + JS + TAILWIND (DAISY UI)
+                </a>
+              </h3>
+              <p class="font-bold text-2xl sm:text-3xl mb-2">STARTUP APP WEBSITE</p>
 
-            </h3>
-            <p class=" font-bold text-gray-200 text-4xl">CONSTRUCTION BUSINESS WEBSITE</p>
-            <img src="./images/website mockups/2.png"
-              alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
-              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-            </a>
+              <!-- light -->
+              <img src="./images/website mockups/1-light.png" alt="Startup app website light theme"
+                data-theme-visible="lofi"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              <!-- dark -->
+              <img src="./images/website mockups/1-dark.png" alt="Startup app website dark theme"
+                data-theme-visible="black"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+            </div>
           </div>
+
+          <!-- 2 -->
+          <div class="swiper-slide">
+            <div class="group relative flex-1">
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
+                <a href="https://modular-homes.netlify.app/" target="_blank" rel="noopener noreferrer" class="block">
+                  <span class="absolute inset-0"></span>
+                  BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
+                </a>
+              </h3>
+              <p class="font-bold text-2xl sm:text-3xl mb-2">CONSTRUCTION BUSINESS WEBSITE</p>
+
+              <!-- light -->
+              <img src="./images/website mockups/2-light.png" alt="Construction business website light theme"
+                data-theme-visible="lofi"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              <!-- dark  -->
+              <img src="./images/website mockups/2-dark.png" alt="Construction business website dark theme"
+                data-theme-visible="black"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+            </div>
+          </div>
+
           <!-- 3 -->
-          <div class="group relative">
-            <h3 class="mt-6 text-gray-500 text-2xl">
-              <a href="https://barbershop-react-vite.netlify.app/" target=" _blank" rel="noopener noreferrer"
-                class="block">
-                <span class="absolute inset-0"></span>
-                REACT + CHAKRA UI + MOTION ANIMATION JS
-            </h3>
-            <p class="font-bold text-gray-200 text-4xl">BARBERSHOP WEBSITE</p>
-            <img src="./images/website mockups/3.png" alt="Collection of four insulated travel bottles on wooden shelf."
-              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+          <div class="swiper-slide">
+            <div class="group relative flex-1">
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
+                <a href="https://barbershop-react-vite.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="block">
+                  <span class="absolute inset-0"></span>
+                  REACT + CHAKRA UI + MOTION ANIMATION JS
+                </a>
+              </h3>
+              <p class="font-bold text-2xl sm:text-3xl mb-2">BARBERSHOP WEBSITE</p>
+
+              <!-- light  -->
+              <img src="./images/website mockups/3-light.png" alt="Barbershop website light theme"
+                data-theme-visible="lofi"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              <!-- dark  -->
+              <img src="./images/website mockups/3-dark.png" alt="Barbershop website dark theme"
+                data-theme-visible="black"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+            </div>
           </div>
-          </a>
+
         </div>
+
+        <!-- Pagination bullets -->
+        <div class="pt-10 swiper-pagination"></div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
+
 
   <footer class="py-4 text-center">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
@@ -247,9 +342,9 @@
     });
     const swiper = new Swiper('.swiper', {
       loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
       spaceBetween: 20,
       slidesPerView: 1,

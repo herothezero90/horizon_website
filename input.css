@@ -8,6 +8,11 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   /* headings and images */
   .card-title {
     margin-top: 0 !important;
@@ -128,8 +133,15 @@
   .service-card {
     position: relative;
     overflow: hidden;
-    background-color: #ffffff !important;
     opacity: 1;
+  }
+
+  [data-theme="lofi"] .service-card {
+    background-color: #ffffff;
+  }
+
+  [data-theme="black"] .service-card {
+    background-color: #000000;
   }
 
   .tech-card {
