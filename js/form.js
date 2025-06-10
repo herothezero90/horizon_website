@@ -1,75 +1,65 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form[name="contact"]');
+/* eslint-disable no-undef */
+$(document).ready(function () {
+  const $contactForm = $('form[name="contact"]');
 
-  if (form) {
-    form.addEventListener('submit', async function (event) {
-      event.preventDefault(); // Prevent default form submission
+  if ($contactForm.length) {
+    $contactForm.on('submit', function (event) {
+      event.preventDefault();
 
-      const formData = new FormData(form);
+      const formData = $contactForm.serialize();
 
-      // You can add a success message or redirect the user here
-      // For now, let's just log and show a simple alert.
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/x-www-form-urlencoded'
-          }
-        });
-
-        if (response.ok) {
+      $.ajax({
+        url: $contactForm.attr('action'),
+        method: 'POST',
+        data: formData,
+        headers: {
+          'Accept': 'application/x-www-form-urlencoded'
+        },
+        success: function () {
           alert('Thank you for your message! We will get back to you shortly.');
-          form.reset(); // Clear the form fields
-          // Optional: Redirect to a thank you page
-          // window.location.href = '/thank-you/';
-        } else {
+          $contactForm[0].reset();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error('Submission error:', textStatus, errorThrown);
           alert('There was an error submitting your form. Please try again.');
         }
-      } catch (error) {
-        console.error('Submission error:', error);
-        alert('There was an error submitting your form. Please try again.');
-      }
+      });
     });
   }
 
-  // Theme toggle logic (from your existing theme.js)
-  const themeController = document.querySelector('.theme-controller');
-  const htmlElement = document.documentElement;
+  const $themeController = $('.theme-controller');
+  const $htmlElement = $('html');
 
-  // Set initial theme based on local storage or system preference
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme) {
-    htmlElement.setAttribute('data-theme', storedTheme);
-    themeController.checked = storedTheme === 'black'; // Set checkbox based on theme
+    $htmlElement.attr('data-theme', storedTheme);
+    $themeController.prop('checked', storedTheme === 'black');
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    htmlElement.setAttribute('data-theme', 'black');
-    themeController.checked = true;
+    $htmlElement.attr('data-theme', 'black');
+    $themeController.prop('checked', true);
   }
 
-  // Toggle theme on checkbox change
-  themeController.addEventListener('change', () => {
-    if (themeController.checked) {
-      htmlElement.setAttribute('data-theme', 'black');
+  $themeController.on('change', function () {
+    if ($(this).prop('checked')) {
+      $htmlElement.attr('data-theme', 'black');
       localStorage.setItem('theme', 'black');
     } else {
-      htmlElement.setAttribute('data-theme', 'lofi');
+      $htmlElement.attr('data-theme', 'lofi');
       localStorage.setItem('theme', 'lofi');
     }
-    updateThemeImages(htmlElement.getAttribute('data-theme'));
+    updateThemeImages($htmlElement.attr('data-theme'));
   });
 
-  // Function to update image visibility based on theme
   function updateThemeImages(currentTheme) {
-    document.querySelectorAll('[data-theme-visible]').forEach(element => {
-      if (element.getAttribute('data-theme-visible') === currentTheme) {
-        element.style.display = 'block';
+    $('[data-theme-visible]').each(function () {
+      if ($(this).attr('data-theme-visible') === currentTheme) {
+        $(this).show();
       } else {
-        element.style.display = 'none';
+        $(this).hide();
       }
     });
   }
 
   // Initial update of images based on current theme
-  updateThemeImages(htmlElement.getAttribute('data-theme'));
+  updateThemeImages($htmlElement.attr('data-theme'));
 });

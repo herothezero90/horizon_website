@@ -83,7 +83,7 @@
 
   /* light theme card */
   [data-theme="lofi"] .card {
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     /* background-color: white; */
     /* padding-top: 0; */
@@ -91,7 +91,7 @@
 
   /* dark theme card */
   [data-theme="black"] .card {
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     border: none;
     /* background-color: black; */
     /* padding-top: 0; */
@@ -101,7 +101,7 @@
   [data-theme="lofi"] .homepage-wrapper {
     background-color: white;
     color: black;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     padding: 1em;
     overflow-y: auto;
   }
@@ -109,7 +109,7 @@
   [data-theme="black"] .homepage-wrapper {
     background-color: #0e0e0e;
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     padding: 1em;
     overflow-y: auto;
   }
