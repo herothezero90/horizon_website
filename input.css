@@ -177,3 +177,26 @@
     font-family: 'Onest', sans-serif;
   }
 }
+
+
+:root {
+  --swiper-pagination-color: #F5CF0A;
+  --swiper-pagination-bullet-inactive-color: gray;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+
+.swiper-pagination-bullet-active {
+  background: #F5CF0A !important;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: gray !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  margin: 0 6px !important;
+}

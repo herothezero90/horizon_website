@@ -67,15 +67,80 @@
   <!-- main -->
 
   <main class="px-2 overflow-x-hidden">
-    <div class="flex items-center justify-center gap-4 py-10 animate-fade-left animate-once animate-duration-2000">
+    <div class="flex items-center justify-center gap-4 py-10 " data-aos="fade-right" data-aos-easing="linear"
+      data-aos-duration="1500">
       <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
       <h2 class="text-[#F5CF0A] text-2xl sm:text-4xl font-bold text-center">
         some of our previous projects:
       </h2>
     </div>
 
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class="text-left mb-6">
+        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">data management</h2>
+      </div>
+
+      <div class="swiper w-full max-w-full mx-auto">
+        <div class="swiper-wrapper mb-10">
+
+          <!-- 1 -->
+          <div class="swiper-slide">
+            <div class="text-left">
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
+              <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+                Next js + MySQL + react + chakra ui (deployed on digital ocean)
+              </h3>
+              <p class="text-base sm:text-lg mb-8">
+                Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu
+                ideas
+                and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized
+                interface on
+                desktop and mobile.<br> With
+                integrated instant live translations into all required languages,editing of the restaurant menu became
+                simple.
+                <br>
+                Additional feature was a PDF menu prepared for print with one easy click.
+              </p>
+              <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
+                class="w-full h-auto mx-auto max-w-3xl" />
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="swiper-slide">
+            <div class="text-left">
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for small medical clinic
+              </h2>
+              <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+                PHP + MySQL + jAVASCRIPT + BOOTSTRAP
+              </h3>
+              <p class="text-base sm:text-lg mb-8">
+                Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia
+                for
+                purposes of running patients database, ailment and attendance history, feeding program and outreach
+                program
+                database. Application is secured so access is allowed only for clinic staff. Option to export various
+                data
+                from database and to add new database parameters specific for health clinic work. Design is simple and
+                clean
+                with data entry enabled by using keyboard to simulate desktop software.
+              </p>
+
+              <img src="./images/clinic_mockup.png" alt="Clinic database system"
+                class="w-full h-auto mx-auto max-w-3xl" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pagination bullets -->
+        <div class="pt-10 swiper-pagination"></div>
+      </div>
+    </section>
+
     <!-- restaurant -->
-    <section
+    <!-- <section
       class="bg-base-100/80 mt-0 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
       <div class="text-left">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Restaurant management web app</h2>
@@ -93,10 +158,10 @@
         <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
           class="w-full h-auto mx-auto max-w-3xl" />
       </div>
-    </section>
+    </section> -->
 
     <!-- clinic -->
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+    <!-- <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
       <div class="text-left">
         <h2 class="text-4xl sm:text-5xl font-bold mb-4">Database management</h2>
@@ -113,13 +178,13 @@
 
         <img src="./images/clinic_mockup.png" alt="Clinic database system" class="w-full h-auto mx-auto max-w-3xl" />
       </div>
-    </section>
+    </section> -->
 
     <!-- screenagers -->
-    <section
-      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-      <div class="text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">PROGRAMMING AND ART</h2>
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class=" text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">PROGRAMMING AND ART</h2>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
           node.js + JavaScript + WebSocket + HTML + CSS
         </h3>
@@ -153,10 +218,10 @@
 
     <!-- flight data -->
 
-    <section
-      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-      <div class="text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">FLIGHT DATA VISUALISATION</h2>
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class=" text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">FLIGHT DATA VISUALISATION</h2>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
           node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + Web socket based chat +
           Flightlab
@@ -177,10 +242,10 @@
 
     <!-- qr code dating site -->
 
-    <section
-      class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-      <div class="text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">QR CODE SYSTEM</h2>
+    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+      data-aos-easing="linear" data-aos-duration="1500">
+      <div class=" text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">QR CODE SYSTEM</h2>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
           PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
         </h3>
@@ -192,16 +257,16 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
@@ -214,8 +279,8 @@
     <!-- games -->
     <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
-      <div class="text-left">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4">GAMES</h2>
+      <div class=" text-left">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
           HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
         </h3>
@@ -228,10 +293,10 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg shadow" />
+              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
@@ -240,14 +305,14 @@
       </div>
     </section>
 
-    <!-- websites new element -->
+    <!-- websites -->
     <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
       <div class="text-left mb-6">
-        <h2 class="text-4xl sm:text-5xl font-bold">websites</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">websites</h2>
       </div>
 
-      <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+      <div class="swiper w-full max-w-full mx-auto">
         <div class="swiper-wrapper mb-10">
 
           <!-- 1 -->

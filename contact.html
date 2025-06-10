@@ -94,6 +94,46 @@
       </div>
 
     </div>
+
+    <section class="w-full lg:w-1/2 mt-8 animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms]">
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" netlify-recaptcha="true"
+        class="card-body p-0">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="subject" value="New inquiry from Horizon website" />
+        <input type="hidden" name="netlify-honeypot" id="bot-field" />
+        <input type="hidden" name="netlify-email" value="karl.a.lenard@gmail.com">
+
+        <div class="form-control">
+          <label class="label" for="name">
+            <span class="label-text text-xl">Name</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="Your Name" class="input input-bordered text-lg"
+            required />
+        </div>
+
+        <div class="form-control mt-4">
+          <label class="label" for="email">
+            <span class="label-text text-xl">Email</span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="Your Email" class="input input-bordered text-lg"
+            required />
+        </div>
+
+        <div class="form-control mt-4">
+          <label class="label" for="message">
+            <span class="label-text text-xl">Message</span>
+          </label>
+          <textarea id="message" name="message" placeholder="Your Message"
+            class="textarea textarea-bordered h-32 text-lg" required></textarea>
+        </div>
+
+        <div data-netlify-recaptcha="true" class="mt-4"></div>
+
+        <div class="form-control mt-6">
+          <button type="submit" class="btn btn-primary text-xl">Send Message</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <!-- footer  -->
@@ -103,6 +143,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
+  <script src="./js/form.js"></script>
 </body>
 
 </html>
