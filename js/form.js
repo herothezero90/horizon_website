@@ -60,6 +60,5 @@ $(document).ready(function () {
     });
   }
 
-  // Initial update of images based on current theme
   updateThemeImages($htmlElement.attr('data-theme'));
 });

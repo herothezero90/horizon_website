@@ -35,7 +35,7 @@
           <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
+      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -67,27 +67,31 @@
   <!-- main -->
 
   <main class="px-2 overflow-x-hidden">
-    <div class="flex items-center justify-center gap-4 py-10 " data-aos="fade-right" data-aos-easing="linear"
+    <div class="flex items-center justify-center gap-4 py-0 mb-0" data-aos="fade-right" data-aos-easing="linear"
       data-aos-duration="1500">
       <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
-      <h2 class="text-[#F5CF0A] text-2xl sm:text-4xl font-bold text-center">
+      <h2 class=" text-2xl sm:text-4xl font-bold text-center">
         some of our previous projects:
       </h2>
     </div>
 
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <!-- data management -->
+    <section class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
       <div class="text-left mb-6">
-        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">data management</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">data management</h2>
       </div>
-
+      <div class="swiper-pagination-top mb-4 flex justify-end"></div>
       <div class="swiper w-full max-w-full mx-auto">
         <div class="swiper-wrapper mb-10">
-
-          <!-- 1 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
+          <!-- slide 1 -->
+          <div class="swiper-slide bg-transparent">
+            <div class="bg-base-100 p-6 rounded-md">
+              <div class="text-left">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
+              </div>
+              <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
+                class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 Next js + MySQL + react + chakra ui (deployed on digital ocean)
               </h3>
@@ -99,19 +103,20 @@
                 desktop and mobile.<br> With
                 integrated instant live translations into all required languages,editing of the restaurant menu became
                 simple.
-                <br>
                 Additional feature was a PDF menu prepared for print with one easy click.
               </p>
-              <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
-                class="w-full h-auto mx-auto max-w-3xl" />
             </div>
           </div>
-
-          <!-- 2 -->
-          <div class="swiper-slide">
-            <div class="text-left">
-              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for small medical clinic
-              </h2>
+          <!-- slide 2 -->
+          <div class="swiper-slide bg-transparent">
+            <div class="bg-base-100 p-6 rounded-md">
+              <div class="text-left">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for small medical
+                  clinic
+                </h2>
+              </div>
+              <img src="./images/clinic_mockup.png" alt="Clinic database system"
+                class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 PHP + MySQL + jAVASCRIPT + BOOTSTRAP
               </h3>
@@ -126,16 +131,11 @@
                 clean
                 with data entry enabled by using keyboard to simulate desktop software.
               </p>
-
-              <img src="./images/clinic_mockup.png" alt="Clinic database system"
-                class="w-full h-auto mx-auto max-w-3xl" />
             </div>
           </div>
-
         </div>
 
-        <!-- Pagination bullets -->
-        <div class="pt-10 swiper-pagination"></div>
+        <div class="swiper-pagination pt-6 flex justify-center"></div>
       </div>
     </section>
 
@@ -181,28 +181,37 @@
     </section> -->
 
     <!-- screenagers -->
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
-      <div class=" text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">PROGRAMMING AND ART</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          node.js + JavaScript + WebSocket + HTML + CSS
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Platform for creation and control of multimedia shows. Videos, audio images, texts and live stream defined
-          trough editor interface with layers compatibility to achieve complex and multilayered time dependent display
-          of media. Audience is connected to server to interact with displays on stage supported by websockets.
-          Integrated two classic games that audience can control with their smartphone. Master interface for directors
-          to control live show.
-        </p>
-        <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
+
+      <div class="text-left mb-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
+          PROGRAMMING AND ART
+        </h2>
+      </div>
+
+      <div class="swiper-pagination-top mb-4 flex justify-end"></div>
+
+      <div class="bg-base-100 p-6 rounded-md">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+          screenagers vol.2
+          <a href="https://www.premierstratageme.net/en/screenagers-vol-2/"
+            class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
+            aria-label="Visit Screenagers Vol. 2 on Premier Stratageme" target="_blank" rel="noopener noreferrer">
+            (visit)
+          </a>
+        </h2>
+
+        <div class="swiper w-full max-w-full mx-auto">
           <div class="swiper-wrapper mb-10">
+            <!-- slide 1 -->
             <div class="swiper-slide">
               <video src="./images/multimedia show/artproject_1.mov" controls autoplay muted loop playsinline
                 class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
+            <!-- slide 2 -->
             <div class="swiper-slide">
               <video src="./images/multimedia show/artproject_2.mov" controls autoplay muted loop playsinline
                 class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
@@ -211,17 +220,43 @@
             </div>
           </div>
 
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination pt-6 flex justify-center mt-10"></div>
         </div>
+
+        <div class="mt-6">
+          <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+            node.js + JavaScript + WebSocket + HTML + CSS
+          </h3>
+          <p class="text-base sm:text-lg mb-8">
+            Platform for creation and control of multimedia shows. Videos, audio images, texts and live stream defined
+            through editor interface with layers compatibility to achieve complex and multilayered time dependent
+            display of media. Audience is connected to server to interact with displays on stage supported by
+            websockets.
+            Integrated two classic games that audience can control with their smartphone. Master interface for directors
+            to control live show.
+          </p>
+        </div>
+
       </div>
     </section>
 
     <!-- flight data -->
 
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
+
       <div class=" text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">FLIGHT DATA VISUALISATION</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-[#F5CF0A]">FLIGHT DATA VISUALISATION</h2>
+      </div>
+      <div class="bg-base-100 p-6 rounded-md">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+          Social network with live flight tracking
+        </h2>
+        <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
+          class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+          Your browser does not support the video tag.
+        </video>
+
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
           node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + Web socket based chat +
           Flightlab
@@ -233,27 +268,26 @@
           users entered fight numbers with integration of Flightlab API. Integration of live one to one chat for
           platform users.
         </p>
-        <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
-          class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
-          Your browser does not support the video tag.
-        </video>
       </div>
     </section>
 
     <!-- qr code dating site -->
 
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
-      <div class=" text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">QR CODE SYSTEM</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          QR code generator, UI for QR code reader and redeem system developed and added to an existing dating web app.
-          Developed with purpose to enable dating app users sending gifts connected to real shops. Shops can read and
-          redeem QR code based gifts send among dating app platform users.
-        </p>
+
+      <div class="text-left mb-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
+          QR CODE GENERATOR
+        </h2>
+      </div>
+
+      <div class="swiper-pagination-top mb-4 flex justify-end"></div>
+
+      <div class="bg-base-100 p-6 rounded-md">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+          QR CODE BASED TRANSACTIONS
+        </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
@@ -272,24 +306,32 @@
 
           <div class="pt-10 swiper-pagination"></div>
         </div>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          QR code generator, UI for QR code reader and redeem system developed and added to an existing dating web app.
+          Developed with purpose to enable dating app users sending gifts connected to real shops. Shops can read and
+          redeem QR code based gifts send among dating app platform users.
+        </p>
       </div>
     </section>
 
 
     <!-- games -->
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
+
       <div class=" text-left">
         <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Game platform for subscription based multiuser accounts sold on Shopify. Interactive educational games for
-          language learning which includes word search games, level based games, hints, collecting points and custom
-          avatars.
-        </p>
+      </div>
 
+      <div class="swiper-pagination-top mb-4 flex justify-end"></div>
+
+      <div class="bg-base-100 p-6 rounded-md">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+          subject pronouns, animals and alphabet game
+        </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
@@ -302,52 +344,68 @@
 
           <div class="pt-10 swiper-pagination"></div>
         </div>
+        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
+          HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
+        </h3>
+        <p class="text-base sm:text-lg mb-8">
+          Game platform for subscription based multiuser accounts sold on Shopify. Interactive educational games for
+          language learning which includes word search games, level based games, hints, collecting points and custom
+          avatars.
+        </p>
       </div>
     </section>
 
     <!-- websites -->
-    <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
+
       <div class="text-left mb-6">
         <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">websites</h2>
       </div>
 
-      <div class="swiper w-full max-w-full mx-auto">
-        <div class="swiper-wrapper mb-10">
+      <div class="swiper-pagination-top mb-4 flex justify-end"></div>
 
-          <!-- 1 -->
-          <div class="swiper-slide">
-            <div class="group relative flex-1">
-              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                <a href="https://shift-mate.netlify.app/" target="_blank" rel="noopener noreferrer" class="block">
-                  <span class="absolute inset-0"></span>
-                  HTML + JS + TAILWIND (DAISY UI)
+      <div class="bg-base-100 p-6 rounded-md">
+        <div class="swiper w-full max-w-full mx-auto">
+          <div class="swiper-wrapper mb-10">
+
+            <!-- 1 -->
+            <div class="swiper-slide">
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                website for a startup app
+                <a href="https://shift-mate.netlify.app/"
+                  class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
+                  aria-label="Visit shift mate website" target="_blank" rel="noopener noreferrer">
+                  (visit)
                 </a>
+              </h2>
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JAVASCRIPT + TAILWIND (DAISY UI)
               </h3>
-              <p class="font-bold text-2xl sm:text-3xl mb-2">STARTUP APP WEBSITE</p>
-
-              <!-- light -->
-              <img src="./images/website mockups/1-light.png" alt="Startup app website light theme"
-                data-theme-visible="lofi"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-              <!-- dark -->
-              <img src="./images/website mockups/1-dark.png" alt="Startup app website dark theme"
-                data-theme-visible="black"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              <div class="group relative flex-1">
+                <!-- light -->
+                <img src="./images/website mockups/1-light.png" alt="Startup app website light theme"
+                  data-theme-visible="lofi"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                <!-- dark -->
+                <img src="./images/website mockups/1-dark.png" alt="Startup app website dark theme"
+                  data-theme-visible="black"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              </div>
             </div>
-          </div>
 
-          <!-- 2 -->
-          <div class="swiper-slide">
-            <div class="group relative flex-1">
-              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                <a href="https://modular-homes.netlify.app/" target="_blank" rel="noopener noreferrer" class="block">
-                  <span class="absolute inset-0"></span>
-                  BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
+            <!-- 2 -->
+            <div class="swiper-slide">
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                construction company website
+                <a href="https://modular-homes.netlify.app/"
+                  class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
+                  aria-label="Visit construction company website" target="_blank" rel="noopener noreferrer">
+                  (visit)
                 </a>
+              </h2>
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
+                BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
               </h3>
-              <p class="font-bold text-2xl sm:text-3xl mb-2">CONSTRUCTION BUSINESS WEBSITE</p>
-
               <!-- light -->
               <img src="./images/website mockups/2-light.png" alt="Construction business website light theme"
                 data-theme-visible="lofi"
@@ -356,36 +414,36 @@
               <img src="./images/website mockups/2-dark.png" alt="Construction business website dark theme"
                 data-theme-visible="black"
                 class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              <div class="group relative flex-1">
+              </div>
             </div>
-          </div>
 
-          <!-- 3 -->
-          <div class="swiper-slide">
-            <div class="group relative flex-1">
-              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                <a href="https://barbershop-react-vite.netlify.app/" target="_blank" rel="noopener noreferrer"
-                  class="block">
-                  <span class="absolute inset-0"></span>
+            <!-- 3 -->
+            <div class="swiper-slide">
+              <div class="group relative flex-1">
+                <h2 class="font-bold text-2xl sm:text-3xl mb-2">BARBERSHOP WEBSITE
+                  <a href="https://barbershop-react-vite.netlify.app/"
+                    class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
+                    aria-label="Visit BARBERSHOP website" target="_blank" rel="noopener noreferrer">
+                    (visit)
+                  </a>
+                </h2>
+                <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
                   REACT + CHAKRA UI + MOTION ANIMATION JS
-                </a>
-              </h3>
-              <p class="font-bold text-2xl sm:text-3xl mb-2">BARBERSHOP WEBSITE</p>
-
-              <!-- light  -->
-              <img src="./images/website mockups/3-light.png" alt="Barbershop website light theme"
-                data-theme-visible="lofi"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-              <!-- dark  -->
-              <img src="./images/website mockups/3-dark.png" alt="Barbershop website dark theme"
-                data-theme-visible="black"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                </h3>
+                <!-- light  -->
+                <img src="./images/website mockups/3-light.png" alt="Barbershop website light theme"
+                  data-theme-visible="lofi"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                <!-- dark  -->
+                <img src="./images/website mockups/3-dark.png" alt="Barbershop website dark theme"
+                  data-theme-visible="black"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+              </div>
             </div>
           </div>
-
+          <div class="pt-10 swiper-pagination"></div>
         </div>
-
-        <!-- Pagination bullets -->
-        <div class="pt-10 swiper-pagination"></div>
       </div>
     </section>
 
@@ -404,16 +462,31 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       AOS.init();
-    });
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      spaceBetween: 20,
-      slidesPerView: 1,
-      grabCursor: true,
+
+      document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
+        const topPagination = document.querySelectorAll('.swiper-pagination-top')[index];
+        const bottomPagination = swiperEl.querySelector('.swiper-pagination');
+
+        new Swiper(swiperEl, {
+          loop: true,
+          observer: true,
+          observeParents: true,
+          pagination: {
+            el: [topPagination, bottomPagination],
+            clickable: true,
+            renderBullet: (i, className) => `<span class="${className}"></span>`
+          },
+          autoHeight: true,
+          spaceBetween: 20,
+          slidesPerView: 1,
+          grabCursor: true
+        });
+      });
+      function clonePagination(swiper, topEl, bottomEl) {
+        if (topEl && bottomEl) {
+          topEl.innerHTML = bottomEl.innerHTML;
+        }
+      }
     });
   </script>
 </body>
