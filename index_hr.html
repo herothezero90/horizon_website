@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO -->
   <meta name="description"
     content="Horizon Web Development: Inovativne aplikacije na pretplatu, kontrolne ploče za podatke i SEO optimizirane web stranice koje oživljavaju vaše ideje.">
   <meta property="og:title" content="Horizon – Web Development" />
@@ -14,19 +15,29 @@
   <meta name="twitter:card" content="summary_large_image" />
   <title>Horizon – Početna</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link rel="preload" href="/dist/output.css" as="style" />
-  <link rel="stylesheet" href="/dist/output.css" />
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" as="style" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" />
-  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
-    as="style" />
+
+
+  <link rel="preload" href="/dist/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/dist/output.css">
+  </noscript>
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
+
+  <link rel="preload" href="https://ka-f.fontawesome.com/releases/v6.7.2/webfonts/free-fa-brands-400.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -121,8 +132,7 @@
             class="text-xl md:text-4xl mb-2 font-heading text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
             Web Development
           </h2>
-          <h2
-            class="text-base md:text-3xl mb-2 mt-2 text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+          <h2 class="text-base md:text-3xl mb-2 mt-2 text-left">
             Specijalizirani smo za izradu inovativnih web rješenja, od aplikacija s pretplatničkim modelom do
             nadzornih ploča za upravljanje podatcima -<br>
             oživljavamo vaše ideje. <br>
@@ -144,7 +154,7 @@
       </section>
 
       <!-- usluge -->
-      <section class="w-full p-6 mb-10">
+      <section class="w-full p-6 mb-10 min-h-[560px]">
         <div class="w-full max-w-7xl mt-12 mx-auto flex flex-col items-center
              animate-fade animate-duration-[2000ms] animate-ease-in">
           <h2 class="text-4xl font-bold mb-8 text-[#F5CF0A]">Usluge koje nudimo</h2>
