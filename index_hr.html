@@ -32,39 +32,59 @@
 <body class="min-h-screen flex flex-col">
   <header>
     <!-- navbar -->
-    <div class="navbar bg-base-100">
+    <header class="header navbar bg-base-100" role="banner">
       <div class="navbar-start">
+        <!-- Mobile menu -->
         <div class="dropdown bg-base-200">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Otvori izbornik"
+            class="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
-          </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-            <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">POČETNA</a></li>
-            <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJEKTI</a></li>
-            <li><a class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
-            <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">O NAMA</a></li>
-            <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">KONTAKT</a></li>
+          </button>
+
+          <ul tabindex="0" role="menu"
+            class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html"
+                aria-current="page">POČETNA</a>
+            </li>
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold"
+                href="projects_hr.html">PROJEKTI</a></li>
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup_hr.html">STARTUP</a>
+            </li>
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold"
+                href="about_hr.html">O&nbsp;NAMA</a></li>
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact_hr.html">KONTAKT</a>
+            </li>
           </ul>
         </div>
-        <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
+
+        <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
+          aria-label="Horizon početna">
+          HORIZON
+        </a>
       </div>
-      <div class="navbar-center hidden lg:flex">
+
+      <!-- Desktop nav -->
+      <nav class="navbar-center hidden lg:flex" aria-label="Primarna navigacija">
         <ul class="menu menu-horizontal px-1">
-          <li class="text-2xl font-bold"><a href="index.html">POČETNA</a></li>
-          <li class="text-2xl font-bold"><a href="projects.html">PROJEKTI</a></li>
-          <li class="text-2xl font-bold"><a href="startup.html">STARTUP</a></li>
-          <li class="text-2xl font-bold"><a href="about.html">O NAMA</a></li>
-          <li class="text-2xl font-bold"><a href="contact.html">KONTAKT</a></li>
+          <li><a class="text-2xl font-bold" href="index_hr.html" aria-current="page">POČETNA</a></li>
+          <li><a class="text-2xl font-bold" href="projects_hr.html">PROJEKTI</a></li>
+          <li><a class="text-2xl font-bold" href="startup_hr.html">STARTUP</a></li>
+          <li><a class="text-2xl font-bold" href="about_hr.html">O&nbsp;NAMA</a></li>
+          <li><a class="text-2xl font-bold" href="contact_hr.html">KONTAKT</a></li>
         </ul>
-      </div>
+      </nav>
 
+      <!-- Lang + theme -->
       <div class="navbar-end flex items-center gap-4">
-        <!-- Language toggle -->
-        <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none">EN</button>
+        <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
+          aria-label="Prebaci jezik na engleski">
+          EN
+        </button>
 
+        <!-- theme toggle -->
         <label class="swap swap-rotate">
           <input type="checkbox" class="theme-controller" value="black" />
           <!-- Sun icon  -->
@@ -81,7 +101,7 @@
           </svg>
         </label>
       </div>
-    </div>
+    </header>
   </header>
 
   <!-- homepage -->

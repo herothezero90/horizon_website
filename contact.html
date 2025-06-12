@@ -3,49 +3,78 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Get in touch with Horizon – full-stack web development, MVP builds, design & SEO." />
+  <meta property="og:title" content="Contact – Horizon Web Development" />
+  <meta property="og:description" content="Send us an email or use the secure form to discuss your project." />
+  <meta property="og:image" content="https://horizon-dev.hr/images/hero3.png" />
+  <meta property="og:url" content="https://horizon-dev.hr/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <title>Contact | Horizon</title>
-  <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link href="./dist/output.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+
+  <!-- Performance: CSS & fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="/dist/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </noscript>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&family=Phudu:wght@400;700&display=swap"
     rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous" defer></script>
+  <link rel="icon" type="image/x-icon" href="./images/FAVICON.png" />
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
-  <!-- navbar -->
-  <div class="navbar bg-base-100">
+
+  <!-- NAVBAR (klase ostaju) -->
+  <header class="navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
+          class="btn btn-ghost lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-          <li><a class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
-          <li><a class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+        </button>
+        <ul tabindex="0" role="menu"
+          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html"
+              aria-current="page">CONTACT</a></li>
         </ul>
       </div>
-      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color">HORIZON</a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li class="text-2xl font-bold"><a href="index.html">HOME</a></li>
-        <li class="text-2xl font-bold"><a href="projects.html">PROJECTS</a></li>
-        <li class="text-2xl font-bold"><a href="startup.html">STARTUP</a></li>
-        <li class="text-2xl font-bold"><a href="about.html">ABOUT</a></li>
-        <li class="text-2xl font-bold"><a href="contact.html">CONTACT</a></li>
-      </ul>
+      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
+        aria-label="Horizon home">HORIZON</a>
     </div>
 
-    <div class="navbar-end">
+    <nav class="navbar-center hidden lg:flex" aria-label="Primary navigation">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="text-2xl font-bold" href="index.html">HOME</a></li>
+        <li><a class="text-2xl font-bold" href="projects.html">PROJECTS</a></li>
+        <li><a class="text-2xl font-bold" href="startup.html">STARTUP</a></li>
+        <li><a class="text-2xl font-bold" href="about.html">ABOUT</a></li>
+        <li><a class="text-2xl font-bold" href="contact.html" aria-current="page">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar-end flex items-center gap-4">
+      <!-- Lang toggle -->
+      <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
+        aria-label="Switch language to Croatian">HR</button>
+
+      <!-- theme toggle -->
       <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="black" />
         <!-- Sun icon  -->
@@ -61,39 +90,39 @@
         </svg>
       </label>
     </div>
-  </div>
+  </header>
 
-  <main class="w-full flex-grow flex items-start justify-center py-12 px-4">
+  <!-- MAIN -->
+  <main id="main-content" class="w-full flex-grow flex items-start justify-center py-12 px-4" role="main">
     <div class="max-w-6xl w-full flex flex-col lg:flex-row lg:items-start justify-center gap-10">
 
+      <!-- Left column -->
       <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left
-                  animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms]
-                  order-1 lg:order-1">
+                  animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms] order-1 lg:order-1">
+
+        <!-- Email card -->
         <section class="card w-full max-w-md bg-base-300 mb-5">
           <div class="card-body">
             <h1 class="text-6xl font-bold mb-6 theme-color normal-case">GET IN TOUCH</h1>
-            <h2 class="text-2xl sm:text-3xl mb-2">
-              SEND AN EMAIL:
-            </h2>
+            <h2 class="text-2xl sm:text-3xl mb-2">SEND AN EMAIL:</h2>
             <p class="text-xl sm:text-3xl mb-2 theme-color normal-case">
-              <a href="mailto:horizon.dev.info@gmail.com" class="hover:underline text-black-600">
-                horizon.dev.info@gmail.com
-              </a>
+              <a href="mailto:horizon.dev.info@gmail.com"
+                class="hover:underline text-black-600">horizon.dev.info@gmail.com</a>
             </p>
           </div>
         </section>
 
+        <!-- Form card -->
         <section class="w-full max-w-md card rounded-xl bg-base-300 order-3 lg:order-none">
           <div class="card-body rounded-xl bg-[#F5CF0A]">
-            <h2 class="text-2xl sm:text-3xl mb-4 normal-case">
-              OR FILL OUT THE FORM:
-            </h2>
-            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
-              netlify-recaptcha="true" class="card-body p-0 items-center">
+            <h2 class="text-2xl sm:text-3xl mb-4 normal-case">OR FILL OUT THE FORM:</h2>
+
+            <form name="contact" method="POST" data-netlify="true" netlify-recaptcha="true"
+              data-netlify-honeypot="bot-field" class="card-body p-0 items-center" aria-label="Contact form">
               <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="subject" value="Upit s Horizon stranice" />
-              <input type="hidden" name="netlify-honeypot" id="bot-field" />
-              <input type="hidden" name="netlify-email" value="karl.a.lenard@gmail.com">
+              <input type="hidden" name="subject" value="Website enquiry" />
+              <input type="hidden" name="netlify-honeypot" />
+              <input type="hidden" name="netlify-email" value="karl.a.lenard@gmail.com" />
 
               <div class="form-control w-full">
                 <label class="label justify-start" for="name">
@@ -129,31 +158,32 @@
         </section>
       </div>
 
+      <!-- Right column (images) -->
       <div class="w-full lg:w-1/2 flex justify-center lg:justify-start lg:pt-24
                   animate-fade-down animate-once animate-ease-linear animate-duration-[1000ms]
                   order-2 lg:order-2">
         <div class="block" data-theme-visible="lofi">
-          <img src="./images/pair-programming-light.png" alt="Hero light"
-            class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" />
+          <img src="./images/pair-programming-light.png" alt="Pair programming illustration (light theme)" width="512"
+            height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" loading="lazy" />
         </div>
-
         <div class="hidden" data-theme-visible="black">
-          <img src="./images/pair-programming-dark.png" alt="Hero dark"
-            class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" />
+          <img src="./images/pair-programming-dark.png" alt="Pair programming illustration (dark theme)" width="512"
+            height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" loading="lazy" />
         </div>
       </div>
-
     </div>
   </main>
 
-  <!-- footer  -->
-  <footer class="py-4 text-center">
+  <!-- FOOTER -->
+  <footer class="py-4 text-center" role="contentinfo">
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/theme.js"></script>
-  <script src="./js/form.js"></script>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/lang_toggle.js" defer></script>
+  <script src="./js/form.js" defer></script>
 </body>
 
 </html>

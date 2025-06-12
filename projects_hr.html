@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="hr" data-theme="lofi">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Horizon</title>
+  <title>Projekti | Horizon</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
   <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
@@ -18,10 +18,12 @@
 </head>
 
 <body class="min-h-screen flex flex-col overflow-x-hidden">
+  <!-- navbar -->
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
+      <!-- Mobile menu -->
       <div class="dropdown bg-base-200">
-        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
+        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Otvori izbornik"
           class="btn btn-ghost lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
@@ -30,37 +32,43 @@
 
         <ul tabindex="0" role="menu"
           class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html"
-              aria-current="page">PROJECTS</a>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html">POČETNA</a>
           </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects_hr.html"
+              aria-current="page">PROJEKTI</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup_hr.html">STARTUP</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about_hr.html">O&nbsp;NAMA</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact_hr.html">KONTAKT</a>
+          </li>
         </ul>
       </div>
 
-      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color" aria-label="Horizon home">
+      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
+        aria-label="Horizon početna">
         HORIZON
       </a>
     </div>
 
-    <nav class="navbar-center hidden lg:flex" aria-label="Primary navigation">
+    <!-- Desktop nav -->
+    <nav class="navbar-center hidden lg:flex" aria-label="Primarna navigacija">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="text-2xl font-bold" href="index.html">HOME</a></li>
-        <li><a class="text-2xl font-bold" href="projects.html" aria-current="page">PROJECTS</a></li>
-        <li><a class="text-2xl font-bold" href="startup.html">STARTUP</a></li>
-        <li><a class="text-2xl font-bold" href="about.html">ABOUT</a></li>
-        <li><a class="text-2xl font-bold" href="contact.html">CONTACT</a></li>
+        <li><a class="text-2xl font-bold" href="index_hr.html">POČETNA</a></li>
+        <li><a class="text-2xl font-bold" href="projects_hr.html" aria-current="page">PROJEKTI</a></li>
+        <li><a class="text-2xl font-bold" href="startup_hr.html">STARTUP</a></li>
+        <li><a class="text-2xl font-bold" href="about_hr.html">O&nbsp;NAMA</a></li>
+        <li><a class="text-2xl font-bold" href="contact_hr.html">KONTAKT</a></li>
       </ul>
     </nav>
 
+    <!-- Lang + theme -->
     <div class="navbar-end flex items-center gap-4">
       <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
-        aria-label="Switch language to Croatian">
-        HR
+        aria-label="Prebaci jezik na engleski">
+        EN
       </button>
-
       <!-- theme toggle -->
       <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="black" />
@@ -83,9 +91,9 @@
   <main class="px-2 overflow-x-hidden">
     <div class="flex items-center justify-center gap-4 py-0 mb-0" data-aos="fade-right" data-aos-easing="linear"
       data-aos-duration="1500">
-      <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
+      <img src="./images/responsive.svg" alt="Ikona" class="w-24 h-24 sm:w-64 sm:h-64" />
       <h2 class=" text-2xl sm:text-4xl font-bold text-center">
-        some of our previous projects:
+        neki od naših prijašnjih projekata:
       </h2>
     </div>
 
@@ -93,7 +101,7 @@
     <section class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
       <div class="text-left mb-6">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">data management</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">upravljanje podacima</h2>
       </div>
       <div class="swiper-pagination-top mb-4 flex justify-end"></div>
       <div class="swiper w-full max-w-full mx-auto">
@@ -102,22 +110,20 @@
           <div class="swiper-slide bg-transparent">
             <div class="bg-base-100 p-6 rounded-md">
               <div class="text-left">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Web aplikacija za upravljanje restoranom</h2>
               </div>
-              <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
+              <img src="./images/restaurant_mockup.png" alt="Aplikacija za upravljanje restoranom"
                 class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-                Next js + MySQL + react + chakra ui (deployed on digital ocean)
+                Next js + MySQL + React + Chakra UI (deploirano na DigitalOcean-u)
               </h3>
               <p class="text-base sm:text-lg mb-8">
-                Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu
-                ideas
-                and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized
-                interface on
-                desktop and mobile.<br> With
-                integrated instant live translations into all required languages,editing of the restaurant menu became
-                simple.
-                Additional feature was a PDF menu prepared for print with one easy click.
+                Administratorska nadzorna ploča za vlasnika restorana razvijena je kako bi omogućila definiranje
+                trenutačnog jelovnika, jelovnika s posebnim ponudama ili novih ideja jelovnika i njihovo kasnije
+                uključivanje u aktivni jelovnik. Cijene, opise i alergene moguće je uređivati kroz prilagođeno sučelje
+                na stolnom računalu i mobilnom uređaju. Zahvaljujući integriranim trenutačnim prijevodima na sve
+                potrebne jezike, uređivanje jelovnika postalo je jednostavno. Dodatna funkcionalnost je PDF jelovnik
+                spreman za ispis jednim klikom.
               </p>
             </div>
           </div>
@@ -125,25 +131,21 @@
           <div class="swiper-slide bg-transparent">
             <div class="bg-base-100 p-6 rounded-md">
               <div class="text-left">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for small medical
-                  clinic
-                </h2>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Sustav upravljanja podacima za malu
+                  medicinsku kliniku</h2>
               </div>
-              <img src="./images/clinic_mockup.png" alt="Clinic database system"
+              <img src="./images/clinic_mockup.png" alt="Sustav baze podataka klinike"
                 class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-                PHP + MySQL + jAVASCRIPT + BOOTSTRAP
+                PHP + MySQL + JavaScript + Bootstrap
               </h3>
               <p class="text-base sm:text-lg mb-8">
-                Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia
-                for
-                purposes of running patients database, ailment and attendance history, feeding program and outreach
-                program
-                database. Application is secured so access is allowed only for clinic staff. Option to export various
-                data
-                from database and to add new database parameters specific for health clinic work. Design is simple and
-                clean
-                with data entry enabled by using keyboard to simulate desktop software.
+                Sustav upravljanja podacima za malu medicinsku kliniku. Interna web‑aplikacija za Lifeline Clinic u
+                Namibiji namijenjena vođenju baze pacijenata, povijesti bolesti i posjeta, baze programa prehrane i
+                terenskih programa. Aplikacija je zaštićena tako da joj pristup imaju samo djelatnici klinike. Omogućeno
+                je izvoz različitih podataka iz baze te dodavanje novih parametara specifičnih za rad zdravstvene
+                ustanove. Dizajn je jednostavan i čist, a unos podataka optimiziran je za rad tipkovnicom kako bi se
+                simuliralo desktop softver.
               </p>
             </div>
           </div>
@@ -153,54 +155,13 @@
       </div>
     </section>
 
-    <!-- restaurant -->
-    <!-- <section
-      class="bg-base-100/80 mt-0 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-      <div class="text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Restaurant management web app</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          Next js + MySQL + react + chakra ui (deployed on digital ocean)
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu ideas
-          and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized interface on
-          desktop and mobile.<br> With
-          integrated instant live translations into all required languages,editing of the restaurant menu became simple.
-          <br>
-          Additional feature was a PDF menu prepared for print with one easy click.
-        </p>
-        <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
-          class="w-full h-auto mx-auto max-w-3xl" />
-      </div>
-    </section> -->
-
-    <!-- clinic -->
-    <!-- <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
-      data-aos-easing="linear" data-aos-duration="1500">
-      <div class="text-left">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4">Database management</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          PHP + MySQL + jAVASCRIPT + BOOTSTRAP
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia for
-          purposes of running patients database, ailment and attendance history, feeding program and outreach program
-          database. Application is secured so access is allowed only for clinic staff. Option to export various data
-          from database and to add new database parameters specific for health clinic work. Design is simple and clean
-          with data entry enabled by using keyboard to simulate desktop software.
-        </p>
-
-        <img src="./images/clinic_mockup.png" alt="Clinic database system" class="w-full h-auto mx-auto max-w-3xl" />
-      </div>
-    </section> -->
-
     <!-- screenagers -->
     <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
-          PROGRAMMING AND ART
+          PROGRAMIRANJE I UMJETNOST
         </h2>
       </div>
 
@@ -211,8 +172,8 @@
           screenagers vol.2
           <a href="https://www.premierstratageme.net/en/screenagers-vol-2/"
             class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-            aria-label="Visit Screenagers Vol. 2 on Premier Stratageme" target="_blank" rel="noopener noreferrer">
-            (visit)
+            aria-label="Posjeti Screenagers Vol. 2 na Premier Stratageme" target="_blank" rel="noopener noreferrer">
+            (posjeti)
           </a>
         </h2>
 
@@ -242,12 +203,11 @@
             node.js + JavaScript + WebSocket + HTML + CSS
           </h3>
           <p class="text-base sm:text-lg mb-8">
-            Platform for creation and control of multimedia shows. Videos, audio images, texts and live stream defined
-            through editor interface with layers compatibility to achieve complex and multilayered time dependent
-            display of media. Audience is connected to server to interact with displays on stage supported by
-            websockets.
-            Integrated two classic games that audience can control with their smartphone. Master interface for directors
-            to control live show.
+            Platforma za kreiranje i upravljanje multimedijskim predstavama. Videozapisi, zvukovi, slike, tekstovi i
+            prijenos uživo definiraju se kroz uređivačko sučelje s mogućnošću slojevitog kombiniranja medija kako bi se
+            postigao kompleksan, vremenski ovisan prikaz. Publika je povezana na poslužitelj i interaktivno sudjeluje u
+            prikazu na pozornici putem WebSocketa. Integrirane su dvije klasične igre kojima publika upravlja svojim
+            pametnim telefonom. Postoji i „master" sučelje za redatelje kojim se upravlja cjelokupnom predstavom uživo.
           </p>
         </div>
 
@@ -260,11 +220,12 @@
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class=" text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-[#F5CF0A]">FLIGHT DATA VISUALISATION</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-[#F5CF0A]">VIZUALIZACIJA PODATAKA O LETOVIMA
+        </h2>
       </div>
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-          Social network with live flight tracking
+          Društvena mreža s praćenjem letova uživo
         </h2>
         <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
           class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
@@ -272,15 +233,14 @@
         </video>
 
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + Web socket based chat +
-          Flightlab
-          API + Google places API
+          node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + WebSocket chat + Flightlab
+          API + Google Places API
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          Subscription based social network with integration of flight tracking data visualisation. 3D Globe with real
-          and detailed world map layer and interactive representation of flight data. Tracked flights from platform
-          users entered fight numbers with integration of Flightlab API. Integration of live one to one chat for
-          platform users.
+          Pretplatnička društvena mreža s integriranom vizualizacijom podataka o letovima. 3D globus s detaljnom kartom
+          svijeta i interaktivnim prikazom podataka o letovima. Korisnici platforme prate letove unosom broja leta, a
+          podaci se dohvaćaju putem Flightlab API‑ja. Ugrađen je i sustav izravnog čavrljanja (1‑na‑1) među korisnicima
+          platforme.
         </p>
       </div>
     </section>
@@ -292,7 +252,7 @@
 
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
-          QR CODE GENERATOR
+          QR KOD GENERATOR
         </h2>
       </div>
 
@@ -300,21 +260,21 @@
 
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-          QR CODE BASED TRANSACTIONS
+          Transakcije temeljene na QR kodu
         </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_1.png" alt="Slika 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_2.png" alt="Slika 2" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_3.png" alt="Slika 3" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_4.png" alt="Slika 4" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
@@ -324,9 +284,9 @@
           PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          QR code generator, UI for QR code reader and redeem system developed and added to an existing dating web app.
-          Developed with purpose to enable dating app users sending gifts connected to real shops. Shops can read and
-          redeem QR code based gifts send among dating app platform users.
+          Generator QR kodova, sučelje za očitanje i sustav iskupa razvijeni su i dodani postojećoj dating
+          web‑aplikaciji. Cilj je omogućiti korisnicima aplikacije slanje darova povezanih s fizičkim trgovinama.
+          Trgovine mogu očitati i iskoristiti darove temeljene na QR kodu koje korisnici razmjenjuju na platformi.
         </p>
       </div>
     </section>
@@ -337,34 +297,34 @@
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class=" text-left">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">IGRE</h2>
       </div>
 
       <div class="swiper-pagination-top mb-4 flex justify-end"></div>
 
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-          subject pronouns, animals and alphabet game
+          Igra zamjenica, životinja i abecede
         </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_1.png" alt="Slika igre 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_2.png" alt="Slika igre 2" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
           <div class="pt-10 swiper-pagination"></div>
         </div>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
+          HTML + CSS + Bootstrap + JavaScript + PHP + MySQL + Shopify API
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          Game platform for subscription based multiuser accounts sold on Shopify. Interactive educational games for
-          language learning which includes word search games, level based games, hints, collecting points and custom
-          avatars.
+          Platforma igara za višekorisničke pretplatničke račune prodavana putem Shopifyja. Interaktivne edukativne igre
+          za učenje jezika uključuju tražilice riječi, igre temeljene na razinama, savjete, prikupljanje bodova i
+          prilagodljive avatare.
         </p>
       </div>
     </section>
@@ -374,7 +334,7 @@
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class="text-left mb-6">
-        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">websites</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">WEB STRANICE</h2>
       </div>
 
       <div class="swiper-pagination-top mb-4 flex justify-end"></div>
@@ -386,22 +346,22 @@
             <!-- 1 -->
             <div class="swiper-slide">
               <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                website for a startup app
+                Web stranica za startup aplikaciju
                 <a href="https://shift-mate.netlify.app/"
                   class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-                  aria-label="Visit shift mate website" target="_blank" rel="noopener noreferrer">
-                  (visit)
+                  aria-label="Posjeti Shift Mate web stranicu" target="_blank" rel="noopener noreferrer">
+                  (posjeti)
                 </a>
               </h2>
-              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JAVASCRIPT + TAILWIND (DAISY UI)
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JavaScript + Tailwind (Daisy UI)
               </h3>
               <div class="group relative flex-1">
                 <!-- light -->
-                <img src="./images/website mockups/1-light.png" alt="Startup app website light theme"
+                <img src="./images/website mockups/1-light.png" alt="Startup web stranica svijetla tema"
                   data-theme-visible="lofi"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
                 <!-- dark -->
-                <img src="./images/website mockups/1-dark.png" alt="Startup app website dark theme"
+                <img src="./images/website mockups/1-dark.png" alt="Startup web stranica tamna tema"
                   data-theme-visible="black"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               </div>
@@ -410,22 +370,22 @@
             <!-- 2 -->
             <div class="swiper-slide">
               <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                construction company website
+                Web stranica građevinske tvrtke
                 <a href="https://modular-homes.netlify.app/"
                   class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-                  aria-label="Visit construction company website" target="_blank" rel="noopener noreferrer">
-                  (visit)
+                  aria-label="Posjeti web stranicu građevinske tvrtke" target="_blank" rel="noopener noreferrer">
+                  (posjeti)
                 </a>
               </h2>
               <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
+                Bootstrap + HTML + JavaScript (jQuery)
               </h3>
               <!-- light -->
-              <img src="./images/website mockups/2-light.png" alt="Construction business website light theme"
+              <img src="./images/website mockups/2-light.png" alt="Građevinska web stranica svijetla tema"
                 data-theme-visible="lofi"
                 class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               <!-- dark  -->
-              <img src="./images/website mockups/2-dark.png" alt="Construction business website dark theme"
+              <img src="./images/website mockups/2-dark.png" alt="Građevinska web stranica tamna tema"
                 data-theme-visible="black"
                 class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               <div class="group relative flex-1">
@@ -435,22 +395,22 @@
             <!-- 3 -->
             <div class="swiper-slide">
               <div class="group relative flex-1">
-                <h2 class="font-bold text-2xl sm:text-3xl mb-2">BARBERSHOP WEBSITE
+                <h2 class="font-bold text-2xl sm:text-3xl mb-2">WEB STRANICA ZA FRIZERSKI SALON
                   <a href="https://barbershop-react-vite.netlify.app/"
                     class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-                    aria-label="Visit BARBERSHOP website" target="_blank" rel="noopener noreferrer">
-                    (visit)
+                    aria-label="Posjeti web stranicu frizerskog salona" target="_blank" rel="noopener noreferrer">
+                    (posjeti)
                   </a>
                 </h2>
                 <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                  REACT + CHAKRA UI + MOTION ANIMATION JS
+                  React + Chakra UI + Motion Animation JS
                 </h3>
                 <!-- light  -->
-                <img src="./images/website mockups/3-light.png" alt="Barbershop website light theme"
+                <img src="./images/website mockups/3-light.png" alt="Frizerski salon web stranica svijetla tema"
                   data-theme-visible="lofi"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
                 <!-- dark  -->
-                <img src="./images/website mockups/3-dark.png" alt="Barbershop website dark theme"
+                <img src="./images/website mockups/3-dark.png" alt="Frizerski salon web stranica tamna tema"
                   data-theme-visible="black"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               </div>
@@ -465,7 +425,7 @@
 
 
   <footer class="py-4 text-center">
-    <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
+    <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -497,11 +457,6 @@
           grabCursor: true
         });
       });
-      function clonePagination(swiper, topEl, bottomEl) {
-        if (topEl && bottomEl) {
-          topEl.innerHTML = bottomEl.innerHTML;
-        }
-      }
     });
   </script>
 </body>

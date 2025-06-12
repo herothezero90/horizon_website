@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="hr" data-theme="lofi">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- SEO -->
   <meta name="description"
-    content="Learn about Horizon’s full‑stack team: experts in MVP, web design, SEO and digital growth." />
-  <meta property="og:title" content="About – Horizon Web Development" />
-  <meta property="og:description" content="Meet the developers, designers and marketers behind Horizon." />
+    content="Upoznajte Horizonov full-stack tim: stručnjaci za MVP, web-dizajn, SEO i digitalni rast." />
+  <meta property="og:title" content="O nama – Horizon Web Development" />
+  <meta property="og:description" content="Upoznajte developere, dizajnere i marketinške stručnjake iza Horizona." />
   <meta property="og:image" content="https://horizon-dev.hr/images/hero3.png" />
-  <meta property="og:url" content="https://horizon-dev.hr/about.html" />
+  <meta property="og:url" content="https://horizon-dev.hr/about_hr.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>About | Horizon</title>
+  <title>O nama | Horizon</title>
 
   <!-- Performance: fonts + css -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +21,7 @@
   <noscript>
     <link rel="stylesheet" href="/dist/output.css" />
   </noscript>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&family=Phudu:wght@400;700&display=swap"
@@ -30,16 +31,12 @@
 </head>
 
 <body class="min-h-screen flex flex-col">
-  <!-- Skip link -->
-  <a href="#main-content"
-    class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-4 bg-base-200 p-2 rounded">Skip to main
-    content</a>
 
-  <!-- NAVBAR (unchanged classes) -->
+  <!-- NAVBAR (klase ostaju) -->
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
-        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
+        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Otvori izbornik"
           class="btn btn-ghost lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
@@ -47,30 +44,36 @@
         </button>
         <ul tabindex="0" role="menu"
           class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html">POČETNA</a>
           </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html"
-              aria-current="page">ABOUT</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects_hr.html">PROJEKTI</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup_hr.html">STARTUP</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about_hr.html"
+              aria-current="page">O&nbsp;NAMA</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact_hr.html">KONTAKT</a>
+          </li>
         </ul>
       </div>
       <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
-        aria-label="Horizon home">HORIZON</a>
+        aria-label="Horizon početna">HORIZON</a>
     </div>
-    <nav class="navbar-center hidden lg:flex" aria-label="Primary navigation">
+
+    <nav class="navbar-center hidden lg:flex" aria-label="Primarna navigacija">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="text-2xl font-bold" href="index.html">HOME</a></li>
-        <li><a class="text-2xl font-bold" href="projects.html">PROJECTS</a></li>
-        <li><a class="text-2xl font-bold" href="startup.html">STARTUP</a></li>
-        <li><a class="text-2xl font-bold" href="about.html" aria-current="page">ABOUT</a></li>
-        <li><a class="text-2xl font-bold" href="contact.html">CONTACT</a></li>
+        <li><a class="text-2xl font-bold" href="index_hr.html">POČETNA</a></li>
+        <li><a class="text-2xl font-bold" href="projects_hr.html">PROJEKTI</a></li>
+        <li><a class="text-2xl font-bold" href="startup_hr.html">STARTUP</a></li>
+        <li><a class="text-2xl font-bold" href="about_hr.html" aria-current="page">O&nbsp;NAMA</a></li>
+        <li><a class="text-2xl font-bold" href="contact_hr.html">KONTAKT</a></li>
       </ul>
     </nav>
+
     <div class="navbar-end flex items-center gap-4">
       <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
-        aria-label="Switch language to Croatian">HR</button>
+        aria-label="Switch language to English">EN</button>
+
       <!-- theme toggle -->
       <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="black" />
@@ -91,43 +94,43 @@
 
   <!-- MAIN -->
   <main id="main-content" class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow mb-10" role="main">
-    <h1 class="sr-only">Horizon Team & Expertise</h1>
+    <h1 class="sr-only">Horizon tim i stručnost</h1>
 
-    <h2 class="text-5xl font-bold text-center mb-10 animate-fade-right animate-once animate-duration-2000">Our Team:
+    <h2 class="text-5xl font-bold text-center mb-10 animate-fade-right animate-once animate-duration-2000">
+      Naš tim:
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-
       <!-- Dubravka Card -->
       <section
         class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
         <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
           <div class="flex items-center">
             <img class="rounded-full w-20 h-20" src="./images/dubravka.jpeg" width="80" height="80"
-              alt="Portrait of Dubravka Spoljaric" loading="lazy" />
+              alt="Portret Dubravke Spoljaric" loading="lazy" />
             <figcaption class="ms-4 text-left space-y-1">
               <span class="text-2xl font-bold text-[#F5CF0A]">Dubravka Spoljaric</span>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Full Stack Developer</span>
+              <span class="block text-lg text-gray-500 dark:text-gray-400">Full-stack developer</span>
             </figcaption>
           </div>
           <div class="flex ms-10 space-x-3">
-            <a href="https://github.com/duda1304" target="_blank" rel="noopener" aria-label="Dubravka on GitHub"><i
-                class="fab fa-github text-xl" aria-hidden="true"></i></a>
+            <a href="https://github.com/duda1304" target="_blank" rel="noopener" aria-label="Dubravka na GitHubu">
+              <i class="fab fa-github text-xl" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/dubravka-%C5%A1poljari%C4%87-906403a/" target="_blank" rel="noopener"
-              aria-label="Dubravka on LinkedIn"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
+              aria-label="Dubravka na LinkedInu">
+              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
           </div>
         </figure>
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Experience in full stack development of multiple projects over the years</li>
-          <li>Specialised in MVP products for market testing</li>
-          <li>Builds and maintains backend services with Node.js, Express, PHP or other server-side technologies</li>
-          <li>Develops responsive, accessible, and performant user interfaces using modern frameworks</li>
-          <li>Designs and manages databases</li>
-          <li>Development and integration of RESTful APIs to enable communication between frontend and backend systems
-          </li>
-          <li>Implements user authentication, authorisation, and session management securely</li>
-          <li>Deploys and monitors applications</ <li>Troubleshoots across the full stack—from browser UI bugs to
-            server/database issues</li>
+          <li>Višegodišnje iskustvo u full-stack razvoju različitih projekata</li>
+          <li>Specijalizirana za MVP proizvode za testiranje tržišta</li>
+          <li>Izrađuje i održava backend servise (Node.js, Express, PHP i druge tehnologije)</li>
+          <li>Razvija responzivna, pristupačna i brza korisnička sučelja modernim okvirima</li>
+          <li>Dizajnira i administrira baze podataka</li>
+          <li>Razvija i integrira RESTful API-je za komunikaciju front-enda i back-enda</li>
+          <li>Sigurno implementira autentikaciju, autorizaciju i sesije</li>
+          <li>Postavlja i nadzire aplikacije</li>
+          <li>Rješava probleme kroz cijeli stack – od UI bugova do poslužitelja i baze</li>
         </ul>
       </section>
 
@@ -137,38 +140,34 @@
         <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
           <div class="flex items-center">
             <img class="rounded-full w-20 h-20" src="./images/karla.jpg" width="80" height="80"
-              alt="Portrait of Karla Lenard" loading="lazy" />
+              alt="Portret Karle Lenard" loading="lazy" />
             <figcaption class="ms-4 text-left space-y-1">
               <span class="text-2xl font-bold text-[#F5CF0A]">Karla Lenard</span>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Frontend Developer</span>
+              <span class="block text-lg text-gray-500 dark:text-gray-400">Frontend developer</span>
             </figcaption>
           </div>
           <div class="flex ms-10 space-x-3">
-            <a href="https://github.com/herothezero90" target="_blank" rel="noopener" aria-label="Karla on GitHub">
-              <i class="fab fa-github text-xl" aria-hidden="true"></i>
-            </a>
+            <a href="https://github.com/herothezero90" target="_blank" rel="noopener" aria-label="Karla na GitHubu">
+              <i class="fab fa-github text-xl" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/karla-lenard-b7590b26b/" target="_blank" rel="noopener"
-              aria-label="Karla on LinkedIn">
-              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
-            </a>
+              aria-label="Karla na LinkedInu">
+              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
           </div>
         </figure>
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Designs and implements SEO optimized user interfaces with HTML, CSS (Tailwind, SCSS) and JavaScript (plain
-            or jQuery)
-          </li>
-          <li>Builds interactive, single-page or routed applications using frameworks like React (Next.js, Remix)</li>
-          <li>Focuses on responsive design to ensure smooth performance across devices and screen sizes</li>
-          <li>Uses UI libraries (like DaisyUI, Chakra UI, or Material UI, Bootstrap) to accelerate development</li>
-          <li>Optimizes websites for speed and performance, ensures cross-browser compatibility and accessibility</li>
-          <li>Collaborates with backend developers to integrate APIs and display dynamic content</li>
-          <li>Works closely with designers to translate mockups into functional web pages</li>
+          <li>Dizajnira i implementira SEO-optimizirana sučelja u HTML-u, CSS-u (Tailwind, SCSS) i JavaScriptu</li>
+          <li>Izrađuje interaktivne SPA ili routed aplikacije (React, Next.js, Remix)</li>
+          <li>Brine o responzivnosti i performansama na svim uređajima</li>
+          <li>Koristi UI biblioteke (DaisyUI, Chakra UI, Material UI, Bootstrap) za brži razvoj</li>
+          <li>Optimizira web-stranice za brzinu, kompatibilnost i pristupačnost</li>
+          <li>Integrira API-je i dinamički sadržaj u suradnji s backend timom</li>
+          <li>Tijesno surađuje s dizajnerima kako bi makete oživjele u kodu</li>
         </ul>
       </section>
     </div>
 
     <h2 class="text-4xl font-bold text-center mt-16 mb-10 animate-fade-right animate-once animate-duration-2000">
-      Extended Team:
+      Prošireni tim:
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
@@ -178,31 +177,28 @@
         <figure class="flex items-start bg-base-300 rounded-md p-4">
           <div class="flex items-center">
             <img class="rounded-full w-20 h-20" src="./images/mia.jpeg" width="80" height="80"
-              alt="Portrait of Mia Majstor" loading="lazy" />
+              alt="Portret Mije Majstor" loading="lazy" />
             <figcaption class="ms-4 text-left space-y-1">
               <span class="text-2xl font-bold text-[#F5CF0A]">Mia Majstor</span>
               <a href="https://cleverfoxdesign.hr/en" target="_blank" rel="noopener"
-                class="text-lg text-gray-500 dark:text-gray-400 underline" aria-label="Clever Fox Design website">
+                class="text-lg text-gray-500 dark:text-gray-400 underline" aria-label="Clever Fox Design">
                 Clever&nbsp;Fox&nbsp;Design
               </a>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Brand Identity &amp; Web Designer</span>
+              <span class="block text-lg text-gray-500 dark:text-gray-400">Brand identitet &amp; web dizajn</span>
             </figcaption>
           </div>
           <div class="flex ms-10 space-x-3">
             <a href="https://www.linkedin.com/in/mia-majstor-39a257246/" target="_blank" rel="noopener"
-              aria-label="Mia on LinkedIn">
-              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
-            </a>
+              aria-label="Mia na LinkedInu"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
           </div>
         </figure>
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Brand identity, crafting unique visual identities that resonate with client objectives and
-            target audiences</li>
-          <li>Experienced in UI/UX design, creating intuitive and user-centered interfaces that enhance usability and
-            engagement</li>
-          <li>Skilled in web design, developing visually appealing and functional websites </li>
-          <li>Proficient in visual design, utilizing creative tools and techniques to deliver compelling visuals and
-            graphics</li>
+          <li>Kreira vizualne identitete usklađene s potrebama klijenata i ciljanom publikom</li>
+          <li>Iskusna u UI/UX dizajnu – intuitivna, korisnički usmjerena sučelja koja poboljšavaju korisnično iskustvo
+          </li>
+          <li>Oblikuje vizualno atraktivne i funkcionalne web-stranice</li>
+          <li>Vješta u vizualnom dizajnu i primjeni raznih kreativnih alata i tehnika za stvaranje upečatljivih i
+            originalnih vizuala i grafika</li>
         </ul>
       </section>
 
@@ -212,7 +208,7 @@
         <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
           <div class="flex items-center">
             <img class="rounded-full w-20 h-20" src="./images/ivona.jpg" width="80" height="80"
-              alt="Portrait of Ivona Lenard" loading="lazy" />
+              alt="Portret Ivone Lenard" loading="lazy" />
             <figcaption class="ms-4 text-left space-y-1">
               <span class="text-2xl font-bold text-[#F5CF0A]">Ivona Lenard</span>
               <span class="block text-lg text-gray-500 dark:text-gray-400">Social Media Manager</span>
@@ -220,38 +216,28 @@
           </div>
           <div class="flex ms-10 space-x-3">
             <a href="https://www.linkedin.com/in/ivona-lenard-59892a118/" target="_blank" rel="noopener"
-              aria-label="Ivona on LinkedIn">
-              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
-            </a>
+              aria-label="Ivona na LinkedInu"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
           </div>
         </figure>
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Expertise in Google Ads & Meta marketing, focusing on strategic campaigns and targeted advertising.</li>
-          <li>Proficient in social media management, enhancing brand presence across various platforms.</li>
-          <li>Skilled in content writing, creating engaging and informative posts that resonate with the audience.</li>
-          <li>Experienced in digital marketing strategies, optimizing online channels for increased reach and
-            engagement and social media campaign management.</li>
+          <li>Stručnjakinja za Google Ads i Meta oglašavanje s fokusom na strateške kamapnje i ciljano oglašavanje</li>
+          <li>Unaprjeđuje prisutnost brenda na društvenim mrežama svojim iskustvom kao social media manager</li>
+          <li>Vješta u copyrightu, piše angažirajući i informativan sadržaj prilagođen publici</li>
+          <li>Iskusna za strategije digitalnog oglašacanja, optimizirajući online kanale za povećan doseg i angažman te
+            u vođenju digitalnih kampanja</li>
         </ul>
       </section>
     </div>
   </main>
 
   <footer class="py-4 text-center">
-    <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
+    <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
   <script src="./js/theme.js" defer></script>
   <script src="./js/lang_toggle.js" defer></script>
-  <script src="./js/projects.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init();
-      new Swiper('.swiper', { loop: true, spaceBetween: 20, slidesPerView: 1, grabCursor: true });
-    });
-  </script>
+  <script src="./js/about.js" defer></script>
 </body>
 
 </html>
