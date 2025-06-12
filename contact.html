@@ -93,85 +93,111 @@
   </header>
 
   <!-- MAIN -->
-  <main id="main-content" class="w-full flex-grow flex items-start justify-center py-12 px-4" role="main">
-    <div class="max-w-6xl w-full flex flex-col lg:flex-row lg:items-start justify-center gap-10">
+  <main id="main-content" class="w-full flex-grow flex items-center justify-center py-12 px-4" role="main">
 
-      <!-- Left column -->
-      <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left
-                  animate-fade-up animate-once animate-ease-linear animate-duration-[1000ms] order-1 lg:order-1">
+    <section class="w-full max-w-6xl animate-fade-up animate-once animate-ease-linear animate-duration-[800ms]">
 
-        <!-- Email card -->
-        <section class="card w-full max-w-md bg-base-300 mb-5">
-          <div class="card-body">
-            <h1 class="text-6xl font-bold mb-6 theme-color normal-case">GET IN TOUCH</h1>
-            <h2 class="text-2xl sm:text-3xl mb-2">SEND AN EMAIL:</h2>
-            <p class="text-xl sm:text-3xl mb-2 theme-color normal-case">
-              <a href="mailto:horizon.dev.info@gmail.com"
-                class="hover:underline text-black-600">horizon.dev.info@gmail.com</a>
-            </p>
+      <div class="flex flex-col lg:flex-row lg:gap-10">
+
+        <!-- 1) HOOK TEXT (always first) -->
+        <div class="order-1 lg:order-1 flex-1 flex flex-col items-start text-left lg:text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+            You have an idea?<br />
+            Get in touch so we can turn it into reality!
+          </h1>
+
+          <!-- Desktop image (inside left column) -->
+          <div class="hidden lg:block w-full">
+            <div class="block" data-theme-visible="lofi">
+              <img src="./images/pair-programming-light.png" alt="Pair programming illustration (light)" width="512"
+                height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto lg:mx-0" loading="lazy" />
+            </div>
+            <div class="hidden" data-theme-visible="black">
+              <img src="./images/pair-programming-dark.png" alt="Pair programming illustration (dark)" width="512"
+                height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto lg:mx-0" loading="lazy" />
+            </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Form card -->
-        <section class="w-full max-w-md card rounded-xl bg-base-300 order-3 lg:order-none">
-          <div class="card-body rounded-xl bg-[#F5CF0A]">
-            <h2 class="text-2xl sm:text-3xl mb-4 normal-case">OR FILL OUT THE FORM:</h2>
+        <!-- 2) EMAIL + FORM (always second) -->
+        <div class="order-2 lg:order-2 flex-1 flex flex-col items-start text-left">
 
-            <form name="contact" method="POST" data-netlify="true" netlify-recaptcha="true"
-              data-netlify-honeypot="bot-field" class="card-body p-0 items-center" aria-label="Contact form">
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="subject" value="Website enquiry" />
-              <input type="hidden" name="netlify-honeypot" />
-              <input type="hidden" name="netlify-email" value="karl.a.lenard@gmail.com" />
+          <!-- Email card -->
+          <section class="card w-full bg-base-100 mb-6">
+            <div class="card-body">
+              <h2 class="text-3xl font-bold mb-4 theme-color normal-case">Send an email</h2>
+              <p class="text-2xl theme-color">
+                <a href="mailto:horizon.dev.info@gmail.com" class="hover:underline text-black-600">
+                  horizon.dev.info@gmail.com
+                </a>
+              </p>
+            </div>
+          </section>
 
-              <div class="form-control w-full">
-                <label class="label justify-start" for="name">
-                  <span class="label-text text-xl normal-case">Name</span>
-                </label>
-                <input type="text" id="name" name="name" placeholder="Your Name"
-                  class="input input-bordered text-lg font-onest w-full" required />
-              </div>
+          <!-- Form card -->
+          <section class="card w-full bg-base-100">
+            <div class="card-body">
+              <h2 class="text-2xl font-bold mb-4 normal-case">…or fill out the form:</h2>
 
-              <div class="form-control mt-4 w-full">
-                <label class="label justify-start" for="email">
-                  <span class="label-text text-xl normal-case">Email</span>
-                </label>
-                <input type="email" id="email" name="email" placeholder="Your Email"
-                  class="input input-bordered text-lg font-onest w-full" required />
-              </div>
+              <form name="contact" method="POST" data-netlify="true" netlify-recaptcha="true"
+                data-netlify-honeypot="bot-field" class="space-y-4 w-full" aria-label="Contact form">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="subject" value="Website enquiry" />
+                <input type="hidden" name="netlify-honeypot" />
 
-              <div class="form-control mt-4 w-full">
-                <label class="label justify-start" for="message">
-                  <span class="label-text text-xl normal-case">Message</span>
-                </label>
-                <textarea id="message" name="message" placeholder="Your Message"
-                  class="textarea textarea-bordered h-32 text-lg font-onest w-full" required></textarea>
-              </div>
+                <!-- Name -->
+                <div class="form-control w-full">
+                  <label class="label justify-start" for="name">
+                    <span class="label-text text-xl normal-case">Name</span>
+                  </label>
+                  <input type="text" id="name" name="name" placeholder="Your Name"
+                    class="input input-bordered text-lg font-onest w-full" required />
+                </div>
 
-              <div data-netlify-recaptcha="true" class="mt-4 w-full"></div>
+                <!-- Email -->
+                <div class="form-control w-full">
+                  <label class="label justify-start" for="email">
+                    <span class="label-text text-xl normal-case">Email</span>
+                  </label>
+                  <input type="email" id="email" name="email" placeholder="Your Email"
+                    class="input input-bordered text-lg font-onest w-full" required />
+                </div>
 
-              <div class="form-control mt-6 w-full">
-                <button type="submit" class="btn btn-primary text-xl normal-case">Send Message</button>
-              </div>
-            </form>
+                <!-- Message -->
+                <div class="form-control w-full">
+                  <label class="label justify-start" for="message">
+                    <span class="label-text text-xl normal-case">Message</span>
+                  </label>
+                  <textarea id="message" name="message" placeholder="Your Message"
+                    class="textarea textarea-bordered h-32 text-lg font-onest w-full" required></textarea>
+                </div>
+
+                <div data-netlify-recaptcha="true" class="w-full"></div>
+
+                <div class="form-control w-full">
+                  <button type="submit" class="btn btn-primary text-xl normal-case w-full">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3) MOBILE IMAGE (bottom on small screens) -->
+        <div class="order-3 lg:hidden w-full mt-10">
+          <div class="block" data-theme-visible="lofi">
+            <img src="./images/pair-programming-light.png" alt="Pair programming illustration (light)" width="512"
+              height="450" class="w-full max-w-xs sm:max-w-sm mx-auto" loading="lazy" />
           </div>
-        </section>
-      </div>
+          <div class="hidden" data-theme-visible="black">
+            <img src="./images/pair-programming-dark.png" alt="Pair programming illustration (dark)" width="512"
+              height="450" class="w-full max-w-xs sm:max-w-sm mx-auto" loading="lazy" />
+          </div>
+        </div>
 
-      <!-- Right column (images) -->
-      <div class="w-full lg:w-1/2 flex justify-center lg:justify-start lg:pt-24
-                  animate-fade-down animate-once animate-ease-linear animate-duration-[1000ms]
-                  order-2 lg:order-2">
-        <div class="block" data-theme-visible="lofi">
-          <img src="./images/pair-programming-light.png" alt="Pair programming illustration (light theme)" width="512"
-            height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" loading="lazy" />
-        </div>
-        <div class="hidden" data-theme-visible="black">
-          <img src="./images/pair-programming-dark.png" alt="Pair programming illustration (dark theme)" width="512"
-            height="450" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" loading="lazy" />
-        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
