@@ -1,13 +1,13 @@
+/* eslint-disable no-undef */
 $(function () {
   const $toggle = $('#lang-toggle');
   if (!$toggle.length) return;
 
-  const stored = localStorage.getItem('horizonLang') || 'en';
   const path = window.location.pathname;
+  const onHrPage = path.endsWith('_hr.html');
+  const current = onHrPage ? 'hr' : 'en';
 
-  const onHr = path.endsWith('_hr.html');
-  const onEn = path.endsWith('.html') && !onHr;
-
+  localStorage.setItem('horizonLang', current);
 
   function toHr(p) {
     if (p.endsWith('_hr.html')) return p;
@@ -20,16 +20,13 @@ $(function () {
     return '/index.html';
   }
 
-  if (stored === 'hr' && !onHr) {
-    const target = toHr(path);
-    if (target !== path) { location.replace(target); return; }
-  }
-  if (stored === 'en' && !onEn) {
-    const target = toEn(path);
-    if (target !== path) { location.replace(target); return; }
+  const targetPath = current === 'hr' ? toHr(path) : toEn(path);
+  if (targetPath !== path) {
+    location.replace(targetPath);
+    return;
   }
 
-  $toggle.text(stored === 'en' ? 'HR' : 'EN');
+  $toggle.text(current === 'en' ? 'HR' : 'EN');
 
   $toggle.on('click', function () {
     const nowShows = $(this).text().trim().toLowerCase();
