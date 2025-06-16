@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr" data-theme="lofi">
+<html lang="hr" data-theme="black">
 
 <head>
   <meta charset="UTF-8" />
@@ -78,8 +78,9 @@
       </button>
 
       <!-- theme toggle -->
-      <label class="swap swap-rotate">
-        <input type="checkbox" class="theme-controller" value="black" />
+      <label for="theme-toggle" class="swap swap-rotate" aria-label="Toggle dark / light theme">
+        <span class="sr-only">Toggle dark / light theme</span>
+        <input id="theme-toggle" type="checkbox" class="theme-controller" value="black" />
         <!-- Sun icon  -->
         <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24">
@@ -103,9 +104,9 @@
           class="mx-auto grid max-w-2xl grid-cols-1 gap-x-2 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="lg:pt-4 lg:pr-8" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
             <div class="lg:max-w-xl">
-              <h1 class="sr-only">Horizon Startup Usluge</h1>
+              <h1 class="sr-only" style="font-size:2.25rem; line-height:1.2;">Horizon Startup Usluge</h1>
               <p class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl text-[#F5CF0A]">
-                PRVO MVP <span class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl text-white">PRISTUP</span>
+                PRVO MVP <span class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl text-base">PRISTUP</span>
               </p>
               <p class="mt-6 text-2xl font-medium">
                 Startupima i tvrtkama pomažemo brže izbaciti ideje na tržište kroz razvoj MVP-a.

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="hr" data-theme="lofi">
+<html lang="hr" data-theme="black">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- SEO -->
+
   <meta name="description"
-    content="Upoznajte Horizonov full-stack tim: stručnjaci za MVP, web-dizajn, SEO i digitalni rast." />
+    content="Saznajte više o Horizonovu full-stack timu: stručnjaci za MVP-eve, web-dizajn, SEO i digitalni rast." />
   <meta property="og:title" content="O nama – Horizon Web Development" />
   <meta property="og:description" content="Upoznajte developere, dizajnere i marketinške stručnjake iza Horizona." />
   <meta property="og:image" content="https://horizon-dev.hr/images/hero3.png" />
@@ -14,76 +14,135 @@
   <meta name="twitter:card" content="summary_large_image" />
   <title>O nama | Horizon</title>
 
-  <!-- Performance: fonts + css -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="/dist/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/dist/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/dist/output.css">
   </noscript>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&family=Phudu:wght@400;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous" defer></script>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png" />
+
+  <style>
+    .about-card {
+      transition: opacity .35s ease;
+    }
+
+    .about-card.collapsed ul {
+      display: none;
+    }
+
+    .about-card.active-card {
+      opacity: .5;
+    }
+
+    #card-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      padding: 1.5rem;
+      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, .45);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    #card-overlay.visible {
+      opacity: 1;
+    }
+
+    @keyframes fade-in-grow {
+      0% {
+        opacity: 0;
+        transform: scale(.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fade-out-shrink {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(.95);
+      }
+    }
+
+    .fade-in {
+      animation: fade-in-grow .35s ease forwards;
+    }
+
+    .fade-out {
+      animation: fade-out-shrink .35s ease forwards;
+    }
+  </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-  <!-- NAVBAR (klase ostaju) -->
+  <!-- NAVIGACIJSKA TRAKA -->
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Otvori izbornik"
-          class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          class="btn lg:hidden p-1 bg-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </button>
         <ul tabindex="0" role="menu"
           class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html">POČETNA</a>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">POČETNA</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJEKTI</a>
           </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects_hr.html">PROJEKTI</a>
-          </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup_hr.html">STARTUP</a>
-          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about_hr.html"
               aria-current="page">O&nbsp;NAMA</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact_hr.html">KONTAKT</a>
-          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">KONTAKT</a></li>
         </ul>
       </div>
-      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
-        aria-label="Horizon početna">HORIZON</a>
+      <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color pb-1"
+        aria-label="Naslovnica Horizon">HORIZON</a>
     </div>
-
-    <nav class="navbar-center hidden lg:flex" aria-label="Primarna navigacija">
+    <nav class="navbar-center hidden lg:flex" aria-label="Glavna navigacija">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="text-2xl font-bold" href="index_hr.html">POČETNA</a></li>
-        <li><a class="text-2xl font-bold" href="projects_hr.html">PROJEKTI</a></li>
-        <li><a class="text-2xl font-bold" href="startup_hr.html">STARTUP</a></li>
+        <li><a class="text-2xl font-bold" href="index.html">POČETNA</a></li>
+        <li><a class="text-2xl font-bold" href="projects.html">PROJEKTI</a></li>
+        <li><a class="text-2xl font-bold" href="startup.html">STARTUP</a></li>
         <li><a class="text-2xl font-bold" href="about_hr.html" aria-current="page">O&nbsp;NAMA</a></li>
-        <li><a class="text-2xl font-bold" href="contact_hr.html">KONTAKT</a></li>
+        <li><a class="text-2xl font-bold" href="contact.html">KONTAKT</a></li>
       </ul>
     </nav>
-
     <div class="navbar-end flex items-center gap-4">
       <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
-        aria-label="Switch language to English">EN</button>
-
-      <!-- theme toggle -->
-      <label class="swap swap-rotate">
-        <input type="checkbox" class="theme-controller" value="black" />
-        <!-- Sun icon  -->
+        aria-label="Prebaci na engleski">EN</button>
+      <!-- promjena teme -->
+      <label for="theme-toggle" class="swap swap-rotate" aria-label="Uključi tamnu / svijetlu temu">
+        <span class="sr-only">Uključi tamnu / svijetlu temu</span>
+        <input id="theme-toggle" type="checkbox" class="theme-controller" value="black" />
+        <!-- Sunce -->
         <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24">
           <path
             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
         </svg>
-        <!-- Moon icon  -->
+        <!-- Mjesec -->
         <svg class="swap-off w-8 h-8 sm:w-10 sm:h-10 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
@@ -92,140 +151,187 @@
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main id="main-content" class="w-full max-w-6xl mx-auto px-4 pt-10 flex-grow mb-10" role="main">
+  <!-- GLAVNI SADRŽAJ -->
+  <main id="main-content" class="w-full max-w-6xl mx-auto px-4 pt-2 md:pt-10 flex-grow mb-2" role="main">
+
     <h1 class="sr-only">Horizon tim i stručnost</h1>
 
-    <h2 class="text-5xl font-bold text-center mb-10 animate-fade-right animate-once animate-duration-2000">
-      Naš tim:
+    <h2
+      class="text-2xl md:text-4xl font-bold text-left md:text-center pt-2 md:pt-10 md:mt-10 mb-5 md:mb-10 animate-fade-right animate-once animate-ease-linear animate-duration-[2000ms]">
+      naš tim:
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-      <!-- Dubravka Card -->
-      <section
-        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
-        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
-          <div class="flex items-center">
-            <img class="rounded-full w-20 h-20" src="./images/dubravka.jpeg" width="80" height="80"
-              alt="Portret Dubravke Spoljaric" loading="lazy" />
-            <figcaption class="ms-4 text-left space-y-1">
-              <span class="text-2xl font-bold text-[#F5CF0A]">Dubravka Spoljaric</span>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Full-stack developer</span>
+    <!-- SLIKE -->
+    <img src="./images/team.svg" class="block fixed top-20 right-4 w-20 md:w-32 xl:w-56 2xl:w-72 pointer-events-none select-none
+                animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms]" alt=""
+      aria-hidden="true">
+
+    <img src="./images/tasting.svg" class="hidden md:block fixed bottom-20 left-4 md:w-32 xl:w-44 2xl:w-60 pointer-events-none select-none
+                animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms]" alt=""
+      aria-hidden="true">
+
+    <!-- GRID TIMA -->
+    <div class="grid grid-cols-1 gap-4 justify-items-center">
+
+      <!-- DUBRAVKA -->
+      <section class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-1 lg:p-5 collapsed">
+        <figure class="flex items-center gap-4 rounded-xl bg-base-300 p-4">
+          <img class="rounded-full w-20 h-20 shrink-0" src="./images/dubravka.jpeg" width="80" height="80"
+            alt="Portrait of Dubravka Spoljaric" loading="lazy" />
+          <div class="flex flex-col md:flex-row md:items-center flex-1">
+            <figcaption class="text-left">
+              <span class="block text-lg md:text-2xl font-bold ">
+                Dubravka Špoljarić
+              </span>
+              <span class="block text-sm md:text-lg">
+                Full&nbsp;Stack&nbsp;Developer
+              </span>
             </figcaption>
-          </div>
-          <div class="flex ms-10 space-x-3">
-            <a href="https://github.com/duda1304" target="_blank" rel="noopener" aria-label="Dubravka na GitHubu">
-              <i class="fab fa-github text-xl" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/dubravka-%C5%A1poljari%C4%87-906403a/" target="_blank" rel="noopener"
-              aria-label="Dubravka na LinkedInu">
-              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
+            <div class="flex mt-2 md:mt-0 md:ml-auto space-x-2">
+              <a href="https://github.com/duda1304" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  class="fab fa-github text-xl"></i></a>
+              <a href="https://www.linkedin.com/in/dubravka-%C5%A1poljari%C4%87-906403a/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin text-xl"></i></a>
+            </div>
           </div>
         </figure>
-        <ul class="list-disc text-md mt-4 ms-4">
-          <li>Višegodišnje iskustvo u full-stack razvoju različitih projekata</li>
+
+        <ul class="list-disc text-md mt-1 ms-4">
+          <li>Iskustvo u full-stack razvoju brojnih projekata</li>
           <li>Specijalizirana za MVP proizvode za testiranje tržišta</li>
-          <li>Izrađuje i održava backend servise (Node.js, Express, PHP i druge tehnologije)</li>
-          <li>Razvija responzivna, pristupačna i brza korisnička sučelja modernim okvirima</li>
-          <li>Dizajnira i administrira baze podataka</li>
-          <li>Razvija i integrira RESTful API-je za komunikaciju front-enda i back-enda</li>
-          <li>Sigurno implementira autentikaciju, autorizaciju i sesije</li>
-          <li>Postavlja i nadzire aplikacije</li>
-          <li>Rješava probleme kroz cijeli stack – od UI bugova do poslužitelja i baze</li>
+          <li>Gradi i održava backend servise (Node.js, Express, PHP…)</li>
+          <li>Razvija responzivna, pristupačna i brza sučelja</li>
+          <li>Projektira i održava baze podataka</li>
+          <li>Razvija RESTful API-je i sigurne autentikacijske tokove</li>
+          <li>Implementira, nadzire i otklanja greške kroz cijeli stack</li>
         </ul>
+
+        <button type="button" class="btn btn-md mt-1 btn-more rounded-xl bg-[#F5CF0A] text-neutral">
+          Više
+        </button>
       </section>
 
-      <!-- Karla Card -->
-      <section
-        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
-        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
-          <div class="flex items-center">
-            <img class="rounded-full w-20 h-20" src="./images/karla.jpg" width="80" height="80"
-              alt="Portret Karle Lenard" loading="lazy" />
-            <figcaption class="ms-4 text-left space-y-1">
-              <span class="text-2xl font-bold text-[#F5CF0A]">Karla Lenard</span>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Frontend developer</span>
+      <!-- KARLA -->
+      <section class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-1 lg:p-5 collapsed">
+        <figure class="flex items-center gap-4 bg-base-300 rounded-xl p-4">
+          <img class="rounded-full w-20 h-20 shrink-0" src="./images/karla.jpg" width="80" height="80"
+            alt="Portrait of Karla Lenard" loading="lazy" />
+
+          <div class="flex flex-col md:flex-row md:items-center flex-1">
+            <figcaption class="text-left">
+              <span class="block text-lg md:text-2xl font-bold ">
+                Karla Lenard
+              </span>
+              <span class="block text-sm md:text-lg">
+                Frontend Developer
+              </span>
             </figcaption>
-          </div>
-          <div class="flex ms-10 space-x-3">
-            <a href="https://github.com/herothezero90" target="_blank" rel="noopener" aria-label="Karla na GitHubu">
-              <i class="fab fa-github text-xl" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/karla-lenard-b7590b26b/" target="_blank" rel="noopener"
-              aria-label="Karla na LinkedInu">
-              <i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
+
+            <div class="flex mt-2 md:mt-0 md:ml-auto space-x-2">
+              <a href="https://github.com/herothezero90" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  class="fab fa-github text-xl"></i></a>
+              <a href="https://www.linkedin.com/in/karla-lenard-b7590b26b/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin text-xl"></i></a>
+            </div>
           </div>
         </figure>
-        <ul class="list-disc text-md mt-4 ms-4">
-          <li>Dizajnira i implementira SEO-optimizirana sučelja u HTML-u, CSS-u (Tailwind, SCSS) i JavaScriptu</li>
-          <li>Izrađuje interaktivne SPA ili routed aplikacije (React, Next.js, Remix)</li>
-          <li>Brine o responzivnosti i performansama na svim uređajima</li>
-          <li>Koristi UI biblioteke (DaisyUI, Chakra UI, Material UI, Bootstrap) za brži razvoj</li>
-          <li>Optimizira web-stranice za brzinu, kompatibilnost i pristupačnost</li>
-          <li>Integrira API-je i dinamički sadržaj u suradnji s backend timom</li>
-          <li>Tijesno surađuje s dizajnerima kako bi makete oživjele u kodu</li>
+
+        <ul class="list-disc text-md mt-1 ms-4">
+          <li>Kreira SEO-optimizirana sučelja (HTML, CSS, Tailwind, NextJS…)</li>
+          <li>Gradi interaktivne stranice s Reactom, Next.js-om ili Remixom</li>
+          <li>Optimizira brzinu i responzivnost web-a</li>
+          <li>Korištenje UI biblioteka (DaisyUI, Chakra, MUI, Bootstrap)</li>
+          <li>Pristupačnost i cross-browser kompatibilnost</li>
+          <li>Integracija API-ja i suradnja dizajn-kôd</li>
         </ul>
+
+        <button type="button" class="btn btn-md mt-1 btn-more rounded-xl bg-[#F5CF0A] text-neutral">
+          Više
+        </button>
       </section>
     </div>
 
-    <h2 class="text-4xl font-bold text-center mt-16 mb-10 animate-fade-right animate-once animate-duration-2000">
-      Prošireni tim:
+    <h2
+      class="text-2xl md:text-4xl font-bold text-left md:text-center pt-2 md:pt-10 md:mt-10 mb-5 md:mb-10 animate-fade-right animate-once animate-ease-linear animate-duration-[2000ms]">
+      prošireni tim:
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-      <!-- Mia Card -->
-      <section
-        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
-        <figure class="flex items-start bg-base-300 rounded-md p-4">
-          <div class="flex items-center">
-            <img class="rounded-full w-20 h-20" src="./images/mia.jpeg" width="80" height="80"
-              alt="Portret Mije Majstor" loading="lazy" />
-            <figcaption class="ms-4 text-left space-y-1">
-              <span class="text-2xl font-bold text-[#F5CF0A]">Mia Majstor</span>
+    <!-- GRID PROŠIRENOG TIMA -->
+    <div class="grid grid-cols-1 gap-4 justify-items-center">
+
+      <!-- MIA -->
+      <section class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-1 lg:p-5 collapsed">
+        <figure class="flex items-center gap-4 bg-base-300 rounded-xl p-4">
+          <img class="rounded-full w-20 h-20 shrink-0" src="./images/mia.jpeg" width="80" height="80"
+            alt="Portrait of Mia Majstor" loading="lazy" />
+
+          <div class="flex flex-col md:flex-row md:items-center flex-1">
+            <figcaption class="text-left">
+              <span class="block text-lg md:text-2xl font-bold ">
+                Mia Majstor
+              </span>
               <a href="https://cleverfoxdesign.hr/en" target="_blank" rel="noopener"
-                class="text-lg text-gray-500 dark:text-gray-400 underline" aria-label="Clever Fox Design">
+                class="block text-xs md:text-md underline" aria-label="Clever Fox Design website">
                 Clever&nbsp;Fox&nbsp;Design
               </a>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Brand identitet &amp; web dizajn</span>
+              <span class="block text-sm md:text-lg">
+                Grafička&nbsp;i&nbsp;web&nbsp;dizajnerica
+              </span>
             </figcaption>
-          </div>
-          <div class="flex ms-10 space-x-3">
-            <a href="https://www.linkedin.com/in/mia-majstor-39a257246/" target="_blank" rel="noopener"
-              aria-label="Mia na LinkedInu"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
+            <div class="flex mt-2 md:mt-0 md:ml-auto space-x-2">
+              <a href="https://www.linkedin.com/in/mia-majstor-39a257246/" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
           </div>
         </figure>
+
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Kreira vizualne identitete usklađene s potrebama klijenata i ciljanom publikom</li>
-          <li>Iskusna u UI/UX dizajnu – intuitivna, korisnički usmjerena sučelja koja poboljšavaju korisnično iskustvo
-          </li>
-          <li>Oblikuje vizualno atraktivne i funkcionalne web-stranice</li>
-          <li>Vješta u vizualnom dizajnu i primjeni raznih kreativnih alata i tehnika za stvaranje upečatljivih i
-            originalnih vizuala i grafika</li>
+          <li>Kreiranje identiteta brenda usklađenog s ciljanom publikom</li>
+          <li>UI/UX dizajn orijentiran na korisničko iskustvo</li>
+          <li>Razvoj vizualno privlačnih, učinkovitih web-stranica</li>
+          <li>Kreativni vizuali i grafike za snažnu vizualnu priču</li>
         </ul>
+
+        <button type="button" class="btn btn-md mt-1 btn-more rounded-xl bg-[#F5CF0A] text-neutral">
+          Više
+        </button>
       </section>
 
-      <!-- Ivona Card -->
-      <section
-        class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-6 animate-fade-left animate-once animate-duration-2000">
-        <figure class="flex justify-between items-center bg-base-300 rounded-md p-4">
-          <div class="flex items-center">
-            <img class="rounded-full w-20 h-20" src="./images/ivona.jpg" width="80" height="80"
-              alt="Portret Ivone Lenard" loading="lazy" />
-            <figcaption class="ms-4 text-left space-y-1">
-              <span class="text-2xl font-bold text-[#F5CF0A]">Ivona Lenard</span>
-              <span class="block text-lg text-gray-500 dark:text-gray-400">Social Media Manager</span>
+      <!-- IVONA -->
+      <section class="card about-card bg-base-100 shadow-md w-full max-w-2xl p-1 lg:p-5 collapsed">
+        <figure class="flex items-center gap-4 bg-base-300 rounded-xl p-4">
+          <img class="rounded-full w-20 h-20 shrink-0 object-cover" src="./images/ivona.jpeg" width="80" height="80"
+            alt="Portrait of Ivona Lenard" loading="lazy" />
+
+          <div class="flex flex-col md:flex-row md:items-center flex-1">
+            <figcaption class="text-left">
+              <span class="block text-lg md:text-2xl font-bold ">
+                Ivona Lenard
+              </span>
+              <span class="block text-sm md:text-lg">
+                Social Media Manager
+              </span>
             </figcaption>
-          </div>
-          <div class="flex ms-10 space-x-3">
-            <a href="https://www.linkedin.com/in/ivona-lenard-59892a118/" target="_blank" rel="noopener"
-              aria-label="Ivona na LinkedInu"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
+
+            <div class="flex mt-2 md:mt-0 md:ml-auto space-x-2">
+              <a href="https://www.linkedin.com/in/ivona-lenard-59892a118/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin text-xl"></i></a>
+            </div>
           </div>
         </figure>
         <ul class="list-disc text-md mt-4 ms-4">
-          <li>Stručnjakinja za Google Ads i Meta oglašavanje s fokusom na strateške kamapnje i ciljano oglašavanje</li>
-          <li>Unaprjeđuje prisutnost brenda na društvenim mrežama svojim iskustvom kao social media manager</li>
-          <li>Vješta u copyrightu, piše angažirajući i informativan sadržaj prilagođen publici</li>
-          <li>Iskusna za strategije digitalnog oglašacanja, optimizirajući online kanale za povećan doseg i angažman te
-            u vođenju digitalnih kampanja</li>
+          <li>Kampanje na Google Adsu i Meti</li>
+          <li>Strategija i vođenje društvenih mreža</li>
+          <li>Kreiranje angažiranog i informativnog sadržaja</li>
+          <li>Optimizacija digitalnog dosega i angažmana korisnika</li>
         </ul>
+
+        <button type="button" class="btn btn-md mt-1 btn-more rounded-xl bg-[#F5CF0A] text-neutral">
+          Više
+        </button>
       </section>
     </div>
   </main>
@@ -234,10 +340,71 @@
     <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
+  <div id="card-overlay" role="dialog" aria-modal="true" aria-label="Profil člana tima"></div>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
   <script src="./js/theme.js" defer></script>
   <script src="./js/lang_toggle.js" defer></script>
-  <script src="./js/about.js" defer></script>
+  <script src="./js/projects.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('card-overlay');
+
+      document.querySelectorAll('.about-card').forEach(card => {
+        const moreBtn = card.querySelector('.btn-more');
+
+        moreBtn.addEventListener('click', () => {
+          card.classList.add('active-card');
+
+          const big = card.cloneNode(true);
+          big.classList.remove('collapsed');
+          big.classList.add('fade-in', 'max-w-3xl', 'shadow-lg', 'expanded-card');
+          big.style.position = 'relative';
+
+          const lessBtn = big.querySelector('.btn-more');
+          lessBtn.textContent = 'Manje';
+          lessBtn.addEventListener('click', hideOverlay);
+
+          const close = document.createElement('button');
+          close.className = 'btn btn-circle btn-sm absolute top-4 right-4 btn-ghost';
+          close.innerHTML = '&times;';
+          close.setAttribute('aria-label', 'Zatvori');
+          close.addEventListener('click', hideOverlay);
+          big.appendChild(close);
+
+          overlay.innerHTML = '';
+          overlay.appendChild(big);
+          overlay.style.display = 'flex';
+          requestAnimationFrame(() => overlay.classList.add('visible'));
+          document.body.classList.add('overflow-hidden');
+          document.addEventListener('keydown', escHandler);
+        });
+      });
+
+      overlay.addEventListener('click', e => { if (e.target === overlay) hideOverlay(); });
+      function escHandler(e) { if (e.key === 'Escape') hideOverlay(); }
+
+      function hideOverlay() {
+        const big = overlay.querySelector('.expanded-card');
+        if (big) { big.classList.replace('fade-in', 'fade-out'); }
+
+        overlay.classList.remove('visible');
+        overlay.addEventListener('transitionend', clean, { once: true });
+      }
+      function clean() {
+        overlay.style.display = 'none';
+        overlay.innerHTML = '';
+        document.body.classList.remove('overflow-hidden');
+        document.removeEventListener('keydown', escHandler);
+
+        const small = document.querySelector('.about-card.active-card');
+        if (small) { small.classList.remove('active-card'); }
+      }
+    });
+  </script>
+
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="hr" data-theme="lofi">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,14 +7,15 @@
 
   <!-- SEO -->
   <meta name="description"
-    content="Get in touch with Horizon – full-stack web development, MVP builds, design & SEO." />
-  <meta property="og:title" content="Contact – Horizon Web Development" />
-  <meta property="og:description" content="Send us an email or use the secure form to discuss your project." />
+    content="Kontaktirajte Horizon – full-stack web development, izrada MVP-eva, dizajn i SEO." />
+  <meta property="og:title" content="Kontakt – Horizon Web Development" />
+  <meta property="og:description"
+    content="Pošaljite nam e-mail ili ispunite sigurni obrazac i razgovarajmo o vašem projektu." />
   <meta property="og:image" content="https://horizon-dev.hr/images/hero3.png" />
-  <meta property="og:url" content="https://horizon-dev.hr/contact.html" />
+  <meta property="og:url" content="https://horizon-dev.hr/contact_hr.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <title>Contact | Horizon</title>
+  <title>Kontakt | Horizon</title>
 
   <!-- Performance: CSS & fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,7 +48,7 @@
   <header class="navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
-        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
+        <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Otvori izbornik"
           class="btn btn-ghost lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
@@ -55,45 +56,46 @@
         </button>
         <ul tabindex="0" role="menu"
           class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">POČETNA</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJEKTI</a>
           </li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html"
-              aria-current="page">CONTACT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about_hr.html">O&nbsp;NAMA</a>
+          </li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact_hr.html"
+              aria-current="page">KONTAKT</a></li>
         </ul>
       </div>
       <a href="https://horizon-dev.hr/" class="btn btn-ghost text-4xl font-bold theme-color"
-        aria-label="Horizon home">HORIZON</a>
+        aria-label="Naslovnica Horizon">HORIZON</a>
     </div>
 
-    <nav class="navbar-center hidden lg:flex" aria-label="Primary navigation">
+    <nav class="navbar-center hidden lg:flex" aria-label="Primarna navigacija">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="text-2xl font-bold" href="index.html">HOME</a></li>
-        <li><a class="text-2xl font-bold" href="projects.html">PROJECTS</a></li>
+        <li><a class="text-2xl font-bold" href="index.html">POČETNA</a></li>
+        <li><a class="text-2xl font-bold" href="projects.html">PROJEKTI</a></li>
         <li><a class="text-2xl font-bold" href="startup.html">STARTUP</a></li>
-        <li><a class="text-2xl font-bold" href="about.html">ABOUT</a></li>
-        <li><a class="text-2xl font-bold" href="contact.html" aria-current="page">CONTACT</a></li>
+        <li><a class="text-2xl font-bold" href="about_hr.html">O&nbsp;NAMA</a></li>
+        <li><a class="text-2xl font-bold" href="contact_hr.html" aria-current="page">KONTAKT</a></li>
       </ul>
     </nav>
 
     <div class="navbar-end flex items-center gap-4">
-      <!-- Lang toggle -->
+      <!-- promjena jezika -->
       <button id="lang-toggle" class="btn btn-ghost text-xl font-semibold select-none"
-        aria-label="Switch language to Croatian">HR</button>
+        aria-label="Prebaci na engleski">EN</button>
 
-      <!-- theme toggle -->
-      <label for="theme-toggle" class="swap swap-rotate" aria-label="Toggle dark / light theme">
-        <span class="sr-only">Toggle dark / light theme</span>
+      <!-- promjena teme -->
+      <label for="theme-toggle" class="swap swap-rotate" aria-label="Uključi tamnu / svijetlu temu">
+        <span class="sr-only">Uključi tamnu / svijetlu temu</span>
         <input id="theme-toggle" type="checkbox" class="theme-controller" value="black" />
-        <!-- Sun icon  -->
+        <!-- Sun icon -->
         <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24">
           <path
             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
         </svg>
-        <!-- Moon icon  -->
+        <!-- Moon icon -->
         <svg class="swap-off w-8 h-8 sm:w-10 sm:h-10 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
@@ -102,14 +104,14 @@
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- GLAVNI SADRŽAJ -->
   <main id="main-content" class="w-full flex-grow flex items-center justify-center py-12 px-4" role="main">
 
-    <h1 class="sr-only">Get in touch with Horizon – Full-stack web development</h1>
+    <h1 class="sr-only">Kontaktirajte Horizon – Full-stack web razvoj</h1>
 
     <section class="w-full max-w-6xl">
 
-      <!-- mobile image -->
+      <!-- mobilna slika -->
       <img src="./images/pair-programming-light.png" dark-theme-visibility="lofi"
         class="block lg:!hidden fixed top-45 right-0 md:right-4 w-64 pointer-events-none select-none animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms] !opacity-25"
         alt="" aria-hidden="true">
@@ -118,22 +120,22 @@
 
       <div class="flex flex-col lg:flex-row lg:gap-10">
 
-        <div
-          class="order-1 lg:order-1 flex-1 flex flex-col items-start text-left lg:text-left animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight mr-10 md:pe-0 md:px-20 ">
-            You have an idea?<br />
-            Get in touch so we can turn it into reality!
+        <div class="order-1 lg:order-1 flex-1 flex flex-col items-start text-left lg:text-left">
+          <h2
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 lg:mb-20 leading-tight md:px-20 animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+            Imate ideju?<br />
+            Javite nam se&nbsp;– <br>pretvorimo je u stvarnost!
           </h2>
 
-          <!-- Desktop image -->
+          <!-- desktop slika -->
           <div
-            class="hidden lg:block w-full animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+            class="hidden lg:block w-full animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms]">
             <div class="block" data-theme-visible="lofi">
-              <img src="./images/pair-programming-light.png" alt="Pair programming illustration (light)" width="512"
+              <img src="./images/pair-programming-light.png" alt="Ilustracija par-programiranja (svijetla)" width="512"
                 height="512" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto lg:mx-0" loading="lazy" />
             </div>
             <div class="hidden" data-theme-visible="black">
-              <img src="./images/pair-programming-dark.png" alt="Pair programming illustration (dark)" width="512"
+              <img src="./images/pair-programming-dark.png" alt="Ilustracija par-programiranja (tamna)" width="512"
                 height="512" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto lg:mx-0" loading="lazy" />
             </div>
           </div>
@@ -141,12 +143,12 @@
 
         <div class="order-2 lg:order-2 flex-1 flex flex-col items-start text-left">
 
-          <!-- Email card -->
+          <!-- Kartica e-maila -->
           <section
-            class="card w-full bg-[#F5CF0A] text-neutral mb-6 md:mt-10 animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
+            class="card w-full mb-6 bg-[#F5CF0A] text-neutral md:mt-10 animate-fade-up animate-once animate-ease-linear animate-duration-[2000ms]">
             <div class="card-body">
-              <h2 class="text-3xl font-bold mb-4 normal-case">Send an email:</h2>
-              <p class="text-2xl">
+              <h2 class="text-3xl mb-4 normal-case">Pošaljite e-mail:</h2>
+              <p class="text-2xl ">
                 <a href="mailto:horizon.dev.info@gmail.com" class="hover:underline text-black-600">
                   horizon.dev.info@gmail.com
                 </a>
@@ -154,42 +156,42 @@
             </div>
           </section>
 
-          <!-- Form card -->
+          <!-- Kartica obrasca -->
           <section
             class="card w-full bg-base-100 animate-fade-down animate-once animate-ease-linear animate-duration-[2000ms]">
             <div class="card-body">
-              <h2 class="text-2xl font-bold mb-4 normal-case">…or fill out the form:</h2>
+              <h2 class="text-2xl font-bold mb-4 normal-case">…ili ispunite obrazac:</h2>
 
               <form name="contact" method="POST" data-netlify="true" netlify-recaptcha="true"
-                data-netlify-honeypot="bot-field" class="space-y-4 w-full" aria-label="Contact form">
+                data-netlify-honeypot="bot-field" class="space-y-4 w-full" aria-label="Kontakt obrazac">
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="subject" value="Website enquiry" />
+                <input type="hidden" name="subject" value="Upit s web-stranice" />
                 <input type="hidden" name="netlify-honeypot" />
 
-                <!-- Name -->
+                <!-- Ime -->
                 <div class="form-control w-full">
                   <label class="label justify-start" for="name">
-                    <span class="label-text text-xl normal-case">Name</span>
+                    <span class="label-text text-xl normal-case">Ime</span>
                   </label>
-                  <input type="text" id="name" name="name" placeholder="Your Name"
+                  <input type="text" id="name" name="name" placeholder="Vaše ime"
                     class="input border p-1 rounded-md input-bordered text-lg font-onest w-full" required />
                 </div>
 
-                <!-- Email -->
+                <!-- E-mail -->
                 <div class="form-control w-full">
                   <label class="label justify-start" for="email">
-                    <span class="label-text text-xl normal-case">Email</span>
+                    <span class="label-text text-xl normal-case">E-mail</span>
                   </label>
-                  <input type="email" id="email" name="email" placeholder="Your Email"
+                  <input type="email" id="email" name="email" placeholder="Vaš e-mail"
                     class="input border p-1 rounded-md input-bordered text-lg font-onest w-full" required />
                 </div>
 
-                <!-- Message -->
+                <!-- Poruka -->
                 <div class="form-control w-full">
                   <label class="label justify-start" for="message">
-                    <span class="label-text text-xl normal-case">Message</span>
+                    <span class="label-text text-xl normal-case">Poruka</span>
                   </label>
-                  <textarea id="message" name="message" placeholder="Your Message"
+                  <textarea id="message" name="message" placeholder="Vaša poruka"
                     class="textarea border p-1 rounded-md textarea-bordered h-32 text-lg font-onest w-full"
                     required></textarea>
                 </div>
@@ -199,7 +201,7 @@
                 <div class="form-control w-full">
                   <button type="submit"
                     class="btn text-xl normal-case w-full bg-[#F5CF0A] text-neutral hover:bg-base-300 rounded-lg">
-                    Send Message
+                    Pošalji poruku
                   </button>
                 </div>
               </form>
@@ -211,7 +213,7 @@
   </main>
 
   <footer class="py-4 text-center" role="contentinfo">
-    <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
+    <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
