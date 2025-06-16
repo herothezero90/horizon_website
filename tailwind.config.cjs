@@ -39,7 +39,12 @@ module.exports = {
   plugins: [
     daisyui,
     require('@tailwindcss/typography'),
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    function ({ addComponents }) {    //  ← our quick override
+      addComponents({
+        'header.navbar.sticky': { position: 'sticky' }
+      })
+    }
   ],
   daisyui: {
     themes: ['lofi', 'black'],

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
 
 <head>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('horizonTheme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
+
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
+
+      addEventListener('load', () => { html.style.backgroundColor = '' });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Horizon</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link href="./dist/output.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <link href="./dist/output.css" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -17,13 +29,14 @@
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="min-h-screen flex flex-col overflow-x-hidden">
+<body class="min-h-screen flex flex-col overflow-hidden">
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
-          class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          class="btn lg:hidden p-1 bg-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </button>
@@ -79,11 +92,24 @@
       </label>
     </div>
   </header>
+
+  <!-- <nav class="bg-base-100/90
+         w-full flex flex-wrap justify-center
+         gap-2 md:gap-4 lg:gap-6 py-4">
+    <a href="#data-management" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">data&nbsp;management</a>
+    <a href="#programming-art"
+      class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">programming&nbsp;&amp;&nbsp;art</a>
+    <a href="#flight-data" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">flight&nbsp;data</a>
+    <a href="#qr-code" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">QR&nbsp;code</a>
+    <a href="#games" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">games</a>
+    <a href="#websites" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">websites</a>
+  </nav> -->
+
   <!-- main -->
 
   <main class="px-2 overflow-x-hidden">
-    <div class="flex items-center justify-center gap-4 py-0 mb-0" data-aos="fade-right" data-aos-easing="linear"
-      data-aos-duration="1500">
+    <div
+      class="flex items-center justify-center gap-4 py-0 mb-0 animate-fade-right animate-once animate-ease-linear animate-duration-[2000ms]">
       <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
       <h2 class=" text-2xl sm:text-4xl font-bold text-center">
         some of our previous projects:
@@ -91,8 +117,8 @@
     </div>
 
     <!-- data management -->
-    <section class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="data-management"
+      class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms]">
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">data management</h2>
       </div>
@@ -106,7 +132,7 @@
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
               </div>
               <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
-                class="w-full h-auto mx-auto max-w-3xl" />
+                class="w-full h-auto mx-auto max-w-xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 Next js + MySQL + react + chakra ui (deployed on digital ocean)
               </h3>
@@ -131,7 +157,7 @@
                 </h2>
               </div>
               <img src="./images/clinic_mockup.png" alt="Clinic database system"
-                class="w-full h-auto mx-auto max-w-3xl" />
+                class="w-full h-auto mx-auto max-w-xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 PHP + MySQL + jAVASCRIPT + BOOTSTRAP
               </h3>
@@ -154,50 +180,9 @@
       </div>
     </section>
 
-    <!-- restaurant -->
-    <!-- <section
-      class="bg-base-100/80 mt-0 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-duration-[1000ms] animate-ease-in">
-      <div class="text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Restaurant management web app</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          Next js + MySQL + react + chakra ui (deployed on digital ocean)
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu ideas
-          and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized interface on
-          desktop and mobile.<br> With
-          integrated instant live translations into all required languages,editing of the restaurant menu became simple.
-          <br>
-          Additional feature was a PDF menu prepared for print with one easy click.
-        </p>
-        <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
-          class="w-full h-auto mx-auto max-w-3xl" />
-      </div>
-    </section> -->
-
-    <!-- clinic -->
-    <!-- <section class="bg-base-100/80 mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
-      data-aos-easing="linear" data-aos-duration="1500">
-      <div class="text-left">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4">Database management</h2>
-        <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          PHP + MySQL + jAVASCRIPT + BOOTSTRAP
-        </h3>
-        <p class="text-base sm:text-lg mb-8">
-          Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia for
-          purposes of running patients database, ailment and attendance history, feeding program and outreach program
-          database. Application is secured so access is allowed only for clinic staff. Option to export various data
-          from database and to add new database parameters specific for health clinic work. Design is simple and clean
-          with data entry enabled by using keyboard to simulate desktop software.
-        </p>
-
-        <img src="./images/clinic_mockup.png" alt="Clinic database system" class="w-full h-auto mx-auto max-w-3xl" />
-      </div>
-    </section> -->
-
     <!-- screenagers -->
-    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="programming-art" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl"
+      data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
 
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
@@ -257,7 +242,7 @@
 
     <!-- flight data -->
 
-    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <section id="flight-data" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class=" text-left">
@@ -288,7 +273,7 @@
 
     <!-- qr code dating site -->
 
-    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+    <section id="qr-code" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class="text-left mb-6">
@@ -306,16 +291,16 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
             </div>
           </div>
 
@@ -334,7 +319,7 @@
 
 
     <!-- games -->
-    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
+    <section id="games" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class=" text-left">
@@ -350,10 +335,10 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto mx-auto max-w-xl" />
             </div>
           </div>
 
@@ -371,7 +356,7 @@
     </section>
 
     <!-- websites -->
-    <section class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
+    <section id="websites" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
       data-aos-easing="linear" data-aos-duration="1500">
 
       <div class="text-left mb-6">

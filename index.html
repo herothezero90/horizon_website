@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
 
 <head>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('horizonTheme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
+
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
+
+      addEventListener('load', () => { html.style.backgroundColor = '' });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
@@ -28,16 +40,16 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
   <script src="./js/theme.js" defer></script>
   <script src="./js/lang_toggle.js" defer></script>
-  <script src="./js/home.js" defer></script>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col opacity-0 transition-opacity duration-300">
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
-          class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          class="btn lg:hidden p-1 bg-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </button>
@@ -48,9 +60,11 @@
               aria-current="page">HOME</a></li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a>
           </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a>
+          </li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a>
+          </li>
         </ul>
       </div>
 
@@ -93,6 +107,7 @@
       </label>
     </div>
   </header>
+  </div>
 
   <!--  homepage -->
   <main id="homepage-content" class="flex-grow py-5 px-2 md:py-10 md:px-0" loading="lazy">
@@ -304,10 +319,13 @@
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/theme.js"></script>
   <script src="./js/lang_toggle.js"></script>
-  <script src="./js/home.js" defer></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded',
+      () => document.body.classList.remove('opacity-0'));
+  </script>
 </body>
 
 </html>

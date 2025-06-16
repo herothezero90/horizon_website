@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 $(document).ready(function () {
-  const savedTheme = localStorage.getItem('theme') || 'lofi';
+  const savedTheme = localStorage.getItem('horizonTheme') || 'lofi';
   $('html').attr('data-theme', savedTheme);
 
   const $themeCheckbox = $('.theme-controller');
@@ -12,7 +12,7 @@ $(document).ready(function () {
       const isDark = $(this).is(':checked');
       const newTheme = isDark ? 'black' : 'lofi';
       $('html').attr('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      localStorage.setItem('horizonTheme', newTheme);
     });
   }
 });

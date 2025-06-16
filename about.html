@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
 
 <head>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('horizonTheme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
+
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
+
+      addEventListener('load', () => { html.style.backgroundColor = '' });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -357,7 +369,7 @@
         const moreBtn = card.querySelector('.btn-more');
 
         moreBtn.addEventListener('click', () => {
-          card.classList.add('active-card'); // opacity → .5
+          card.classList.add('active-card');
 
           const big = card.cloneNode(true);
           big.classList.remove('collapsed');
@@ -406,7 +418,6 @@
       }
     });
   </script>
-
 </body>
 
 </html>

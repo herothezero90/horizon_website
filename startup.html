@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
 
 <head>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('horizonTheme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
+
+      const html = document.documentElement;
+      html.setAttribute('data-theme', theme);
+      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
+
+      addEventListener('load', () => { html.style.backgroundColor = '' });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
@@ -27,8 +39,9 @@
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
         <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
-          class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          class="btn lg:hidden p-1 bg-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </button>
