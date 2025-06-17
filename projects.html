@@ -11,7 +11,9 @@
       html.setAttribute('data-theme', theme);
       html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
 
-      addEventListener('load', () => { html.style.backgroundColor = '' });
+      addEventListener('load', () => {
+        html.style.backgroundColor = ''
+      });
     })();
   </script>
   <meta charset="UTF-8" />
@@ -29,10 +31,10 @@
   <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="min-h-screen flex flex-col overflow-hidden">
+<body class="flex flex-col min-h-screen">
   <header class="header navbar bg-base-100" role="banner">
     <div class="navbar-start">
-      <div class="dropdown bg-base-200">
+      <div class="dropdown bg-base-200 z-40">
         <button tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Open menu"
           class="btn lg:hidden p-1 bg-base">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
@@ -47,9 +49,11 @@
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html"
               aria-current="page">PROJECTS</a>
           </li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="startup.html">STARTUP</a>
+          </li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="about.html">ABOUT</a></li>
-          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a></li>
+          <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="contact.html">CONTACT</a>
+          </li>
         </ul>
       </div>
 
@@ -74,17 +78,14 @@
         HR
       </button>
 
-      <!-- theme toggle -->
       <label for="theme-toggle" class="swap swap-rotate" aria-label="Toggle dark / light theme">
         <span class="sr-only">Toggle dark / light theme</span>
         <input id="theme-toggle" type="checkbox" class="theme-controller" value="black" />
-        <!-- Sun icon  -->
         <svg class="swap-on w-8 h-8 sm:w-10 sm:h-10 fill-[#F5CF0A]" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24">
           <path
             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
         </svg>
-        <!-- Moon icon  -->
         <svg class="swap-off w-8 h-8 sm:w-10 sm:h-10 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
@@ -93,84 +94,77 @@
     </div>
   </header>
 
-  <!-- <nav class="bg-base-100/90
-         w-full flex flex-wrap justify-center
-         gap-2 md:gap-4 lg:gap-6 py-4">
-    <a href="#data-management" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">data&nbsp;management</a>
+  <div
+    class="sticky sticky-top top-0 z-10 flex flex-wrap justify-center gap-1 py-2 bg-base-100 shadow-md sticky-nav-transition lg:sticky-nav-visible sticky-nav-hidden">
+    <a href="#data-management" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Data
+      Management</a>
     <a href="#programming-art"
-      class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">programming&nbsp;&amp;&nbsp;art</a>
-    <a href="#flight-data" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">flight&nbsp;data</a>
-    <a href="#qr-code" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">QR&nbsp;code</a>
-    <a href="#games" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">games</a>
-    <a href="#websites" class="btn btn-neutral btn-sm md:btn-lg normal-case rounded-xl">websites</a>
-  </nav> -->
+      class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Programming
+      & Art</a>
+    <a href="#flight-data" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Flight
+      Data</a>
+    <a href="#qr-code" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">QR Code</a>
+    <a href="#games" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Games</a>
+    <a href="#websites" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Websites</a>
+  </div>
 
-  <!-- main -->
 
   <main class="px-2 overflow-x-hidden">
     <div
-      class="flex items-center justify-center gap-4 py-0 mb-0 animate-fade-right animate-once animate-ease-linear animate-duration-[2000ms]">
+      class="flex items-center justify-center gap-4 py-0 mb-0 animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms]">
       <img src="./images/responsive.svg" alt="Icon" class="w-24 h-24 sm:w-64 sm:h-64" />
-      <h2 class=" text-2xl sm:text-4xl font-bold text-center">
+      <h2 class="text-2xl sm:text-4xl font-bold text-center">
         some of our previous projects:
       </h2>
     </div>
 
-    <!-- data management -->
     <section id="data-management"
-      class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-left animate-once animate-ease-linear animate-duration-[2000ms]">
+      class="bg-transparent mt-2 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl animate-fade-right animate-once animate-ease-linear animate-duration-[2000ms]">
       <div class="text-left mb-6">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">data management</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">Data Management</h2>
       </div>
       <div class="swiper-pagination-top mb-4 flex justify-end"></div>
       <div class="swiper w-full max-w-full mx-auto">
         <div class="swiper-wrapper mb-10">
-          <!-- slide 1 -->
           <div class="swiper-slide bg-transparent">
             <div class="bg-base-100 p-6 rounded-md">
               <div class="text-left">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Restaurant management web app</h2>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Web application for restaurant management
+                </h2>
               </div>
-              <img src="./images/restaurant_mockup.png" alt="Restaurant management app"
-                class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/restaurant_mockup.png" alt="Restaurant management application"
+                class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-                Next js + MySQL + react + chakra ui (deployed on digital ocean)
+                Next.js + MySQL + React + Chakra UI (deployed on DigitalOcean)
               </h3>
               <p class="text-base sm:text-lg mb-8">
-                Admin dashboard for a restaurant owner developed to define current live menu, specials menu or new menu
-                ideas
-                and include them in live menu later. <br> Edit prices, descriptions, allergens trough customized
-                interface on
-                desktop and mobile.<br> With
-                integrated instant live translations into all required languages,editing of the restaurant menu became
-                simple.
-                Additional feature was a PDF menu prepared for print with one easy click.
+                An administrative dashboard for a restaurant owner was developed to enable defining the current menu,
+                special offer menus, or new menu ideas and subsequently including them in the active menu. Prices,
+                descriptions, and allergens can be edited through a custom desktop and mobile interface. Thanks to
+                integrated instant translations into all necessary languages, menu editing has become simple. An
+                additional functionality is a print-ready PDF menu with a single click.
               </p>
             </div>
           </div>
-          <!-- slide 2 -->
           <div class="swiper-slide bg-transparent">
             <div class="bg-base-100 p-6 rounded-md">
               <div class="text-left">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for small medical
-                  clinic
-                </h2>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for a small medical
+                  clinic</h2>
               </div>
               <img src="./images/clinic_mockup.png" alt="Clinic database system"
-                class="w-full h-auto mx-auto max-w-xl" />
+                class="w-full h-auto mx-auto max-w-3xl" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-                PHP + MySQL + jAVASCRIPT + BOOTSTRAP
+                PHP + MySQL + JavaScript + Bootstrap
               </h3>
               <p class="text-base sm:text-lg mb-8">
-                Data management system for small medical clinic. Internal web application for Lifeline Clinic in Namibia
-                for
-                purposes of running patients database, ailment and attendance history, feeding program and outreach
-                program
-                database. Application is secured so access is allowed only for clinic staff. Option to export various
-                data
-                from database and to add new database parameters specific for health clinic work. Design is simple and
-                clean
-                with data entry enabled by using keyboard to simulate desktop software.
+                A data management system for a small medical clinic. An internal web application for Lifeline Clinic in
+                Namibia, intended for managing patient databases, medical and visit history, nutrition program
+                databases,
+                and outreach programs. The application is secured so that only clinic staff have access. It allows
+                exporting various data from the database and adding new parameters specific to the operation of a health
+                institution. The design is simple and clean, and data entry is optimized for keyboard use to simulate
+                desktop software.
               </p>
             </div>
           </div>
@@ -179,14 +173,11 @@
         <div class="swiper-pagination pt-6 flex justify-center"></div>
       </div>
     </section>
-
-    <!-- screenagers -->
-    <section id="programming-art" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl"
-      data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+    <section id="programming-art" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl">
 
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
-          PROGRAMMING AND ART
+          PROGRAMMING & ART
         </h2>
       </div>
 
@@ -204,14 +195,12 @@
 
         <div class="swiper w-full max-w-full mx-auto">
           <div class="swiper-wrapper mb-10">
-            <!-- slide 1 -->
             <div class="swiper-slide">
               <video src="./images/multimedia show/artproject_1.mov" controls autoplay muted loop playsinline
                 class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <!-- slide 2 -->
             <div class="swiper-slide">
               <video src="./images/multimedia show/artproject_2.mov" controls autoplay muted loop playsinline
                 class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
@@ -225,28 +214,24 @@
 
         <div class="mt-6">
           <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-            node.js + JavaScript + WebSocket + HTML + CSS
+            Node.js + JavaScript + WebSocket + HTML + CSS
           </h3>
           <p class="text-base sm:text-lg mb-8">
-            Platform for creation and control of multimedia shows. Videos, audio images, texts and live stream defined
-            through editor interface with layers compatibility to achieve complex and multilayered time dependent
-            display of media. Audience is connected to server to interact with displays on stage supported by
-            websockets.
-            Integrated two classic games that audience can control with their smartphone. Master interface for directors
-            to control live show.
+            A platform for creating and managing multimedia performances. Videos, sounds, images, texts, and live
+            streams are defined through an editing interface with the ability to layer media to achieve a complex,
+            time-dependent display. The audience is connected to the server and participates interactively in the stage
+            display via WebSocket. Two classic games that the audience controls with their smartphone are integrated.
+            There is also a "master" interface for directors to manage the entire live performance.
           </p>
         </div>
 
       </div>
     </section>
-
-    <!-- flight data -->
-
-    <section id="flight-data" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="flight-data" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl">
 
       <div class=" text-left">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-[#F5CF0A]">FLIGHT DATA VISUALISATION</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-[#F5CF0A]">FLIGHT DATA VISUALIZATION
+        </h2>
       </div>
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
@@ -258,23 +243,19 @@
         </video>
 
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + ThreeJS globe + Web socket based chat +
-          Flightlab
-          API + Google places API
+          Node.js + Express + React + HTML + CSS + JavaScript + Bootstrap + Three.js Globe + WebSocket Chat + Flightlab
+          API + Google Places API
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          Subscription based social network with integration of flight tracking data visualisation. 3D Globe with real
-          and detailed world map layer and interactive representation of flight data. Tracked flights from platform
-          users entered fight numbers with integration of Flightlab API. Integration of live one to one chat for
-          platform users.
+          A subscription-based social network with integrated flight data visualization. A 3D globe with a detailed
+          world
+          map and interactive display of flight data. Platform users track flights by entering a flight number, and data
+          is retrieved via the Flightlab API. An integrated direct chat system (1-to-1) among platform users is also
+          included.
         </p>
       </div>
     </section>
-
-    <!-- qr code dating site -->
-
-    <section id="qr-code" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="qr-code" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl">
 
       <div class="text-left mb-6">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#F5CF0A]">
@@ -286,21 +267,21 @@
 
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-          QR CODE BASED TRANSACTIONS
+          QR Code-based transactions
         </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/dating site/datingsite_2.png" alt="Image 2" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/dating site/datingsite_3.png" alt="Image 3" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/dating site/datingsite_4.png" alt="Image 4" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
@@ -310,17 +291,14 @@
           PHP + Yii + MySQL + HTML + CSS + Bootstrap + JavaScript
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          QR code generator, UI for QR code reader and redeem system developed and added to an existing dating web app.
-          Developed with purpose to enable dating app users sending gifts connected to real shops. Shops can read and
-          redeem QR code based gifts send among dating app platform users.
+          A QR code generator, scanning interface, and redemption system were developed and added to an existing dating
+          web application. The goal is to allow app users to send gifts associated with physical stores. Stores can scan
+          and redeem QR code-based gifts exchanged by users on the platform.
         </p>
       </div>
     </section>
 
-
-    <!-- games -->
-    <section id="games" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-left"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="games" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl">
 
       <div class=" text-left">
         <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#F5CF0A]">GAMES</h2>
@@ -330,37 +308,33 @@
 
       <div class="bg-base-100 p-6 rounded-md">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-          subject pronouns, animals and alphabet game
+          Pronoun, animal, and alphabet game
         </h2>
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Image 1" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/games_mockup_1.png" alt="Game image 1" class="w-full h-auto rounded-lg" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Image 2" class="w-full h-auto mx-auto max-w-xl" />
+              <img src="./images/games_mockup_2.png" alt="Game image 2" class="w-full h-auto rounded-lg" />
             </div>
           </div>
 
           <div class="pt-10 swiper-pagination"></div>
         </div>
         <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
-          HTML + CSS + Boostrap + JavaScript + PHP + MySQL + Shopify api
+          HTML + CSS + Bootstrap + JavaScript + PHP + MySQL + Shopify API
         </h3>
         <p class="text-base sm:text-lg mb-8">
-          Game platform for subscription based multiuser accounts sold on Shopify. Interactive educational games for
-          language learning which includes word search games, level based games, hints, collecting points and custom
-          avatars.
+          A game platform for multi-user subscription accounts sold via Shopify. Interactive educational language
+          learning games include word searches, level-based games, tips, point collection, and customizable avatars.
         </p>
       </div>
     </section>
-
-    <!-- websites -->
-    <section id="websites" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl" data-aos="fade-right"
-      data-aos-easing="linear" data-aos-duration="1500">
+    <section id="websites" class="mt-10 mx-auto rounded-md py-2 px-4 sm:px-6 md:px-10 max-w-5xl">
 
       <div class="text-left mb-6">
-        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">websites</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold text-[#F5CF0A]">WEBSITES</h2>
       </div>
 
       <div class="swiper-pagination-top mb-4 flex justify-end"></div>
@@ -369,34 +343,30 @@
         <div class="swiper w-full max-w-full mx-auto">
           <div class="swiper-wrapper mb-10">
 
-            <!-- 1 -->
             <div class="swiper-slide">
               <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                website for a startup app
+                Website for a startup application
                 <a href="https://shift-mate.netlify.app/"
                   class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-                  aria-label="Visit shift mate website" target="_blank" rel="noopener noreferrer">
+                  aria-label="Visit Shift Mate website" target="_blank" rel="noopener noreferrer">
                   (visit)
                 </a>
               </h2>
-              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JAVASCRIPT + TAILWIND (DAISY UI)
+              <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JavaScript + Tailwind (Daisy UI)
               </h3>
               <div class="group relative flex-1">
-                <!-- light -->
-                <img src="./images/website mockups/1-light.png" alt="Startup app website light theme"
+                <img src="./images/website mockups/1-light.png" alt="Startup website light theme"
                   data-theme-visible="lofi"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-                <!-- dark -->
-                <img src="./images/website mockups/1-dark.png" alt="Startup app website dark theme"
+                <img src="./images/website mockups/1-dark.png" alt="Startup website dark theme"
                   data-theme-visible="black"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               </div>
             </div>
 
-            <!-- 2 -->
             <div class="swiper-slide">
               <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-                construction company website
+                Construction company website
                 <a href="https://modular-homes.netlify.app/"
                   class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
                   aria-label="Visit construction company website" target="_blank" rel="noopener noreferrer">
@@ -404,39 +374,34 @@
                 </a>
               </h2>
               <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                BOOTSTRAP + HTML + JAVASCRIPT (jQuery)
+                Bootstrap + HTML + JavaScript (jQuery)
               </h3>
-              <!-- light -->
-              <img src="./images/website mockups/2-light.png" alt="Construction business website light theme"
+              <img src="./images/website mockups/2-light.png" alt="Construction website light theme"
                 data-theme-visible="lofi"
                 class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-              <!-- dark  -->
-              <img src="./images/website mockups/2-dark.png" alt="Construction business website dark theme"
+              <img src="./images/website mockups/2-dark.png" alt="Construction website dark theme"
                 data-theme-visible="black"
                 class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               <div class="group relative flex-1">
               </div>
             </div>
 
-            <!-- 3 -->
             <div class="swiper-slide">
               <div class="group relative flex-1">
-                <h2 class="font-bold text-2xl sm:text-3xl mb-2">BARBERSHOP WEBSITE
+                <h2 class="font-bold text-2xl sm:text-3xl mb-2">HAIR SALON WEBSITE
                   <a href="https://barbershop-react-vite.netlify.app/"
                     class="underline text-lg sm:text-xl font-normal ml-2 align-middle"
-                    aria-label="Visit BARBERSHOP website" target="_blank" rel="noopener noreferrer">
+                    aria-label="Visit hair salon website" target="_blank" rel="noopener noreferrer">
                     (visit)
                   </a>
                 </h2>
                 <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
-                  REACT + CHAKRA UI + MOTION ANIMATION JS
+                  React + Chakra UI + Motion Animation JS
                 </h3>
-                <!-- light  -->
-                <img src="./images/website mockups/3-light.png" alt="Barbershop website light theme"
+                <img src="./images/website mockups/3-light.png" alt="Hair salon website light theme"
                   data-theme-visible="lofi"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-                <!-- dark  -->
-                <img src="./images/website mockups/3-dark.png" alt="Barbershop website dark theme"
+                <img src="./images/website mockups/3-dark.png" alt="Hair salon website dark theme"
                   data-theme-visible="black"
                   class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
               </div>
@@ -461,9 +426,11 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize AOS library
       AOS.init();
 
+      // Initialize Swiper instances
       document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
         const topPagination = document.querySelectorAll('.swiper-pagination-top')[index];
         const bottomPagination = swiperEl.querySelector('.swiper-pagination');
@@ -483,11 +450,69 @@
           grabCursor: true
         });
       });
-      function clonePagination(swiper, topEl, bottomEl) {
-        if (topEl && bottomEl) {
-          topEl.innerHTML = bottomEl.innerHTML;
+
+      const stickyNavLinks = document.querySelectorAll('.sticky-top a');
+      const sections = document.querySelectorAll('main section[id]');
+      const getStickyNavHeight = () => document.querySelector('.sticky-top').offsetHeight;
+
+      const highlightStickyNav = () => {
+        let currentActiveSectionId = null;
+        const scrollPosition = window.scrollY;
+        const navHeight = getStickyNavHeight();
+
+        const activationOffset = navHeight + 20;
+
+        if (scrollPosition <= 10) {
+          if (sections.length > 0 && sections[0].id) {
+            currentActiveSectionId = sections[0].id;
+          }
+        } else {
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            const sectionTop = section.offsetTop;
+
+            if (scrollPosition + activationOffset >= sectionTop) {
+              currentActiveSectionId = section.id;
+              break;
+            }
+          }
         }
-      }
+
+
+        stickyNavLinks.forEach(link => {
+          link.removeAttribute('aria-current');
+
+          if (link.getAttribute('href').substring(1) === currentActiveSectionId) {
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      };
+
+      stickyNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            const navHeight = getStickyNavHeight();
+            const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - navHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+
+            stickyNavLinks.forEach(l => l.removeAttribute('aria-current'));
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      });
+
+      window.addEventListener('scroll', highlightStickyNav);
+      window.addEventListener('resize', highlightStickyNav);
+      highlightStickyNav();
     });
   </script>
 </body>

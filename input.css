@@ -10,7 +10,7 @@
 
   html,
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   /* headings and images */
@@ -44,12 +44,32 @@
     color: #F5CF0A;
   }
 
-  nav a[aria-current="page"],
+  .navbar a[aria-current="page"],
   .dropdown a[aria-current="page"] {
     background: #F5CF0A;
     color: #0f0f0f;
-    border-radius: .5rem;
-    padding-inline: .5rem;
+    /* border-radius: .5rem; */
+    /* padding-inline: .5rem; */
+  }
+
+  /* sticky nav stil */
+  .sticky-top a[aria-current="page"] {
+    background: #F5CF0A;
+    color: #0f0f0f;
+    /* border-radius: .5rem; */
+    /* padding-inline: .5rem; */
+  }
+
+  /* sticky scroll */
+  main section[id] {
+    scroll-margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+
+    main section[id] {
+      scroll-margin-top: 80px;
+    }
   }
 
   @media only screen and (max-width: 950px) {
