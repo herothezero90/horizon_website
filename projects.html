@@ -452,6 +452,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+
       document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
         const topPagination = document.querySelectorAll('.swiper-pagination-top')[index];
         const bottomPagination = swiperEl.querySelector('.swiper-pagination');
@@ -472,8 +473,9 @@
         });
       });
 
+      //  sticky navbar indikator
       const stickyNavLinks = document.querySelectorAll('.sticky-top a');
-      const sections = document.querySelectorAll('main section[id]');
+      const sections = document.querySelectorAll('main section');
       const getStickyNavHeight = () => document.querySelector('.sticky-top').offsetHeight;
 
       const highlightStickyNav = () => {
@@ -481,55 +483,34 @@
         const scrollPosition = window.scrollY;
         const navHeight = getStickyNavHeight();
 
-        const activationOffset = navHeight + 20;
+        const activationOffset = navHeight + 50;
 
-        if (scrollPosition <= 10) {
-          if (sections.length > 0 && sections[0].id) {
-            currentActiveSectionId = sections[0].id;
-          }
-        } else {
-          for (let i = sections.length - 1; i >= 0; i--) {
-            const section = sections[i];
-            const sectionTop = section.offsetTop;
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
 
-            if (scrollPosition + activationOffset >= sectionTop) {
-              currentActiveSectionId = section.id;
-              break;
-            }
+          if (!section.id) continue;
+
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          if (scrollPosition + activationOffset >= sectionTop) {
+            currentActiveSectionId = section.id;
+            break;
           }
         }
 
-
+        if (currentActiveSectionId === null && sections.length > 0) {
+          if (sections[0].id) {
+            currentActiveSectionId = sections[0].id;
+          }
+        }
         stickyNavLinks.forEach(link => {
           link.removeAttribute('aria-current');
-
           if (link.getAttribute('href').substring(1) === currentActiveSectionId) {
             link.setAttribute('aria-current', 'page');
           }
         });
       };
-
-      stickyNavLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-
-          const targetId = link.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-
-          if (targetSection) {
-            const navHeight = getStickyNavHeight();
-            const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = elementPosition - navHeight;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth"
-            });
-
-            stickyNavLinks.forEach(l => l.removeAttribute('aria-current'));
-            link.setAttribute('aria-current', 'page');
-          }
-        });
-      });
 
       window.addEventListener('scroll', highlightStickyNav);
       window.addEventListener('resize', highlightStickyNav);
