@@ -2,33 +2,41 @@
 <html lang="en">
 
 <head>
-  <script>
-    (() => {
-      const saved = localStorage.getItem('horizonTheme');
-      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
-
-      const html = document.documentElement;
-      html.setAttribute('data-theme', theme);
-      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
-
-      addEventListener('load', () => {
-        html.style.backgroundColor = ''
-      });
-    })();
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore Horizon's portfolio of past projects in data management, programming & art, flight visualization, QR code generation, games, and web development.">
   <title>Projects | Horizon</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
-  <link href="./dist/output.css" rel="stylesheet" />
+  <script src="./js/theme.js"></script>
+  <link rel="stylesheet" href="/dist/output.css" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
+    as="style" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
     rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <!-- <script src="./js/theme.js" defer></script> -->
+  <script src="./js/lang_toggle.js" defer></script>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('horizonTheme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.style.backgroundColor = savedTheme === 'black' ? '#0d0d0d' : '#ffffff';
+      } else {
+        document.documentElement.style.backgroundColor = 'lofi' === 'black' ? '#0d0d0d' : '#ffffff';
+      }
+      addEventListener('load', () => { document.documentElement.style.backgroundColor = '' });
+    })();
+  </script>
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -44,7 +52,7 @@
         </button>
 
         <ul tabindex="0" role="menu"
-          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+          class="menu menu-lg dropdown-content z-10 mt-3 w-100 p-5 shadow bg-base-200 rounded-xl">
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html"
               aria-current="page">PROJECTS</a>
@@ -96,16 +104,22 @@
 
   <div
     class="sticky sticky-top top-0 z-10 flex flex-wrap justify-center gap-1 py-2 bg-base-100 shadow-md sticky-nav-transition lg:sticky-nav-visible sticky-nav-hidden">
-    <a href="#data-management" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Data
+    <a href="#data-management"
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Data
       Management</a>
     <a href="#programming-art"
-      class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Programming
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Programming
       & Art</a>
-    <a href="#flight-data" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Flight
+    <a href="#flight-data"
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Flight
       Data</a>
-    <a href="#qr-code" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">QR Code</a>
-    <a href="#games" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Games</a>
-    <a href="#websites" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Websites</a>
+    <a href="#qr-code"
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">QR
+      Code</a>
+    <a href="#games"
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Games</a>
+    <a href="#websites"
+      class="btn btn-sm text-sm md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Websites</a>
   </div>
 
 
@@ -132,8 +146,8 @@
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Web application for restaurant management
                 </h2>
               </div>
-              <img src="./images/restaurant_mockup.png" alt="Restaurant management application"
-                class="w-full h-auto mx-auto max-w-3xl" />
+              <img src="./images/restaurant/restaurant_mockup.webp" alt="Restaurant management application"
+                class="w-full h-auto mx-auto max-w-3xl" fetchpriority="high" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 Next.js + MySQL + React + Chakra UI (deployed on DigitalOcean)
               </h3>
@@ -152,8 +166,8 @@
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Data management system for a small medical
                   clinic</h2>
               </div>
-              <img src="./images/clinic_mockup.png" alt="Clinic database system"
-                class="w-full h-auto mx-auto max-w-3xl" />
+              <img src="./images/clinic_mockup.webp" alt="Clinic database system"
+                class="w-full h-auto mx-auto max-w-3xl" loading="lazy" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 PHP + MySQL + JavaScript + Bootstrap
               </h3>
@@ -196,14 +210,14 @@
         <div class="swiper w-full max-w-full mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <video src="./images/multimedia show/artproject_1.mov" controls autoplay muted loop playsinline
-                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+              <video src="./images/multimedia show/artproject_1.mov" loading="lazy" controls autoplay muted loop
+                playsinline class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
             <div class="swiper-slide">
-              <video src="./images/multimedia show/artproject_2.mov" controls autoplay muted loop playsinline
-                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+              <video src="./images/multimedia show/artproject_2.mov" loading="lazy" controls autoplay muted loop
+                playsinline class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -237,7 +251,7 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
           Social network with live flight tracking
         </h2>
-        <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
+        <video src="./images/visualization_1.mov" loading="lazy" controls autoplay muted loop playsinline
           class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
           Your browser does not support the video tag.
         </video>
@@ -272,16 +286,20 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_1.webp" alt="Image 1" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Image 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_2.webp" alt="Image 2" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Image 3" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_3.webp" alt="Image 3" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Image 4" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_4.webp" alt="Image 4" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
           </div>
 
@@ -313,10 +331,12 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Game image 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_1.webp" alt="Game image 1" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Game image 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_2.webp" alt="Game image 2" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
           </div>
 
@@ -355,12 +375,14 @@
               <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl"> HTML + CSS + JavaScript + Tailwind (Daisy UI)
               </h3>
               <div class="group relative flex-1">
-                <img src="./images/website mockups/1-light.png" alt="Startup website light theme"
+                <img src="./images/website mockups/1-light.webp" alt="Startup website light theme"
                   data-theme-visible="lofi"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-                <img src="./images/website mockups/1-dark.png" alt="Startup website dark theme"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
+                <img src="./images/website mockups/1-dark.webp" alt="Startup website dark theme"
                   data-theme-visible="black"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
               </div>
             </div>
 
@@ -376,12 +398,14 @@
               <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
                 Bootstrap + HTML + JavaScript (jQuery)
               </h3>
-              <img src="./images/website mockups/2-light.png" alt="Construction website light theme"
+              <img src="./images/website mockups/2-light.webp" alt="Construction website light theme"
                 data-theme-visible="lofi"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-              <img src="./images/website mockups/2-dark.png" alt="Construction website dark theme"
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                loading="lazy" />
+              <img src="./images/website mockups/2-dark.webp" alt="Construction website dark theme"
                 data-theme-visible="black"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                loading="lazy" />
               <div class="group relative flex-1">
               </div>
             </div>
@@ -398,12 +422,14 @@
                 <h3 class="mt-6 text-gray-500 text-lg sm:text-2xl">
                   React + Chakra UI + Motion Animation JS
                 </h3>
-                <img src="./images/website mockups/3-light.png" alt="Hair salon website light theme"
+                <img src="./images/website mockups/3-light.webp" alt="Hair salon website light theme"
                   data-theme-visible="lofi"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
-                <img src="./images/website mockups/3-dark.png" alt="Hair salon website dark theme"
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
+                <img src="./images/website mockups/3-dark.webp" alt="Hair salon website dark theme"
                   data-theme-visible="black"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
               </div>
             </div>
           </div>
@@ -424,13 +450,8 @@
   <script src="./js/lang_toggle.js"></script>
   <script src="./js/projects.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize AOS library
-      AOS.init();
-
-      // Initialize Swiper instances
       document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
         const topPagination = document.querySelectorAll('.swiper-pagination-top')[index];
         const bottomPagination = swiperEl.querySelector('.swiper-pagination');

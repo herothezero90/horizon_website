@@ -1,31 +1,27 @@
-/* eslint-disable no-undef */
-$(document).ready(function () {
-  const savedTheme = localStorage.getItem('horizonTheme');
-  const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+(() => {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let initialTheme = localStorage.getItem('horizonTheme');
 
-  // Determine the theme to apply on load
-  let initialTheme;
-  if (savedTheme) {
-    initialTheme = savedTheme;
-  } else {
+  if (!initialTheme) {
     initialTheme = prefersDark ? 'black' : 'lofi';
+    localStorage.setItem('horizonTheme', initialTheme);
   }
 
-  // Apply the theme to the HTML element
-  $('html').attr('data-theme', initialTheme);
+  document.documentElement.setAttribute('data-theme', initialTheme);
 
-  // Set the initial state of the theme toggle checkbox
-  const $themeCheckbox = $('#theme-toggle'); // Use ID for more specific targeting
-  if ($themeCheckbox.length) {
-    // Check the box if the initial theme is 'black' (dark)
-    $themeCheckbox.prop('checked', initialTheme === 'black');
+  document.documentElement.style.backgroundColor = initialTheme === 'black' ? '#0d0d0d' : '#ffffff';
+  window.addEventListener('load', () => {
+    document.documentElement.style.backgroundColor = '';
+  });
 
-    // Add event listener for theme changes
-    $themeCheckbox.on('change', function () {
-      const isDark = $(this).is(':checked');
-      const newTheme = isDark ? 'black' : 'lofi';
-      $('html').attr('data-theme', newTheme);
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.checked = initialTheme === 'black';
+
+    themeToggle.addEventListener('change', function () {
+      const newTheme = this.checked ? 'black' : 'lofi';
+      document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('horizonTheme', newTheme);
     });
   }
-});
+})();

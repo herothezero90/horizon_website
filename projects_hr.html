@@ -2,31 +2,41 @@
 <html lang="en">
 
 <head>
-  <script>
-    (() => {
-      const saved = localStorage.getItem('horizonTheme');
-      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
-
-      const html = document.documentElement;
-      html.setAttribute('data-theme', theme);
-      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
-
-      addEventListener('load', () => { html.style.backgroundColor = '' });
-    })();
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Istražite Horizonov portfelj prijašnjih projekata u upravljanju podacima, programiranju i umjetnosti, vizualizaciji letova, generiranju QR kodova, igrama i web razvoju.">
   <title>Projekti | Horizon</title>
   <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
-  <link href="./dist/output.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" />
+  <script src="./js/theme.js"></script>
+
+  <link rel="stylesheet" href="/dist/output.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
+    as="style" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
     rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <!-- <script src="./js/theme.js"></script> -->
+  <script src="./js/lang_toggle.js" defer></script>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('horizonTheme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.style.backgroundColor = savedTheme === 'black' ? '#0d0d0d' : '#ffffff';
+      } else {
+        document.documentElement.style.backgroundColor = 'lofi' === 'black' ? '#0d0d0d' : '#ffffff';
+      }
+      addEventListener('load', () => { document.documentElement.style.backgroundColor = '' });
+    })();
+  </script>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -103,17 +113,22 @@
   <div
     class="sticky sticky-top top-0 z-10 flex flex-wrap justify-center gap-1 py-2 bg-base-100 shadow-md sticky-nav-transition lg:sticky-nav-visible sticky-nav-hidden">
     <a href="#upravljanje-podacima"
-      class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Upravljanje
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Upravljanje
       Podacima</a>
     <a href="#programiranje-umjetnost"
-      class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Programiranje &
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Programiranje
+      &
       Umjetnost</a>
     <a href="#vizualizacija-letova"
-      class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Vizualizacija
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Vizualizacija
       Podataka</a>
-    <a href="#qr-kod" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">QR Kod</a>
-    <a href="#igre" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Igre</a>
-    <a href="#web-stranice" class="btn btn-xs sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Web
+    <a href="#qr-kod"
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">QR
+      Kod</a>
+    <a href="#igre"
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Igre</a>
+    <a href="#web-stranice"
+      class="btn btn-sm text-[0.8rem] md:text-[1rem] sm:btn-md bg-base-300 hover:bg-neutral-focus m-0 py-0 important">Web
       Stranice</a>
   </div>
 
@@ -141,8 +156,8 @@
               <div class="text-left">
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Web aplikacija za upravljanje restoranom</h2>
               </div>
-              <img src="./images/restaurant_mockup.png" alt="Aplikacija za upravljanje restoranom"
-                class="w-full h-auto mx-auto max-w-3xl" />
+              <img src="./images/restaurant/restaurant_mockup.webp" alt="Aplikacija za upravljanje restoranom"
+                class="w-full h-auto mx-auto max-w-3xl" fetchpriority="high" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 Next js + MySQL + React + Chakra UI (deploirano na DigitalOcean-u)
               </h3>
@@ -163,8 +178,8 @@
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Sustav upravljanja podacima za malu
                   medicinsku kliniku</h2>
               </div>
-              <img src="./images/clinic_mockup.png" alt="Sustav baze podataka klinike"
-                class="w-full h-auto mx-auto max-w-3xl" />
+              <img src="./images/clinic_mockup.webp" alt="Sustav baze podataka klinike"
+                class="w-full h-auto mx-auto max-w-3xl" loading="lazy" />
               <h3 class="mt-6 mb-5 text-gray-500 text-md sm:text-2xl">
                 PHP + MySQL + JavaScript + Bootstrap
               </h3>
@@ -208,15 +223,15 @@
           <div class="swiper-wrapper mb-10">
             <!-- slide 1 -->
             <div class="swiper-slide">
-              <video src="./images/multimedia show/artproject_1.mov" controls autoplay muted loop playsinline
-                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+              <video src="./images/multimedia show/artproject_1.mov" loading="lazy" controls autoplay muted loop
+                playsinline class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
             <!-- slide 2 -->
             <div class="swiper-slide">
-              <video src="./images/multimedia show/artproject_2.mov" controls autoplay muted loop playsinline
-                class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
+              <video src="./images/multimedia show/artproject_2.mov" loading="lazy" controls autoplay muted loop
+                playsinline class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -251,7 +266,7 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
           Društvena mreža s praćenjem letova uživo
         </h2>
-        <video src="./images/visualization_1.mov" controls autoplay muted loop playsinline
+        <video src="./images/visualization_1.mov" loading="lazy" controls autoplay muted loop playsinline
           class="w-full h-auto rounded-lg shadow mx-auto max-w-3xl">
           Your browser does not support the video tag.
         </video>
@@ -287,16 +302,20 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_1.png" alt="Slika 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_1.webp" alt="Slika 1" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_2.png" alt="Slika 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_2.webp" alt="Slika 2" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_3.png" alt="Slika 3" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_3.webp" alt="Slika 3" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/dating site/datingsite_4.png" alt="Slika 4" class="w-full h-auto rounded-lg" />
+              <img src="./images/dating site/datingsite_4.webp" alt="Slika 4" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
           </div>
 
@@ -329,10 +348,12 @@
         <div class="swiper w-full max-w-full sm:max-w-3xl mx-auto">
           <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
-              <img src="./images/games_mockup_1.png" alt="Slika igre 1" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_1.webp" alt="Slika igre 1" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
             <div class="swiper-slide">
-              <img src="./images/games_mockup_2.png" alt="Slika igre 2" class="w-full h-auto rounded-lg" />
+              <img src="./images/games_mockup_2.webp" alt="Slika igre 2" class="w-full h-auto rounded-lg"
+                loading="lazy" />
             </div>
           </div>
 
@@ -375,13 +396,15 @@
               </h3>
               <div class="group relative flex-1">
                 <!-- light -->
-                <img src="./images/website mockups/1-light.png" alt="Startup web stranica svijetla tema"
+                <img src="./images/website mockups/1-light.webp" alt="Startup web stranica svijetla tema"
                   data-theme-visible="lofi"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
                 <!-- dark -->
-                <img src="./images/website mockups/1-dark.png" alt="Startup web stranica tamna tema"
+                <img src="./images/website mockups/1-dark.webp" alt="Startup web stranica tamna tema"
                   data-theme-visible="black"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
               </div>
             </div>
 
@@ -399,13 +422,15 @@
                 Bootstrap + HTML + JavaScript (jQuery)
               </h3>
               <!-- light -->
-              <img src="./images/website mockups/2-light.png" alt="Građevinska web stranica svijetla tema"
+              <img src="./images/website mockups/2-light.webp" alt="Građevinska web stranica svijetla tema"
                 data-theme-visible="lofi"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                loading="lazy" />
               <!-- dark  -->
-              <img src="./images/website mockups/2-dark.png" alt="Građevinska web stranica tamna tema"
+              <img src="./images/website mockups/2-dark.webp" alt="Građevinska web stranica tamna tema"
                 data-theme-visible="black"
-                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                loading="lazy" />
               <div class="group relative flex-1">
               </div>
             </div>
@@ -424,13 +449,15 @@
                   React + Chakra UI + Motion Animation JS
                 </h3>
                 <!-- light  -->
-                <img src="./images/website mockups/3-light.png" alt="Frizerski salon web stranica svijetla tema"
+                <img src="./images/website mockups/3-light.webp" alt="Frizerski salon web stranica svijetla tema"
                   data-theme-visible="lofi"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
                 <!-- dark  -->
-                <img src="./images/website mockups/3-dark.png" alt="Frizerski salon web stranica tamna tema"
+                <img src="./images/website mockups/3-dark.webp" alt="Frizerski salon web stranica tamna tema"
                   data-theme-visible="black"
-                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square" />
+                  class="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  loading="lazy" />
               </div>
             </div>
           </div>
@@ -446,18 +473,13 @@
     <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/theme.js"></script>
-  <script src="./js/lang_toggle.js"></script>
-  <script src="./js/projects.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="./js/lang_toggle.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/theme.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Inicijaliziraj AOS biblioteku
-      AOS.init();
 
-      // Inicijaliziraj Swiper instance
       document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
         const topPagination = document.querySelectorAll('.swiper-pagination-top')[index];
         const bottomPagination = swiperEl.querySelector('.swiper-pagination');

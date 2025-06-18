@@ -1,19 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="lofi">
 
 <head>
-  <script>
-    (() => {
-      const saved = localStorage.getItem('horizonTheme');
-      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
-
-      const html = document.documentElement;
-      html.setAttribute('data-theme', theme);
-      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
-
-      addEventListener('load', () => { html.style.backgroundColor = '' });
-    })();
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
@@ -39,6 +27,18 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
     rel="stylesheet" />
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('horizonTheme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.style.backgroundColor = savedTheme === 'black' ? '#0d0d0d' : '#ffffff';
+      } else {
+        document.documentElement.style.backgroundColor = 'lofi' === 'black' ? '#0d0d0d' : '#ffffff';
+      }
+      addEventListener('load', () => { document.documentElement.style.backgroundColor = '' });
+    })();
+  </script>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -57,7 +57,7 @@
           </button>
 
           <ul tabindex="0" role="menu"
-            class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+            class="menu menu-lg dropdown-content z-10 mt-3 w-100 p-5 shadow bg-base-200 rounded-xl">
             <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html"
                 aria-current="page">POČETNA</a>
             </li>

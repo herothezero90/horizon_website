@@ -2,22 +2,8 @@
 <html lang="en">
 
 <head>
-  <script>
-    (() => {
-      const saved = localStorage.getItem('horizonTheme');
-      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'black' : 'lofi');
-
-      const html = document.documentElement;
-      html.setAttribute('data-theme', theme);
-      html.style.backgroundColor = theme === 'black' ? '#0d0d0d' : '#ffffff';
-
-      addEventListener('load', () => { html.style.backgroundColor = '' });
-    })();
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO -->
   <meta name="description"
     content="Get in touch with Horizon – full-stack web development, MVP builds, design & SEO." />
   <meta property="og:title" content="Contact – Horizon Web Development" />
@@ -28,34 +14,41 @@
 
   <title>Contact | Horizon</title>
 
-  <!-- Performance: CSS & fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5">
+  <link rel="icon" type="image/x-icon" href="./images/FAVICON.png">
+  <link rel="stylesheet" href="/dist/output.css" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
-  <link rel="stylesheet" href="/dist/output.css">
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&family=Phudu:wght@400;700&display=swap"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
+    as="style" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
     rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/39c7bbdf94.js" crossorigin="anonymous" defer></script>
-  <link rel="icon" type="image/x-icon" href="./images/FAVICON.png" />
-  <style>
-    /* [dark-theme-visibility] {
-      display: none;
-    }
-
-    html[data-theme="lofi"] [dark-theme-visibility="lofi"] {
-      display: block;
-    }
-
-    html[data-theme="black"] [dark-theme-visibility="dark"] {
-      display: block;
-    } */
-  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/lang_toggle.js" defer></script>
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('horizonTheme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.style.backgroundColor = savedTheme === 'black' ? '#0d0d0d' : '#ffffff';
+      } else {
+        document.documentElement.style.backgroundColor = 'lofi' === 'black' ? '#0d0d0d' : '#ffffff';
+      }
+      addEventListener('load', () => { document.documentElement.style.backgroundColor = '' });
+    })();
+  </script>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
 
-  <!-- NAVBAR (klase ostaju) -->
+  <!-- NAVBAR -->
   <header class="navbar bg-base-100" role="banner">
     <div class="navbar-start">
       <div class="dropdown bg-base-200">
@@ -67,7 +60,7 @@
           </svg>
         </button>
         <ul tabindex="0" role="menu"
-          class="menu menu-sm dropdown-content z-10 mt-3 w-52 p-2 shadow bg-base-200 rounded-xl">
+          class="menu menu-lg dropdown-content z-10 mt-3 w-100 p-5 shadow bg-base-200 rounded-xl">
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index.html">HOME</a></li>
           <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="projects.html">PROJECTS</a>
           </li>
@@ -227,9 +220,9 @@
     <h2 class="text-lg">© 2025 Horizon. All rights reserved.</h2>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-  <script src="./js/theme.js" defer></script>
-  <script src="./js/lang_toggle.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/lang_toggle.js"></script>
   <script src="./js/form.js" defer></script>
 </body>
 
