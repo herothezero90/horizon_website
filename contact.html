@@ -44,6 +44,7 @@
       addEventListener('load', () => { document.documentElement.style.backgroundColor = '' });
     })();
   </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
@@ -200,7 +201,9 @@
                     required></textarea>
                 </div>
 
-                <div data-netlify-recaptcha="true" class="w-full"></div>
+                <div class="form-control w-full">
+                  <div class="g-recaptcha" data-sitekey="6LdwGGYrAAAAAPhhwi9QuTEspLjreSsbWmgYFN0U"></div>
+                </div>
 
                 <div class="form-control w-full">
                   <button type="submit"
