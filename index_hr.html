@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Onest:ital,wght@0,400;0,700;1,400;1,700&family=Phudu:wght@300..900&display=swap"
     as="style" />
@@ -58,7 +59,7 @@
 
           <ul tabindex="0" role="menu"
             class="menu menu-lg dropdown-content z-10 mt-3 w-100 p-5 shadow bg-base-200 rounded-xl">
-            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold" href="index_hr.html"
+            <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold rounded-xl" href="index_hr.html"
                 aria-current="page">POČETNA</a>
             </li>
             <li role="none"><a role="menuitem" class="text-2xl sm:text-4xl font-bold"
@@ -159,8 +160,8 @@
 
       <!-- usluge -->
       <section class="w-full p-6 mb-10 min-h-[560px]">
-        <div class="w-full max-w-7xl mt-12 mx-auto flex flex-col items-center
-             animate-fade animate-once animate-duration-[2000ms] animate-ease-in">
+        <div
+          class="w-full max-w-7xl mt-12 mx-auto flex flex-col items-center animate-fade animate-once animate-duration-[2000ms] animate-ease-in">
           <h2 class="text-4xl font-bold mb-8 text-[#F5CF0A]">Usluge koje nudimo</h2>
 
           <div class="flex flex-wrap justify-center gap-6 w-full items-stretch">
@@ -325,9 +326,12 @@
     <h2 class="text-lg">© 2025 Horizon. Sva prava pridržana.</h2>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script src="./js/theme.js"></script>
   <script src="./js/lang_toggle.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
